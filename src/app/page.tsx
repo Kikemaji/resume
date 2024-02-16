@@ -1,19 +1,20 @@
 import { FaCode } from 'react-icons/fa6';
 
 import { Navbar } from '@/components/ui/Navbar';
+import Image from 'next/image';
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col overflow-y-scroll bg-background text-text">
       <Navbar />
       <div className="p-4">
-        <section className="flex flex-col-reverse  md:flex-row">
+        <section className="flex flex-col-reverse gap-5  md:flex-row">
           <div className="flex flex-col gap-3">
             <h1 className="text-center text-2xl font-bold">
               El ingeniero frontend que necesitas
             </h1>
             <h3 className="text-center text-lg">
-              Que no lo decido yo, sino tu impresión de esta página web.
+              Con código para que no tengas que mirar tantos CVs
             </h3>
             <button className="flex items-center justify-center gap-3 rounded-md bg-secondary px-3 py-1">
               <FaCode />
@@ -23,7 +24,15 @@ export default function Home() {
               <span>Contacto</span>
             </button>
           </div>
-          <div className="">FOTO</div>
+          <div className="relative flex justify-center">
+            <Image
+              alt="Foto grande Enrique"
+              src="/profile_photo_lg_circle.png"
+              width={300}
+              height={300}
+              priority
+            />
+          </div>
         </section>
         <div className="my-4 opacity-80">
           <p>Calidad asegurada por:</p>
