@@ -1,12 +1,9 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import type { Metadata } from 'next';
+import './globals.css';
 
 export const metadata: Metadata = {
-  title: "Enrique Márquez Jiménez",
-  description: "Curriculum interactivo de Enrique Márquez Jiménez",
+  title: 'Enrique Márquez Jiménez',
+  description: 'Curriculum interactivo de Enrique Márquez Jiménez',
 };
 
 export default function RootLayout({
@@ -16,7 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={inter.className}>{children}</body>
+      <body>{children}</body>
     </html>
   );
 }

@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 :root {
-  --text-color: #cefef7;
-  --background-color: #01231f;
-  --primary-color: #70fbeb;
-  --secondary-color: #057ca7;
-  --accent-color: #14a2f8;
+  --text-color: #ffffff;
+  --background-color: #000;
+  --primary-color: #93ddc2;
+  --secondary-color: #26697b;
+  --accent-color: #4193c4; /* Verde */ /* Morado para el color de acento */
 }
 
 body {
