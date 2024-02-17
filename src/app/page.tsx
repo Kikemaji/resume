@@ -66,15 +66,15 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <section className="flex flex-col">
+        <section className="flex flex-col md:flex-row">
           <div>
-            <h2 className="text-xl font-bold">Aprendo y me adapto rápido</h2>
-            <ul>
-              <li>Acostumbrado a participar en varios proyectos</li>
-              <li>
-                He sido autónomo = aprendía lo que fuera necesario
-                constantemente
-              </li>
+            <h2 className="text-center text-xl font-bold">
+              Aprendo y me adapto rápido
+            </h2>
+            <ul className="list-disc px-4">
+              <li> RAZON 1</li>
+              <li>Razón 2</li>
+              <li>Razón 3</li>
             </ul>
           </div>
           <div>MAPA Madrid</div>
