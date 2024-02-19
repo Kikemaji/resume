@@ -1,4 +1,4 @@
-import { FaCode, FaHeart, FaCircleNodes } from 'react-icons/fa6';
+import { FaCode, FaHeart, FaCircleNodes, FaPlus } from 'react-icons/fa6';
 import { RiTeamFill } from 'react-icons/ri';
 import { GiCrystalGrowth } from 'react-icons/gi';
 
@@ -7,6 +7,16 @@ import Image from 'next/image';
 import MapChart from '@/components/maps/MapChart';
 
 export default function Home() {
+  const comienzoAprox = new Date(2022, 7, 12).getTime();
+  const ahora = new Date().getTime();
+  const diferenciaEnMilisegundos = ahora - comienzoAprox;
+  const anosTotales = Math.floor(
+    diferenciaEnMilisegundos / (365.25 * 24 * 60 * 60 * 1000)
+  );
+  const mesesRestantes = Math.floor(
+    (diferenciaEnMilisegundos % (365.25 * 24 * 60 * 60 * 1000)) /
+      (30.44 * 24 * 60 * 60 * 1000)
+  );
   return (
     <main className="flex min-h-screen flex-col overflow-y-scroll bg-background text-text">
       <Navbar />
@@ -158,6 +168,26 @@ export default function Home() {
               <p>Reconozco mis errores</p>
               <p>Busco respuestas sin miedo a preguntar</p>
             </div>
+          </div>
+        </section>
+        <section className="flex flex-col gap-2">
+          <h2 className="text-center text-xl font-bold">
+            {anosTotales} {anosTotales > 1 ? 'años' : 'año'} y {mesesRestantes}{' '}
+            {mesesRestantes === 1 ? 'mes' : 'meses'} de experiencia
+          </h2>
+          <div className="flex items-center gap-4 rounded-md bg-white p-3 text-black">
+            <FaPlus className="h-5 w-5" />
+            <span className="font-semibold">
+              Software de las elecciones - 1 año y 2 meses
+            </span>
+          </div>
+          <div className="flex items-center gap-4 rounded-md bg-white p-3 text-black">
+            <FaPlus className="h-5 w-5" />
+            <span className="font-semibold">Fullstack becario - 4 meses</span>
+          </div>
+          <div className="bg-border flex items-center gap-4 rounded-md p-3 text-black">
+            <FaPlus className="h-5 w-5" />
+            <span className="font-semibold">Enseñando a estudiar</span>
           </div>
         </section>
       </div>
