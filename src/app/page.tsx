@@ -1,8 +1,8 @@
-import { FaCode } from 'react-icons/fa6';
-import { FaHeart } from 'react-icons/fa6';
+import { FaCode, FaHeart } from 'react-icons/fa6';
 
 import { Navbar } from '@/components/ui/Navbar';
 import Image from 'next/image';
+import MapChart from '@/components/maps/MapChart';
 
 export default function Home() {
   return (
@@ -44,7 +44,7 @@ export default function Home() {
                 alt="ESLint icon"
                 src="/eslint.svg"
                 width={24}
-                height={24}
+                height={21}
               />
               <span className="text-xs">ESLint</span>
             </div>
@@ -66,7 +66,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <section className="flex flex-col md:flex-row">
+        <section className="flex flex-col gap-4 md:flex-row">
           <div>
             <h2 className="text-center text-xl font-bold">
               Aprendo y me adapto rápido
@@ -77,20 +77,10 @@ export default function Home() {
               <li>Razón 3</li>
             </ul>
           </div>
-          <div>MAPA Madrid</div>
-        </section>
-        <section className="my-4">
-          <p>Web creada con: </p>
-          <div className="flex">
-            <div>Next.js</div>
-            <div>React.js</div>
-            <div>Tailwind.js</div>
-            <div>Typescript..</div>
+          <div className="">
+            <p>Modo de trabajo según localización:</p>
+            <MapChart />
           </div>
-        </section>
-        <section>
-          <h2 className="text-xl font-bold">Soft skills</h2>
-          <div>Cuadraditos hablando de 4 cosas diferentes</div>
         </section>
       </div>
     </main>
