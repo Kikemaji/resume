@@ -1,4 +1,6 @@
-import { FaCode, FaHeart } from 'react-icons/fa6';
+import { FaCode, FaHeart, FaCircleNodes } from 'react-icons/fa6';
+import { RiTeamFill } from 'react-icons/ri';
+import { GiCrystalGrowth } from 'react-icons/gi';
 
 import { Navbar } from '@/components/ui/Navbar';
 import Image from 'next/image';
@@ -126,6 +128,35 @@ export default function Home() {
                 />
                 <span>Tailwind CSS</span>
               </div>
+            </div>
+          </div>
+        </section>
+        <section className="flex flex-col gap-2">
+          <h2 className="text-center text-xl font-bold">
+            ¿Por qué elegirme a mí?
+          </h2>
+          <div className="border-border flex w-fit items-center rounded-lg border px-6 py-2 md:flex-col">
+            <GiCrystalGrowth className="h-12 w-12 text-white" />
+            <div className="px-5">
+              <h4 className="text-lg font-semibold">Growth Mindset</h4>
+              <p>Me encanta lo difícil </p>
+              <p>---- --- --- </p>
+            </div>
+          </div>
+          <div className="border-border ml-auto flex w-fit items-center rounded-lg border px-6 py-2 md:flex-col">
+            <RiTeamFill className="h-12 w-12 text-white" />
+            <div className="px-5">
+              <h4 className="text-lg font-semibold">Team Player</h4>
+              <p>Empático</p>
+              <p>Sociable</p>
+            </div>
+          </div>
+          <div className="border-border ml-auto flex w-fit items-center rounded-lg border px-6 py-2 md:flex-col">
+            <FaCircleNodes className="h-12 w-12 text-white" />
+            <div className="px-5">
+              <h4 className="text-lg font-semibold">Autocrítico</h4>
+              <p>Reconozco mis errores</p>
+              <p>Busco respuestas sin miedo a preguntar</p>
             </div>
           </div>
         </section>
