@@ -8,6 +8,7 @@
   --primary-color: #93ddc2;
   --secondary-color: #26697b;
   --accent-color: #4193c4; /* Verde */ /* Morado para el color de acento */
+  --border-color: #7a828e;
 }
 
 body {
