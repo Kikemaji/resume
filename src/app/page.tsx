@@ -84,9 +84,9 @@ export default function Home() {
               Aprendo y me adapto rápido
             </h2>
             <ul className="list-disc px-4">
-              <li> RAZON 1</li>
-              <li>Razón 2</li>
-              <li>Razón 3</li>
+              <li>Me encanta programar</li>
+              <li>Frase sobre fácil de motivar</li>
+              <li>Con iniciativa y habilidad para resolver problemas</li>
             </ul>
           </div>
           <div className="">
@@ -145,7 +145,7 @@ export default function Home() {
           <h2 className="text-center text-xl font-bold">
             ¿Por qué elegirme a mí?
           </h2>
-          <div className="border-border flex w-fit items-center rounded-lg border px-6 py-2 md:flex-col">
+          <div className="flex w-fit items-center rounded-lg border border-border px-6 py-2 md:flex-col">
             <GiCrystalGrowth className="h-12 w-12 text-white" />
             <div className="px-5">
               <h4 className="text-lg font-semibold">Growth Mindset</h4>
@@ -153,7 +153,7 @@ export default function Home() {
               <p>---- --- --- </p>
             </div>
           </div>
-          <div className="border-border ml-auto flex w-fit items-center rounded-lg border px-6 py-2 md:flex-col">
+          <div className="ml-auto flex w-fit items-center rounded-lg border border-border px-6 py-2 md:flex-col">
             <RiTeamFill className="h-12 w-12 text-white" />
             <div className="px-5">
               <h4 className="text-lg font-semibold">Team Player</h4>
@@ -161,7 +161,7 @@ export default function Home() {
               <p>Sociable</p>
             </div>
           </div>
-          <div className="border-border ml-auto flex w-fit items-center rounded-lg border px-6 py-2 md:flex-col">
+          <div className="ml-auto flex w-fit items-center rounded-lg border border-border px-6 py-2 md:flex-col">
             <FaCircleNodes className="h-12 w-12 text-white" />
             <div className="px-5">
               <h4 className="text-lg font-semibold">Autocrítico</h4>
@@ -185,7 +185,7 @@ export default function Home() {
             <FaPlus className="h-5 w-5" />
             <span className="font-semibold">Fullstack becario - 4 meses</span>
           </div>
-          <div className="bg-border flex items-center gap-4 rounded-md p-3 text-black">
+          <div className="flex items-center gap-4 rounded-md bg-border p-3 text-black">
             <FaPlus className="h-5 w-5" />
             <span className="font-semibold">Enseñando a estudiar</span>
           </div>
