@@ -273,6 +273,50 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <section className="my-4 grid gap-4 md:grid-cols-3">
+          <h2 className="text-center text-xl font-bold">¿Con ganas de más?</h2>
+          <div className="grid place-items-center rounded-lg bg-secondary p-6">
+            <h3 className="mb-4 text-lg font-bold">
+              Doble Grado Universitario
+            </h3>
+            <div className="flex gap-2">
+              <Image
+                className="m-auto w-12"
+                alt="URJC logo"
+                src="/URJC.svg"
+                width={24}
+                height={24}
+              />
+              <div>
+                <p>Ingeniería Informática</p>
+                <p>Ingeniería del Software</p>
+              </div>
+            </div>
+          </div>
+          <div className="grid place-items-center rounded-lg bg-secondary p-6">
+            <h3 className="mb-4 text-lg font-bold">4 Idiomas</h3>
+            <ul>
+              <li>
+                <span className="font-bold"> C1 Inglés</span> - Mayor nivel
+                demostrable.
+              </li>
+              <li>
+                <span className="font-bold">C1 Francés</span> - Honestamente, un
+                poco oxidado.
+              </li>
+              <li>
+                <span className="font-bold">Español</span> nativo
+              </li>
+              <li>
+                2 años de clases de <span className="font-bold">japonés</span>
+              </li>
+            </ul>
+          </div>
+          <div className="rounded-lg border border-border p-2">
+            <p>Efecto chulo</p>
+            <span>Hacer algo (esconder en movil)</span>
+          </div>
+        </section>
       </div>
     </main>
   );
