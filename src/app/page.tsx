@@ -1,10 +1,18 @@
-import { FaCode, FaHeart, FaCircleNodes, FaPlus } from 'react-icons/fa6';
+import {
+  FaCode,
+  FaHeart,
+  FaCircleNodes,
+  FaPlus,
+  FaMicrophone,
+  FaCamera,
+} from 'react-icons/fa6';
 import { RiTeamFill } from 'react-icons/ri';
 import { GiCrystalGrowth } from 'react-icons/gi';
 
 import { Navbar } from '@/components/ui/Navbar';
 import Image from 'next/image';
 import MapChart from '@/components/maps/MapChart';
+import { FaUserCircle } from 'react-icons/fa';
 
 export default function Home() {
   const comienzoAprox = new Date(2022, 7, 12).getTime();
@@ -188,6 +196,63 @@ export default function Home() {
           <div className="flex items-center gap-4 rounded-md bg-border p-3 text-black">
             <FaPlus className="h-5 w-5" />
             <span className="font-semibold">Enseñando a estudiar</span>
+          </div>
+        </section>
+        <section className="my-4 flex flex-col gap-4">
+          <h2 className="text-center text-xl font-bold">
+            Habla conmigo directamente
+          </h2>
+          <div className=" rounded-lg border-2 border-border">
+            <div className="w-full rounded-t-lg border-b-2 border-border px-3 py-1 text-center font-bold text-white">
+              Contacto RRHH
+            </div>
+            <div className="flex flex-col gap-3 p-4 ">
+              <div className="flex items-end gap-1">
+                <FaUserCircle className="mb-1 h-5 w-5" />
+                <p className="mr-auto w-fit max-w-[70%] rounded-2xl bg-[#343434] p-2 ">
+                  No sé si es suficiente :/
+                </p>
+              </div>
+
+              <p className="ml-auto w-fit max-w-[70%] rounded-2xl bg-[#00D5CD] p-2">
+                Me encanta aprender nuevas tecnologías! Hace el trabajo más
+                interesante
+              </p>
+              <p className="ml-auto w-fit max-w-[70%] rounded-2xl bg-[#00D5CD] p-2">
+                Por ejemplo, Node, AWS, testing, Vue...
+              </p>
+              <div className="flex items-end gap-1">
+                <FaUserCircle className="mb-1 h-5 w-5" />
+                <p className="mr-auto w-fit max-w-[70%] rounded-2xl bg-[#343434] p-2 ">
+                  También necesitamos que sepas resolver los problemas por tu
+                  cuenta
+                </p>
+              </div>
+              <p className="ml-auto w-fit max-w-[70%] rounded-2xl bg-[#00D5CD] p-2">
+                Hecho! Me entretiene bastante cuando tengo un problema complejo
+                que resolver
+              </p>
+              <div className="flex items-end gap-1">
+                <FaUserCircle className="mb-1 h-5 w-5" />
+                <p className="mr-auto w-fit max-w-[70%] rounded-2xl bg-[#343434] p-2 ">
+                  Me gusta tu actitud, mándame tu CV y agendamos la primera
+                  entrevista
+                </p>
+              </div>
+              <p className="ml-auto w-fit max-w-[70%] rounded-2xl bg-[#00D5CD] p-2 text-end">
+                Genial :)
+              </p>
+              <p className="ml-auto w-fit max-w-[70%] rounded-2xl bg-[#00D5CD] p-2 text-end">
+                CV Enrique adjunto
+              </p>
+              <div className="flex gap-4">
+                <div className="flex-1 rounded-2xl bg-[#343434] p-2 text-border">
+                  Escribe tu mensaje
+                </div>
+                <FaMicrophone className="h-auto text-white" />
+                <FaCamera className="h-auto text-white" />
+              </div>
+            </div>
           </div>
         </section>
       </div>
