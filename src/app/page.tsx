@@ -14,6 +14,7 @@ import Image from 'next/image';
 import MapChart from '@/components/maps/MapChart';
 import { FaUserCircle } from 'react-icons/fa';
 import Dialog from '@/components/ui/Dialog/Dialog';
+import Accordion from '@/components/ui/Accordion/Accordion';
 
 export default function Home() {
   const comienzoAprox = new Date(2022, 7, 12).getTime();
@@ -316,6 +317,12 @@ export default function Home() {
             <p>Efecto chulo</p>
             <span>Hacer algo (esconder en movil)</span>
           </div>
+        </section>
+        <section className="my-4 flex flex-col gap-4">
+          <h2 className="text-center text-xl font-bold">
+            Preguntas frecuentes
+          </h2>
+          <Accordion />
         </section>
       </div>
     </main>
