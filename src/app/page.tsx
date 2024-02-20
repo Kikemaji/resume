@@ -160,15 +160,15 @@ export default function Home() {
             <div className="px-5">
               <h4 className="text-lg font-semibold">Growth Mindset</h4>
               <p>Me encanta lo difícil </p>
-              <p>---- --- --- </p>
+              <p>Soy super curioso </p>
             </div>
           </div>
           <div className="ml-auto flex w-fit items-center rounded-lg border border-border px-6 py-2 md:flex-col">
             <RiTeamFill className="h-12 w-12 text-white" />
             <div className="px-5">
               <h4 className="text-lg font-semibold">Team Player</h4>
-              <p>Empático</p>
-              <p>Sociable</p>
+              <p>Empático, sociable y optimista.</p>
+              <p>Siempre con una sonrisa.</p>
             </div>
           </div>
           <div className="ml-auto flex w-fit items-center rounded-lg border border-border px-6 py-2 md:flex-col">
