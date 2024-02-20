@@ -28,22 +28,22 @@ export default function Home() {
       (30.44 * 24 * 60 * 60 * 1000)
   );
   return (
-    <main className="flex min-h-screen flex-col overflow-y-scroll bg-background text-text">
+    <main className="flex min-h-screen flex-col bg-background text-text ">
       <Navbar />
-      <div className="p-4">
-        <section className="flex flex-col-reverse gap-5  md:flex-row">
-          <div className="flex flex-col gap-3">
-            <h1 className="text-center text-2xl font-bold">
+      <div className=" mx-auto w-full p-4 md:px-8 lg:max-w-[80vw] lg:px-4 2xl:max-w-7xl">
+        <section className="flex flex-col-reverse  gap-5 md:flex-row ">
+          <div className="flex flex-col items-center justify-center gap-3">
+            <h1 className="break-words text-center text-2xl font-bold md:text-4xl">
               El ingeniero frontend que necesitas
             </h1>
-            <h3 className="text-center text-lg">
+            <h3 className="text-center text-lg md:text-xl">
               Con código para que no tengas que mirar tantos CVs
             </h3>
-            <button className="flex items-center justify-center gap-3 rounded-md bg-secondary px-3 py-1">
+            <button className="flex items-center justify-center gap-3 rounded-md bg-secondary px-3 py-1 md:w-4/5">
               <FaCode />
               <span>Ver código</span>
             </button>
-            <button className="flex items-center justify-center gap-1 rounded-md bg-primary px-3 py-1 text-black">
+            <button className="flex items-center justify-center gap-1 rounded-md bg-primary px-3 py-1 text-black md:w-4/5">
               <span>Contacto</span>
             </button>
           </div>
@@ -51,6 +51,7 @@ export default function Home() {
             <Image
               alt="Foto grande Enrique"
               src="/profile_photo_lg_circle.png"
+              className="md:w-[400px]"
               width={300}
               height={300}
               priority

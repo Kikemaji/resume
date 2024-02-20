@@ -10,17 +10,19 @@ export const Navbar = () => {
   );
 
   return (
-    <nav className="sticky top-0 flex items-center gap-4 border-b border-white px-4 py-2">
-      <Image
-        alt="Foto pequeña Enrique"
-        src="/profile_photo_sm_circle.png"
-        width={24}
-        height={24}
-      />
-      <div className="flex-1 text-sm">
-        Enrique Márquez Jiménez - {edadCalculada} años
+    <nav className="sticky top-0 z-50 w-full border-b border-white bg-black ">
+      <div className="mx-auto flex items-center gap-4 px-4 py-2  2xl:max-w-7xl">
+        <Image
+          alt="Foto pequeña Enrique"
+          src="/profile_photo_sm_circle.png"
+          width={24}
+          height={24}
+        />
+        <div className="flex-1 text-sm">
+          Enrique Márquez Jiménez - {edadCalculada} años
+        </div>
+        <CiGlobe className="h-5 w-5" />
       </div>
-      <CiGlobe className="h-5 w-5" />
     </nav>
   );
 };
