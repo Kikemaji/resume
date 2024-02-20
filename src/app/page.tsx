@@ -13,6 +13,7 @@ import { Navbar } from '@/components/ui/Navbar';
 import Image from 'next/image';
 import MapChart from '@/components/maps/MapChart';
 import { FaUserCircle } from 'react-icons/fa';
+import Dialog from '@/components/ui/Dialog/Dialog';
 
 export default function Home() {
   const comienzoAprox = new Date(2022, 7, 12).getTime();
@@ -178,25 +179,42 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="flex flex-col gap-2">
+        <section className="my-4 flex flex-col gap-2">
           <h2 className="text-center text-xl font-bold">
             {anosTotales} {anosTotales > 1 ? 'años' : 'año'} y {mesesRestantes}{' '}
             {mesesRestantes === 1 ? 'mes' : 'meses'} de experiencia
           </h2>
-          <div className="flex items-center gap-4 rounded-md bg-white p-3 text-black">
-            <FaPlus className="h-5 w-5" />
-            <span className="font-semibold">
-              Software de las elecciones - 1 año y 2 meses
-            </span>
-          </div>
-          <div className="flex items-center gap-4 rounded-md bg-white p-3 text-black">
-            <FaPlus className="h-5 w-5" />
-            <span className="font-semibold">Fullstack becario - 4 meses</span>
-          </div>
-          <div className="flex items-center gap-4 rounded-md bg-border p-3 text-black">
-            <FaPlus className="h-5 w-5" />
-            <span className="font-semibold">Enseñando a estudiar</span>
-          </div>
+          <Dialog
+            triggerIcon={<FaPlus className="h-5 w-5" />}
+            triggerText="Software de las elecciones - 1 año y 2 meses"
+            title="Ingeniero frontend"
+            description="Desarrollando el software de las elecciones Españolas y Latinoamericanas"
+          >
+            <select className="">
+              <option>Lenguajes/Frameworks</option>
+              <option className="max-w-36 break-words">
+                Proyecto destacable 1 - Elecciones argentinas
+              </option>
+              <option className="max-w-36 break-words">
+                Proyecto destacable 2 - Elecciones autonómicas españolas
+              </option>
+            </select>
+          </Dialog>
+          <Dialog
+            triggerIcon={<FaPlus className="h-5 w-5" />}
+            triggerText="Fullstack becario - 4 meses"
+            title="Fullstack developer"
+          >
+            Contenido
+          </Dialog>
+          <Dialog
+            triggerIcon={<FaPlus className="h-5 w-5" />}
+            triggerText="Enseñando a estudiar - Autónomo"
+            triggerClassName="!bg-gray-300"
+            title="Autónomo"
+          >
+            Contenido
+          </Dialog>
         </section>
         <section className="my-4 flex flex-col gap-4">
           <h2 className="text-center text-xl font-bold">
