@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@radix-ui/react-accordion": "^1.1.2",
+    "@radix-ui/react-dialog": "^1.0.5",
+    "clsx": "^2.1.0",
     "echarts": "^5.4.3",
     "echarts-for-react": "^3.0.2",
     "next": "14.1.0",
