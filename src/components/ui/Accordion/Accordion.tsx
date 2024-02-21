@@ -7,8 +7,7 @@ const Accordion = ({}) => {
   const content = [
     {
       question: '¿Cuál es tu disponibilidad? ',
-      answer:
-        'Preaviso de 15 días. Si quieres saber por qué me quiero ir de mi trabajo actual, lo podemos hablar en la entrevista ;)',
+      answer: 'Preaviso de 15 días.',
     },
     {
       question: '¿Estás autorizado para trabajar en la Unión Europea?',
@@ -22,7 +21,7 @@ const Accordion = ({}) => {
 
     {
       question: '¿Qué otros lenguajes conoces?',
-      answer: 'Que sean relevantes Java y Python',
+      answer: 'Que sean relevantes, Java y Python',
     },
     {
       question: '¿Cuándo se actualizó esta página por última vez?',
@@ -54,7 +53,8 @@ const Accordion = ({}) => {
 
 export default Accordion;
 
-interface AccordionTriggerProps {
+interface AccordionTriggerProps
+  extends React.HTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
   className?: string;
 }
@@ -77,7 +77,7 @@ const AccordionTrigger = React.forwardRef<
 
 AccordionTrigger.displayName = 'AccordionTrigger';
 
-interface AccordionContentProps {
+interface AccordionContentProps extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactNode;
   className?: string;
 }
