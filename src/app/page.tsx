@@ -2,11 +2,10 @@ import {
   FaCode,
   FaHeart,
   FaCircleNodes,
-  FaPlus,
   FaMicrophone,
   FaCamera,
-  FaCheck,
   FaArrowDown,
+  FaCheck,
 } from 'react-icons/fa6';
 import { RiTeamFill } from 'react-icons/ri';
 import { GiCrystalGrowth } from 'react-icons/gi';
@@ -15,22 +14,11 @@ import { Navbar } from '@/components/ui/Navbar';
 import Image from 'next/image';
 import MapChart from '@/components/maps/MapChart';
 import { FaUserCircle } from 'react-icons/fa';
-import Dialog from '@/components/ui/Dialog/Dialog';
 import Accordion from '@/components/ui/Accordion/Accordion';
 import clsx from 'clsx';
+import { ExperienceSection } from '@/components/sections/ExperienceSection';
 
 export default function Home() {
-  const comienzoAprox = new Date(2022, 7, 12).getTime();
-  const ahora = new Date().getTime();
-  const diferenciaEnMilisegundos = ahora - comienzoAprox;
-  const anosTotales = Math.floor(
-    diferenciaEnMilisegundos / (365.25 * 24 * 60 * 60 * 1000)
-  );
-  const mesesRestantes = Math.floor(
-    (diferenciaEnMilisegundos % (365.25 * 24 * 60 * 60 * 1000)) /
-      (30.44 * 24 * 60 * 60 * 1000)
-  );
-
   const trabajoIdealContent = [
     'Didáctico',
     'Entretenido',
@@ -206,43 +194,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="my-4 flex flex-col gap-2">
-          <h2 className="text-center text-xl font-bold">
-            {anosTotales} {anosTotales > 1 ? 'años' : 'año'} y {mesesRestantes}{' '}
-            {mesesRestantes === 1 ? 'mes' : 'meses'} de experiencia
-          </h2>
-          <Dialog
-            triggerIcon={<FaPlus className="h-5 w-5" />}
-            triggerText="Software de las elecciones - 1 año y 2 meses"
-            title="Ingeniero frontend"
-            description="Desarrollando el software de las elecciones Españolas y Latinoamericanas"
-          >
-            <select className="">
-              <option>Lenguajes/Frameworks</option>
-              <option className="max-w-36 break-words">
-                Proyecto destacable 1 - Elecciones argentinas
-              </option>
-              <option className="max-w-36 break-words">
-                Proyecto destacable 2 - Elecciones autonómicas españolas
-              </option>
-            </select>
-          </Dialog>
-          <Dialog
-            triggerIcon={<FaPlus className="h-5 w-5" />}
-            triggerText="Fullstack becario - 4 meses"
-            title="Fullstack developer"
-          >
-            Contenido
-          </Dialog>
-          <Dialog
-            triggerIcon={<FaPlus className="h-5 w-5" />}
-            triggerText="Enseñando a estudiar - Autónomo"
-            triggerClassName="!bg-gray-300"
-            title="Autónomo"
-          >
-            Contenido
-          </Dialog>
-        </section>
+        <ExperienceSection />
         {/* CTA */}
         <section className="my-8 flex flex-col gap-4">
           <h2 className="text-center text-xl font-bold">
