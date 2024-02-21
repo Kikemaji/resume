@@ -50,7 +50,11 @@ export const ExperienceSection = () => {
         title="Ingeniero frontend - Minsait"
         description="Desarrollando el software de las elecciones Españolas y Latinoamericanas"
       >
-        <Select handleSelectValue={handleSelectValue} content={selectContent} />
+        <Select
+          placeholder="¿Qué quieres saber?"
+          handleSelectValue={handleSelectValue}
+          content={selectContent}
+        />
         <div className="max-h-[50dvh] min-h-[30dvh] overflow-y-scroll">
           {value === '0' && <Skills />}
           {value === '1' && <Project descriptions={ArgPoints} />}
