@@ -31,3 +31,20 @@ body {
 .animate-heart-pulse {
   animation: heart-pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--secondary-color);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--accent-color);
+}
