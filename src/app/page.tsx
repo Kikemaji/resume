@@ -83,7 +83,7 @@ export default function Home() {
             />
           </div>
         </section>
-        <div className="my-4 ">
+        <div className="my-8 ">
           <p className="opacity-50">Calidad asegurada por:</p>
           <div className="mt-1 flex items-end gap-2">
             <div className="flex flex-col gap-1">
@@ -243,7 +243,8 @@ export default function Home() {
             Contenido
           </Dialog>
         </section>
-        <section className="my-4 flex flex-col gap-4">
+        {/* CTA */}
+        <section className="my-8 flex flex-col gap-4">
           <h2 className="text-center text-xl font-bold">
             Habla conmigo directamente
           </h2>
@@ -285,7 +286,7 @@ export default function Home() {
                 </p>
               </div>
               <p className="ml-auto w-fit max-w-[70%] rounded-2xl bg-[#00D5CD] p-2 text-end">
-                Genial :)
+                Genial :&#41;
               </p>
               <p className="ml-auto w-fit max-w-[70%] rounded-2xl bg-[#00D5CD] p-2 text-end">
                 CV Enrique adjunto
@@ -300,7 +301,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="my-4 grid gap-4 md:grid-cols-3">
+        <section className="my-8 grid gap-4 md:grid-cols-3">
           <h2 className="text-center text-xl font-bold">¿Con ganas de más?</h2>
           <div className="grid place-items-center rounded-lg bg-secondary p-6">
             <h3 className="mb-4 text-lg font-bold">
@@ -376,7 +377,7 @@ export default function Home() {
             Háblame :&#41;
           </button>
         </section>
-        <section className="my-4 flex flex-col gap-4">
+        <section className="my-8 flex flex-col gap-4">
           <h2 className="text-center text-xl font-bold">
             Preguntas frecuentes
           </h2>
