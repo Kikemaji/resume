@@ -16,7 +16,7 @@ import MapChart from '@/components/maps/MapChart';
 import { FaUserCircle } from 'react-icons/fa';
 import Accordion from '@/components/ui/Accordion/Accordion';
 import clsx from 'clsx';
-import { ExperienceSection } from '@/components/sections/ExperienceSection';
+import { ExperienceSection } from '@/components/sections/experience/ExperienceSection';
 
 export default function Home() {
   const trabajoIdealContent = [
@@ -212,11 +212,11 @@ export default function Home() {
                 </p>
               </div>
 
-              <p className="ml-auto w-fit max-w-[70%] rounded-2xl bg-[#00D5CD] p-2">
+              <p className="ml-auto w-fit max-w-[70%] rounded-2xl bg-[#00D5CD] p-2 text-black">
                 Me encanta aprender nuevas tecnologías! Hace el trabajo más
                 interesante
               </p>
-              <p className="ml-auto w-fit max-w-[70%] rounded-2xl bg-[#00D5CD] p-2">
+              <p className="ml-auto w-fit max-w-[70%] rounded-2xl bg-[#00D5CD] p-2 text-black">
                 Por ejemplo, Node, AWS, testing, Vue...
               </p>
               <div className="flex items-end gap-1">
@@ -226,7 +226,7 @@ export default function Home() {
                   cuenta
                 </p>
               </div>
-              <p className="ml-auto w-fit max-w-[70%] rounded-2xl bg-[#00D5CD] p-2">
+              <p className="ml-auto w-fit max-w-[70%] rounded-2xl bg-[#00D5CD] p-2 text-black">
                 Hecho! Me entretiene bastante cuando tengo un problema complejo
                 que resolver
               </p>
@@ -237,10 +237,10 @@ export default function Home() {
                   entrevista
                 </p>
               </div>
-              <p className="ml-auto w-fit max-w-[70%] rounded-2xl bg-[#00D5CD] p-2 text-end">
+              <p className="ml-auto w-fit max-w-[70%] rounded-2xl bg-[#00D5CD] p-2 text-end text-black">
                 Genial :&#41;
               </p>
-              <p className="ml-auto w-fit max-w-[70%] rounded-2xl bg-[#00D5CD] p-2 text-end">
+              <p className="ml-auto w-fit max-w-[70%] rounded-2xl bg-[#00D5CD] p-2 text-end text-black">
                 CV Enrique adjunto
               </p>
               <div className="flex gap-4">

@@ -4,6 +4,7 @@ import * as DialogElem from '@radix-ui/react-dialog';
 import { RxCross2 } from 'react-icons/rx';
 import './styles.css';
 import clsx from 'clsx';
+import { addFontBoldJSX } from '@/utils/addFontBold';
 
 interface DialogProps {
   triggerIcon?: React.ReactNode;
@@ -12,6 +13,7 @@ interface DialogProps {
   title: string;
   description?: string;
   children: React.ReactNode;
+  handleClose?: () => void;
 }
 
 const Dialog = ({
@@ -21,9 +23,16 @@ const Dialog = ({
   title,
   description,
   children,
+  handleClose,
 }: DialogProps) => {
+  const handleCloseInside = (open: boolean) => {
+    if (!open && handleClose) {
+      handleClose();
+    }
+  };
+
   return (
-    <DialogElem.Root>
+    <DialogElem.Root onOpenChange={handleCloseInside}>
       <DialogElem.Trigger asChild>
         <button
           className={clsx(
@@ -43,7 +52,7 @@ const Dialog = ({
           </DialogElem.Title>
           {description && (
             <DialogElem.Description className="my-2">
-              {description}
+              {addFontBoldJSX(description)}
             </DialogElem.Description>
           )}
           {children}

@@ -16,7 +16,7 @@ const Select = ({
   placeholder: string;
 }) => (
   <SelectElem.Root onValueChange={handleSelectValue}>
-    <SelectElem.Trigger className="inline-flex h-9 w-full max-w-64 items-center justify-between gap-1.5 rounded-md px-4 text-sm text-black outline outline-1 outline-border hover:bg-[#f7f7f7] data-[placeholder]:text-border">
+    <SelectElem.Trigger className="inline-flex h-9 w-full max-w-64 items-center justify-between gap-1.5 rounded-md px-4 py-1 text-sm text-black outline outline-1 outline-border hover:bg-[#f7f7f7] data-[placeholder]:text-border">
       <SelectElem.Value placeholder={placeholder} />
       <SelectElem.Icon className="text-border">
         <FaChevronDown />
