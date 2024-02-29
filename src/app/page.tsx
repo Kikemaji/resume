@@ -17,6 +17,7 @@ import { FaUserCircle } from 'react-icons/fa';
 import Accordion from '@/components/ui/Accordion/Accordion';
 import clsx from 'clsx';
 import { ExperienceSection } from '@/components/sections/experience/ExperienceSection';
+import SpinningText from '@/components/ui/SpinningContent/SpinningContent';
 
 export default function Home() {
   const trabajoIdealContent = [
@@ -44,7 +45,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col bg-background text-text ">
       <Navbar />
       <div className=" mx-auto w-full p-4 md:px-8 lg:max-w-[80vw] lg:px-4 2xl:max-w-7xl">
-        <section className="flex flex-col-reverse  gap-5 md:flex-row ">
+        <section className="flex flex-col-reverse  gap-5 md:mt-12 md:flex-row md:justify-around">
           <div className="flex flex-col items-center justify-center gap-3">
             <h1 className="break-words text-center text-2xl font-bold md:text-4xl">
               El ingeniero frontend que necesitas
@@ -61,14 +62,16 @@ export default function Home() {
             </button>
           </div>
           <div className="relative flex justify-center">
-            <Image
-              alt="Foto grande Enrique"
-              src="/profile_photo_lg_circle.png"
-              className="md:w-[400px]"
-              width={300}
-              height={300}
-              priority
-            />
+            <SpinningText>
+              <Image
+                alt="Foto grande Enrique"
+                src="/profile_photo_lg_circle.png"
+                className="customShadow rounded-full md:w-[310px]"
+                width={210}
+                height={210}
+                priority
+              />
+            </SpinningText>
           </div>
         </section>
         <div className="my-8 ">
@@ -109,7 +112,7 @@ export default function Home() {
             </h2>
             <ul className="list-disc px-4">
               <li>Me encanta programar</li>
-              <li>Frase sobre fácil de motivar</li>
+              <li>Independiente y me motivo con facilidad. </li>
               <li>Con iniciativa y habilidad para resolver problemas</li>
             </ul>
           </div>
