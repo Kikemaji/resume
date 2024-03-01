@@ -1,5 +1,4 @@
 import {
-  FaCode,
   FaHeart,
   FaCircleNodes,
   FaMicrophone,
@@ -17,7 +16,7 @@ import { FaUserCircle } from 'react-icons/fa';
 import Accordion from '@/components/ui/Accordion/Accordion';
 import clsx from 'clsx';
 import { ExperienceSection } from '@/components/sections/experience/ExperienceSection';
-import SpinningText from '@/components/ui/SpinningContent/SpinningContent';
+import HeroSection from '@/components/sections/hero/HeroSection';
 
 export default function Home() {
   const trabajoIdealContent = [
@@ -45,35 +44,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col bg-background text-text ">
       <Navbar />
       <div className=" mx-auto w-full p-4 md:px-8 lg:max-w-[80vw] lg:px-4 2xl:max-w-7xl">
-        <section className="flex flex-col-reverse  gap-5 md:mt-12 md:flex-row md:justify-around">
-          <div className="flex flex-col items-center justify-center gap-3">
-            <h1 className="break-words text-center text-2xl font-bold md:text-4xl">
-              El ingeniero frontend que necesitas
-            </h1>
-            <h3 className="text-center text-lg md:text-xl">
-              Con código para que no tengas que mirar tantos CVs
-            </h3>
-            <button className="flex items-center justify-center gap-3 rounded-md bg-secondary px-3 py-1 md:w-4/5">
-              <FaCode />
-              <span>Ver código</span>
-            </button>
-            <button className="flex items-center justify-center gap-1 rounded-md bg-primary px-3 py-1 text-black md:w-4/5">
-              <span>Contacto</span>
-            </button>
-          </div>
-          <div className="relative flex justify-center">
-            <SpinningText>
-              <Image
-                alt="Foto grande Enrique"
-                src="/profile_photo_lg_circle.png"
-                className="customShadow rounded-full md:w-[310px]"
-                width={210}
-                height={210}
-                priority
-              />
-            </SpinningText>
-          </div>
-        </section>
+        <HeroSection />
         <div className="my-8 ">
           <p className="opacity-50">Calidad asegurada por:</p>
           <div className="mt-1 flex items-end gap-2">

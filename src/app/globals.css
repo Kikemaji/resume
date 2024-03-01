@@ -11,6 +11,15 @@
   --border-color: #7a828e;
 }
 
+html {
+  box-sizing: border-box !important;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit !important;
+}
+
 body {
   color: var(--text-color);
   background: var(--background-color);
