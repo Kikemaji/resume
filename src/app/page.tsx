@@ -17,6 +17,7 @@ import { ExperienceSection } from '@/components/sections/experience/ExperienceSe
 import HeroSection from '@/components/sections/hero/HeroSection';
 import QualitySection from '@/components/sections/quality/QualitySection';
 import MapSection from '@/components/sections/map/MapSection';
+import CreatedSection from '@/components/sections/created/CreatedSection';
 
 export default function Home() {
   const trabajoIdealContent = [
@@ -47,53 +48,7 @@ export default function Home() {
         <HeroSection />
         <QualitySection />
         <MapSection />
-        <section className="mb-4">
-          <h3 className="text-lg font-bold">Web creada con: </h3>
-          <div className="flex">
-            <div className="flex w-full items-end justify-around">
-              <div className="">
-                <Image
-                  className="mx-auto w-10 invert"
-                  alt="NextJS icon"
-                  src="/next.svg"
-                  width={24}
-                  height={24}
-                />
-                <span>Next.js</span>
-              </div>
-              <div className="">
-                <Image
-                  className="mx-auto w-10"
-                  alt="ReactJS icon"
-                  src="/react.svg"
-                  width={24}
-                  height={24}
-                />
-                <span>React.js</span>
-              </div>
-              <div className="">
-                <Image
-                  className="mx-auto w-10"
-                  alt="Typescript icon"
-                  src="/typescript.svg"
-                  width={24}
-                  height={24}
-                />
-                <span>Typescript</span>
-              </div>
-              <div className="">
-                <Image
-                  className="mx-auto w-10"
-                  alt="Tailwind CSS icon"
-                  src="/tailwind.svg"
-                  width={40}
-                  height={24}
-                />
-                <span>Tailwind CSS</span>
-              </div>
-            </div>
-          </div>
-        </section>
+        <CreatedSection />
         <section className="flex flex-col gap-2">
           <h2 className="text-center text-xl font-bold">
             ¿Por qué elegirme a mí?
