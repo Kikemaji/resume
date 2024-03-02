@@ -1,0 +1,7 @@
+.card {
+  @apply flex w-fit items-center gap-5 rounded-lg border border-border px-6 py-2 md:min-w-[335px] md:flex-col md:gap-0;
+}
+
+.icon {
+  @apply h-12 w-12 text-white;
+}

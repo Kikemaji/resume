@@ -1,12 +1,4 @@
-import {
-  FaCircleNodes,
-  FaMicrophone,
-  FaCamera,
-  FaArrowDown,
-  FaCheck,
-} from 'react-icons/fa6';
-import { RiTeamFill } from 'react-icons/ri';
-import { GiCrystalGrowth } from 'react-icons/gi';
+import { FaMicrophone, FaCamera, FaArrowDown, FaCheck } from 'react-icons/fa6';
 
 import { Navbar } from '@/components/ui/Navbar';
 import Image from 'next/image';
@@ -18,6 +10,7 @@ import HeroSection from '@/components/sections/hero/HeroSection';
 import QualitySection from '@/components/sections/quality/QualitySection';
 import MapSection from '@/components/sections/map/MapSection';
 import CreatedSection from '@/components/sections/created/CreatedSection';
+import WhyMeSection from '@/components/sections/whyMe/WhyMeSection';
 
 export default function Home() {
   const trabajoIdealContent = [
@@ -49,35 +42,7 @@ export default function Home() {
         <QualitySection />
         <MapSection />
         <CreatedSection />
-        <section className="flex flex-col gap-2">
-          <h2 className="text-center text-xl font-bold">
-            ¿Por qué elegirme a mí?
-          </h2>
-          <div className="flex w-fit items-center rounded-lg border border-border px-6 py-2 md:flex-col">
-            <GiCrystalGrowth className="h-12 w-12 text-white" />
-            <div className="px-5">
-              <h4 className="text-lg font-semibold">Growth Mindset</h4>
-              <p>Me encanta lo difícil </p>
-              <p>Soy super curioso </p>
-            </div>
-          </div>
-          <div className="ml-auto flex w-fit items-center rounded-lg border border-border px-6 py-2 md:flex-col">
-            <RiTeamFill className="h-12 w-12 text-white" />
-            <div className="px-5">
-              <h4 className="text-lg font-semibold">Team Player</h4>
-              <p>Empático, sociable y optimista.</p>
-              <p>Siempre con una sonrisa.</p>
-            </div>
-          </div>
-          <div className="ml-auto flex w-fit items-center rounded-lg border border-border px-6 py-2 md:flex-col">
-            <FaCircleNodes className="h-12 w-12 text-white" />
-            <div className="px-5">
-              <h4 className="text-lg font-semibold">Autocrítico</h4>
-              <p>Reconozco mis errores</p>
-              <p>Busco respuestas sin miedo a preguntar</p>
-            </div>
-          </div>
-        </section>
+        <WhyMeSection />
         <ExperienceSection />
         {/* CTA */}
         <section className="my-8 flex flex-col gap-4">
