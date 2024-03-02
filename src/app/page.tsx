@@ -10,13 +10,13 @@ import { GiCrystalGrowth } from 'react-icons/gi';
 
 import { Navbar } from '@/components/ui/Navbar';
 import Image from 'next/image';
-import MapChart from '@/components/maps/MapChart';
 import { FaUserCircle } from 'react-icons/fa';
 import Accordion from '@/components/ui/Accordion/Accordion';
 import clsx from 'clsx';
 import { ExperienceSection } from '@/components/sections/experience/ExperienceSection';
 import HeroSection from '@/components/sections/hero/HeroSection';
 import QualitySection from '@/components/sections/quality/QualitySection';
+import MapSection from '@/components/sections/map/MapSection';
 
 export default function Home() {
   const trabajoIdealContent = [
@@ -43,25 +43,10 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col bg-background text-text ">
       <Navbar />
-      <div className=" mx-auto w-full p-4 md:px-8 lg:max-w-[80vw] lg:px-4 2xl:max-w-7xl">
+      <div className=" mx-auto w-full px-4 py-4 md:px-16 lg:max-w-[80vw] lg:px-4 2xl:max-w-7xl">
         <HeroSection />
         <QualitySection />
-        <section className="flex flex-col gap-4 md:flex-row">
-          <div>
-            <h2 className="text-center text-xl font-bold">
-              Aprendo y me adapto rápido
-            </h2>
-            <ul className="list-disc px-4">
-              <li>Me encanta programar</li>
-              <li>Independiente y me motivo con facilidad. </li>
-              <li>Con iniciativa y habilidad para resolver problemas</li>
-            </ul>
-          </div>
-          <div className="">
-            <p>Modo de trabajo según localización:</p>
-            <MapChart />
-          </div>
-        </section>
+        <MapSection />
         <section className="mb-4">
           <h3 className="text-lg font-bold">Web creada con: </h3>
           <div className="flex">
