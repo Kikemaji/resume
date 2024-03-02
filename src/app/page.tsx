@@ -1,5 +1,4 @@
 import {
-  FaHeart,
   FaCircleNodes,
   FaMicrophone,
   FaCamera,
@@ -17,6 +16,7 @@ import Accordion from '@/components/ui/Accordion/Accordion';
 import clsx from 'clsx';
 import { ExperienceSection } from '@/components/sections/experience/ExperienceSection';
 import HeroSection from '@/components/sections/hero/HeroSection';
+import QualitySection from '@/components/sections/quality/QualitySection';
 
 export default function Home() {
   const trabajoIdealContent = [
@@ -45,37 +45,7 @@ export default function Home() {
       <Navbar />
       <div className=" mx-auto w-full p-4 md:px-8 lg:max-w-[80vw] lg:px-4 2xl:max-w-7xl">
         <HeroSection />
-        <div className="my-8 ">
-          <p className="opacity-50">Calidad asegurada por:</p>
-          <div className="mt-1 flex items-end gap-2">
-            <div className="flex flex-col gap-1">
-              <Image
-                className=""
-                alt="ESLint icon"
-                src="/eslint.svg"
-                width={24}
-                height={21}
-              />
-              <span className="text-xs">ESLint</span>
-            </div>
-            <div
-              className="
-            text-center text-xs"
-            >
-              <p>Principios</p>SOLID
-            </div>
-            {/* <div>¿Sonnar?</div> */}
-            <div className="text-xs">
-              <p>¿Por ti?</p>
-              <p className="flex items-center gap-2">
-                <a href="" className="underline">
-                  Dale amor al repo
-                </a>
-                <FaHeart className="animate-heart-pulse text-red-500" />
-              </p>
-            </div>
-          </div>
-        </div>
+        <QualitySection />
         <section className="flex flex-col gap-4 md:flex-row">
           <div>
             <h2 className="text-center text-xl font-bold">
