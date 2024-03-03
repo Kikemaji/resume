@@ -1,6 +1,8 @@
+import clsx from 'clsx';
 import Image from 'next/image';
 import React from 'react';
 import { FaHeart } from 'react-icons/fa6';
+import styles from './Quality.module.css';
 
 const QualitySection = () => {
   return (
@@ -32,7 +34,9 @@ const QualitySection = () => {
             <a href="" className="underline">
               Dale amor al repo
             </a>
-            <FaHeart className="animate-heart-pulse text-red-500" />
+            <FaHeart
+              className={clsx(styles.animateHeartPulse, 'text-red-500')}
+            />
           </p>
         </div>
       </div>

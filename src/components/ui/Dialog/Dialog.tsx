@@ -2,7 +2,7 @@
 import React from 'react';
 import * as DialogElem from '@radix-ui/react-dialog';
 import { RxCross2 } from 'react-icons/rx';
-import './styles.css';
+import styles from './Dialog.module.css';
 import clsx from 'clsx';
 import { addFontBoldJSX } from '@/utils/addFontBold';
 
@@ -45,8 +45,19 @@ const Dialog = ({
         </button>
       </DialogElem.Trigger>
       <DialogElem.Portal>
-        <DialogElem.Overlay className="animate-overlay-show fixed inset-0 bg-black opacity-30" />
-        <DialogElem.Content className="dialog-shadow animate-content-show fixed left-1/2 top-1/2 max-h-[85dvh] w-[90vw] max-w-xl -translate-x-1/2 -translate-y-1/2 transform rounded-lg bg-white p-6 text-black">
+        <DialogElem.Overlay
+          className={clsx(
+            styles.animateOverlayShow,
+            'fixed inset-0 bg-black opacity-30'
+          )}
+        />
+        <DialogElem.Content
+          className={clsx(
+            styles.dialogShadow,
+            styles.animateContentShow,
+            ' fixed left-1/2 top-1/2 max-h-[85dvh] w-[90vw] max-w-xl -translate-x-1/2 -translate-y-1/2 transform rounded-lg bg-white p-6 text-black'
+          )}
+        >
           <DialogElem.Title className="mx-auto border-b border-black p-1 text-center text-xl md:w-8/12">
             {title}
           </DialogElem.Title>

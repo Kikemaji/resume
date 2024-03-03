@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
-import './styles.css';
+import styles from './SpinningContent.module.css';
+import clsx from 'clsx';
 
 function SpinningText({ children }: { children: React.ReactNode }) {
   const icons: JSX.Element[] = [
@@ -74,7 +75,12 @@ function SpinningText({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="relative grid aspect-square h-[300px] place-items-center rounded-full md:h-[400px]">
-      <div className="animate-spin-icons absolute m-0 h-full w-full rounded-full">
+      <div
+        className={clsx(
+          styles.animateSpinIcons,
+          'absolute m-0 h-full w-full rounded-full'
+        )}
+      >
         {icons.map((icon, i) => (
           <span
             className="absolute left-1/2 top-0 origin-[0px_150px] md:origin-[0px_200px]"

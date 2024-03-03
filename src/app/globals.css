@@ -25,20 +25,20 @@ body {
   background: var(--background-color);
 }
 
+/* button {
+  all: unset;
+} */
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
 }
 
-@keyframes heart-pulse {
-  50% {
-    opacity: 0.5;
-    transform: scale(80%);
-  }
-}
-.animate-heart-pulse {
-  animation: heart-pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+.customShadow {
+  -webkit-box-shadow: 0px 0px 50px 20px rgba(255, 15, 155, 1);
+  -moz-box-shadow: 0px 0px 50px 20px rgba(255, 15, 155, 1);
+  box-shadow: 0px 0px 50px 20px rgba(255, 15, 155, 1);
 }
 
 ::-webkit-scrollbar {
