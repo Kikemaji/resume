@@ -47,7 +47,7 @@ const Dialog = ({
       <DialogElem.Portal>
         <DialogElem.Overlay className="animate-overlay-show fixed inset-0 bg-black opacity-30" />
         <DialogElem.Content className="dialog-shadow animate-content-show fixed left-1/2 top-1/2 max-h-[85dvh] w-[90vw] max-w-xl -translate-x-1/2 -translate-y-1/2 transform rounded-lg bg-white p-6 text-black">
-          <DialogElem.Title className="mx-auto w-8/12 border-b border-black p-1 text-center text-xl">
+          <DialogElem.Title className="mx-auto border-b border-black p-1 text-center text-xl md:w-8/12">
             {title}
           </DialogElem.Title>
           {description && (

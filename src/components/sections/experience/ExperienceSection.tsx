@@ -7,19 +7,7 @@ import { FaExternalLinkAlt } from 'react-icons/fa';
 import clsx from 'clsx';
 import { addFontBoldJSX } from '@/utils/addFontBold';
 import { Link, Skill, SkillCategory } from './types';
-import {
-  argPoints,
-  categories,
-  categories2,
-  categories3_1,
-  categories3_2,
-  esLinks,
-  esPoints,
-  selectContent,
-  selectContent2,
-  selectContent3,
-  ustPoints,
-} from './text';
+import * as data from './text';
 
 const comienzoAprox = new Date(2022, 7, 12).getTime();
 const ahora = new Date().getTime();
@@ -59,7 +47,7 @@ export const ExperienceSection = () => {
         <Select
           placeholder="¿Qué quieres saber?"
           handleSelectValue={handleSelectValue}
-          content={selectContent}
+          content={data.selectContent}
         />
         <div className="max-h-[50dvh] min-h-[30dvh] overflow-y-scroll">
           {value === '-1' && (
@@ -67,9 +55,11 @@ export const ExperienceSection = () => {
               Elige una opción
             </div>
           )}
-          {value === '0' && <Skills categories={categories} />}
-          {value === '1' && <Project descriptions={argPoints} />}
-          {value === '2' && <Project descriptions={esPoints} links={esLinks} />}
+          {value === '0' && <Skills categories={data.categories} />}
+          {value === '1' && <Project descriptions={data.argPoints} />}
+          {value === '2' && (
+            <Project descriptions={data.esPoints} links={data.esLinks} />
+          )}
         </div>
       </Dialog>
       <Dialog
@@ -82,7 +72,7 @@ export const ExperienceSection = () => {
         <Select
           placeholder="¿Qué quieres saber?"
           handleSelectValue={handleSelectValue}
-          content={selectContent2}
+          content={data.selectContent2}
         />
         <div className="max-h-[50dvh] min-h-[30dvh] overflow-y-scroll">
           {value === '-1' && (
@@ -90,8 +80,8 @@ export const ExperienceSection = () => {
               Elige una opción
             </div>
           )}
-          {value === '0' && <Skills categories={categories2} />}
-          {value === '1' && <Project descriptions={ustPoints} />}
+          {value === '0' && <Skills categories={data.categories2} />}
+          {value === '1' && <Project descriptions={data.ustPoints} />}
         </div>
       </Dialog>
       <Dialog
@@ -105,7 +95,7 @@ export const ExperienceSection = () => {
         <Select
           placeholder="¿Qué quieres saber?"
           handleSelectValue={handleSelectValue}
-          content={selectContent3}
+          content={data.selectContent3}
         />
         <div className="max-h-[50dvh] min-h-[30dvh] overflow-y-scroll">
           {value === '-1' && (
@@ -113,8 +103,8 @@ export const ExperienceSection = () => {
               Elige una opción
             </div>
           )}
-          {value === '0' && <Skills categories={categories3_1} />}
-          {value === '1' && <Skills categories={categories3_2} />}
+          {value === '0' && <Skills categories={data.categories3_1} />}
+          {value === '1' && <Skills categories={data.categories3_2} />}
           {value === '2' && (
             <div>
               Libro organización, 500k seguidores, Habilidades poco comunes
@@ -129,7 +119,7 @@ export const ExperienceSection = () => {
 
 const Skills = ({ categories }: { categories: SkillCategory[] }) => {
   return (
-    <div className="mt-2 flex max-h-[400px] flex-col flex-wrap gap-2 p-2">
+    <div className="mt-2 flex max-h-[400px] flex-col gap-2 p-2 md:flex-wrap">
       {categories.map((category, index) => (
         <SkillList
           key={index}
