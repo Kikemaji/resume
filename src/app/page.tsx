@@ -1,7 +1,6 @@
 import { FaArrowDown, FaCheck } from 'react-icons/fa6';
 
 import { Navbar } from '@/components/ui/Navbar';
-import Image from 'next/image';
 import Accordion from '@/components/ui/Accordion/Accordion';
 import clsx from 'clsx';
 import { ExperienceSection } from '@/components/sections/experience/ExperienceSection';
@@ -11,6 +10,7 @@ import MapSection from '@/components/sections/map/MapSection';
 import CreatedSection from '@/components/sections/created/CreatedSection';
 import WhyMeSection from '@/components/sections/whyMe/WhyMeSection';
 import ChatSection from '@/components/sections/chat/ChatSection';
+import EducationSection from '@/components/sections/education/EducationSection';
 
 export default function Home() {
   const trabajoIdealContent = [
@@ -45,50 +45,7 @@ export default function Home() {
         <ExperienceSection />
         {/* CTA */}
         <ChatSection />
-        <section className="my-8 grid gap-4 md:grid-cols-3">
-          <h2 className="text-center text-xl font-bold">¿Con ganas de más?</h2>
-          <div className="grid place-items-center rounded-lg bg-secondary p-6">
-            <h3 className="mb-4 text-lg font-bold">
-              Doble Grado Universitario
-            </h3>
-            <div className="flex gap-2">
-              <Image
-                className="m-auto w-12"
-                alt="URJC logo"
-                src="/URJC.svg"
-                width={24}
-                height={24}
-              />
-              <div>
-                <p>Ingeniería Informática</p>
-                <p>Ingeniería del Software</p>
-              </div>
-            </div>
-          </div>
-          <div className="grid place-items-center rounded-lg bg-secondary p-6">
-            <h3 className="mb-4 text-lg font-bold">4 Idiomas</h3>
-            <ul>
-              <li>
-                <span className="font-bold"> C1 Inglés</span> - Mayor nivel
-                demostrable.
-              </li>
-              <li>
-                <span className="font-bold">C1 Francés</span> - Honestamente, un
-                poco oxidado.
-              </li>
-              <li>
-                <span className="font-bold">Español</span> nativo
-              </li>
-              <li>
-                2 años de clases de <span className="font-bold">japonés</span>
-              </li>
-            </ul>
-          </div>
-          <div className="rounded-lg border border-border p-2">
-            <p>Efecto chulo</p>
-            <span>Hacer algo (esconder en movil)</span>
-          </div>
-        </section>
+        <EducationSection />
         <section className="my-8 flex flex-col gap-4">
           <h2 className="text-center text-xl font-bold">
             ¿Cómo es mi trabajo ideal?
