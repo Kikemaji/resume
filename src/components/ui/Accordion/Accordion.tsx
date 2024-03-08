@@ -44,11 +44,7 @@ const Accordion = ({}) => {
           <AccordionTrigger className="flex w-full cursor-pointer items-center justify-between gap-4 border-b border-border  px-5 py-2 text-start ">
             {element.question}
           </AccordionTrigger>
-          <AccordionContent
-            className={
-              ' border-x border-border bg-white text-black last:rounded-b-sm last:border-b'
-            }
-          >
+          <AccordionContent className={' bg-white text-black'}>
             {element.answer}
           </AccordionContent>
         </AccordionElem.Item>
