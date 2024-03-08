@@ -39,7 +39,7 @@ export const ExperienceSection = () => {
       </h2>
       <Dialog
         triggerIcon={<FaPlus className="h-5 w-5" />}
-        triggerText="Software de las elecciones - 1 año y 2 meses"
+        triggerText="Software de las elecciones - 1 año y 3 meses"
         title="Ingeniero frontend - Minsait"
         description="Desarrollando el *software de las elecciones* Españolas y Latinoamericanas"
         handleClose={resetSelect}

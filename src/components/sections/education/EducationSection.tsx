@@ -39,10 +39,10 @@ const EducationSection = () => {
               <span className="font-bold">C1 Francés</span>: un poco oxidado.
             </li>
             <li>
-              <span className="font-bold">Español</span> nativo
+              <span className="font-bold">Español</span> nativo.
             </li>
             <li>
-              2 años de clases de <span className="font-bold">japonés</span>
+              2 años de clases de <span className="font-bold">japonés</span>.
             </li>
           </ul>
         </div>
