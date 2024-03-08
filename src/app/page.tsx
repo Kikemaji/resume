@@ -11,6 +11,7 @@ import CreatedSection from '@/components/sections/created/CreatedSection';
 import WhyMeSection from '@/components/sections/whyMe/WhyMeSection';
 import ChatSection from '@/components/sections/chat/ChatSection';
 import EducationSection from '@/components/sections/education/EducationSection';
+import CTA1 from '@/components/sections/CTA/CTA1';
 
 export default function Home() {
   const trabajoIdealContent = [
@@ -68,16 +69,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="my-8 bg-white p-6 text-center text-black">
-          <h3 className=" text-center font-bold">
-            Como bien dicen las ofertas de trabajo:
-          </h3>
-          <p>No tienes por qué cumplir todos los requisitos.</p>
-          <p>Si crees que tienes una buena oferta...</p>
-          <button className="rounded-md border border-black px-3 py-1 font-bold">
-            Háblame :&#41;
-          </button>
-        </section>
+        <CTA1 />
         <section className="my-8 flex flex-col gap-4">
           <h2 className="text-center text-xl font-bold">
             Preguntas frecuentes
