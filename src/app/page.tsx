@@ -1,7 +1,6 @@
 import { FaArrowDown, FaCheck } from 'react-icons/fa6';
 
 import { Navbar } from '@/components/ui/Navbar';
-import Accordion from '@/components/ui/Accordion/Accordion';
 import clsx from 'clsx';
 import { ExperienceSection } from '@/components/sections/experience/ExperienceSection';
 import HeroSection from '@/components/sections/hero/HeroSection';
@@ -12,6 +11,7 @@ import WhyMeSection from '@/components/sections/whyMe/WhyMeSection';
 import ChatSection from '@/components/sections/chat/ChatSection';
 import EducationSection from '@/components/sections/education/EducationSection';
 import CTA1 from '@/components/sections/CTA/CTA1';
+import FAQSection from '@/components/sections/faq/FAQSection';
 
 export default function Home() {
   const trabajoIdealContent = [
@@ -70,12 +70,7 @@ export default function Home() {
           </div>
         </section>
         <CTA1 />
-        <section className="my-8 flex flex-col gap-4">
-          <h2 className="text-center text-xl font-bold">
-            Preguntas frecuentes
-          </h2>
-          <Accordion />
-        </section>
+        <FAQSection />
         <CreatedSection />
       </div>
     </main>

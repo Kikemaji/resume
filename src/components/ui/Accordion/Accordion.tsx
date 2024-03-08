@@ -2,13 +2,15 @@
 import React from 'react';
 import { FaChevronDown } from 'react-icons/fa6';
 import * as AccordionElem from '@radix-ui/react-accordion';
+import clsx from 'clsx';
+import styles from './Accordion.module.css';
 
 const Accordion = ({}) => {
   const content = [
-    {
-      question: '¿Cuál es tu disponibilidad? ',
-      answer: 'Preaviso de 15 días.',
-    },
+    // {
+    //   question: '¿Cuál es tu disponibilidad?',
+    //   answer: 'Preaviso de 15 días',
+    // },
     {
       question: '¿Estás autorizado para trabajar en la Unión Europea?',
       answer: 'Sí, soy español.',
@@ -32,17 +34,21 @@ const Accordion = ({}) => {
 
   return (
     <AccordionElem.Root
-      className="AccordionRoot"
+      className="w-full rounded-md xl:max-w-[1024px] "
       type="single"
       defaultValue="item-1"
       collapsible
     >
       {content.map((element, index) => (
         <AccordionElem.Item key={index} value={`item-${index}`}>
-          <AccordionTrigger className="flex w-full cursor-pointer items-center justify-between gap-4 border-b border-border bg-white p-2 text-start text-black">
+          <AccordionTrigger className="flex w-full cursor-pointer items-center justify-between gap-4 border-b border-border  px-5 py-2 text-start ">
             {element.question}
           </AccordionTrigger>
-          <AccordionContent className="border-x border-border p-2  last:rounded-b-sm last:border-b">
+          <AccordionContent
+            className={
+              ' border-x border-border bg-white text-black last:rounded-b-sm last:border-b'
+            }
+          >
             {element.answer}
           </AccordionContent>
         </AccordionElem.Item>
@@ -65,12 +71,12 @@ const AccordionTrigger = React.forwardRef<
 >(({ children, className, ...props }, forwardedRef) => (
   <AccordionElem.Header>
     <AccordionElem.Trigger
-      className={`${className}`} //FIXME: Add classnames o clsx
+      className={clsx(styles.AccordionTrigger, className)}
       {...props}
       ref={forwardedRef}
     >
       {children}
-      <FaChevronDown aria-hidden />
+      <FaChevronDown className={clsx(styles.AccordionChevron)} aria-hidden />
     </AccordionElem.Trigger>
   </AccordionElem.Header>
 ));
@@ -87,11 +93,11 @@ const AccordionContent = React.forwardRef<
   AccordionContentProps
 >(({ children, className, ...props }, forwardedRef) => (
   <AccordionElem.Content
-    className={`${className}`}
+    className={clsx(styles.AccordionContent, className)}
     {...props}
     ref={forwardedRef}
   >
-    <div>{children}</div>
+    <div className={styles.AccordionContentText}>{children}</div>
   </AccordionElem.Content>
 ));
 
