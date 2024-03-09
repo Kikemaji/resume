@@ -1,4 +1,4 @@
-import MapChart from '@/components/maps/MapChart';
+import MapChart from '@/components/charts/MapChart';
 import React from 'react';
 import { IoCheckmarkCircle } from 'react-icons/io5';
 
