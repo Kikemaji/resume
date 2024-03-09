@@ -20,7 +20,7 @@ const mesasDeExperiencia = Math.floor(
     (30.44 * 24 * 60 * 60 * 1000)
 );
 
-export const ExperienceSection = () => {
+const ExperienceSection = () => {
   const [value, setValue] = useState('-1');
   const handleSelectValue = (val: string) => {
     setValue(val);
@@ -177,3 +177,5 @@ const Project: React.FC<ProjectProps> = ({ descriptions, links }) => (
     </ul>
   </div>
 );
+
+export default ExperienceSection;

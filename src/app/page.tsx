@@ -1,15 +1,17 @@
 import { Navbar } from '@/components/ui/Navbar';
-import { ExperienceSection } from '@/components/sections/experience/ExperienceSection';
-import HeroSection from '@/components/sections/hero/HeroSection';
-import QualitySection from '@/components/sections/quality/QualitySection';
-import MapSection from '@/components/sections/map/MapSection';
-import CreatedSection from '@/components/sections/created/CreatedSection';
-import WhyMeSection from '@/components/sections/whyMe/WhyMeSection';
-import ChatSection from '@/components/sections/chat/ChatSection';
-import EducationSection from '@/components/sections/education/EducationSection';
-import CTA1 from '@/components/sections/CTA/CTA1';
-import FAQSection from '@/components/sections/faq/FAQSection';
-import DreamJobSection from '@/components/sections/dreamJob/DreamJobSection';
+import {
+  CTA1Section,
+  ChatSection,
+  CreatedSection,
+  DreamJobSection,
+  EducationSection,
+  ExperienceSection,
+  FAQSection,
+  HeroSection,
+  MapSection,
+  QualitySection,
+  WhyMeSection,
+} from '@/components/sections';
 
 export default function Home() {
   return (
@@ -25,7 +27,7 @@ export default function Home() {
         <ChatSection />
         <EducationSection />
         <DreamJobSection />
-        <CTA1 />
+        <CTA1Section />
         <FAQSection />
         <CreatedSection />
       </div>

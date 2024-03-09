@@ -1,0 +1,11 @@
+export { default as CTA1Section } from './CTA/CTA1';
+export { default as ChatSection } from './chat/ChatSection';
+export { default as CreatedSection } from './created/CreatedSection';
+export { default as DreamJobSection } from './dreamJob/DreamJobSection';
+export { default as EducationSection } from './education/EducationSection';
+export { default as ExperienceSection } from './experience/ExperienceSection';
+export { default as FAQSection } from './faq/FAQSection';
+export { default as HeroSection } from './hero/HeroSection';
+export { default as MapSection } from './map/MapSection';
+export { default as QualitySection } from './quality/QualitySection';
+export { default as WhyMeSection } from './whyMe/WhyMeSection';
