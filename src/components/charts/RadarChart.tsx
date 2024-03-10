@@ -6,9 +6,11 @@ import { Theme } from '../sections/dreamJob/types';
 export const RadarChart = ({
   indicators,
   values,
+  maxValue,
 }: {
   indicators: Theme[];
   values: number[];
+  maxValue: number;
 }) => {
   const option = {
     color: ['#FFE434', '#67F9D8', '#56A3F1', '#FF917C'],
@@ -16,7 +18,7 @@ export const RadarChart = ({
       {
         indicator: indicators.map((theme) => ({
           name: theme.name,
-          max: indicators.length,
+          max: maxValue,
         })),
         startAngle: 90,
         splitNumber: 4,

@@ -4,11 +4,13 @@ const countOccurrences = (features: Feature[]): Record<string, number> => {
   const occurrences: Record<string, number> = {};
 
   features.forEach((feature) => {
-    if (occurrences[feature.theme]) {
-      occurrences[feature.theme]++;
-    } else {
-      occurrences[feature.theme] = 1;
-    }
+    feature.themes.forEach((theme) => {
+      if (occurrences[theme]) {
+        occurrences[theme]++;
+      } else {
+        occurrences[theme] = 1;
+      }
+    });
   });
 
   return occurrences;
@@ -43,5 +45,5 @@ export const calculateFeatureValuePerTheme = (features: Feature[]) => {
       valuePerTheme[theme] = maxFeaturesNumber / totalFeatureCount;
     }
   }
-  return valuePerTheme;
+  return { maxFeaturesNumber, valuePerTheme };
 };

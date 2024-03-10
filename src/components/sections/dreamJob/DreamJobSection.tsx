@@ -8,7 +8,8 @@ import { featuresContent, mainThemes } from './jobContent';
 
 const DreamJobSection = () => {
   const [selectedFeatures, setSelectedFeatures] = useState<Feature[]>([]);
-  const valuePerTheme = calculateFeatureValuePerTheme(featuresContent);
+  const { maxFeaturesNumber, valuePerTheme } =
+    calculateFeatureValuePerTheme(featuresContent);
   const [valuesArray, setValuesArray] = useState(
     Array(mainThemes.length).fill(0)
   );
@@ -18,29 +19,27 @@ const DreamJobSection = () => {
   });
 
   const handleFeatureSelection = (feature: Feature) => {
-    const { theme, name } = feature;
-    const value = valuePerTheme[theme];
-    const position = positionsArray[theme];
-    console.log(value, ' + ', position);
+    const { themes, name } = feature;
+    themes.forEach((theme) => {
+      const value = valuePerTheme[theme];
+      const position = positionsArray[theme];
 
-    setValuesArray((prev) => {
-      const auxArray = [...prev];
-      auxArray[position] += selectedFeatures.some((f) => f.name === name)
-        ? -value
-        : value;
-      return auxArray;
-    });
+      setValuesArray((prev) => {
+        const auxArray = [...prev];
+        auxArray[position] += selectedFeatures.some((f) => f.name === name)
+          ? -value
+          : value;
+        return auxArray;
+      });
 
-    setSelectedFeatures((prev) => {
-      const updatedFeatures = prev.filter((f) => f.name !== name);
-      return selectedFeatures.some((f) => f.name === name)
-        ? updatedFeatures
-        : [...updatedFeatures, feature];
+      setSelectedFeatures((prev) => {
+        const updatedFeatures = prev.filter((f) => f.name !== name);
+        return selectedFeatures.some((f) => f.name === name)
+          ? updatedFeatures
+          : [...updatedFeatures, feature];
+      });
     });
   };
-
-  // Meter array de themes por feature para que cada click se reparta más.
-  // Distinguir plus, necesario y soñar es gratis
 
   return (
     <section className="my-8 flex flex-col gap-4 rounded-lg border-2 border-dashed border-white p-4">
@@ -66,7 +65,11 @@ const DreamJobSection = () => {
         <p>Soñar es gratis</p>
         <div className="flex flex-wrap gap-1 text-sm text-black"></div>
       </div>
-      <RadarChart indicators={mainThemes} values={valuesArray} />
+      <RadarChart
+        indicators={mainThemes}
+        values={valuesArray.map((value) => value)}
+        maxValue={maxFeaturesNumber}
+      />
     </section>
   );
 };

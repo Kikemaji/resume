@@ -7,4 +7,4 @@ type ThemeType =
 
 export type Theme = { name: string; keyword: ThemeType };
 
-export type Feature = { name: string; theme: ThemeType };
+export type Feature = { name: string; themes: ThemeType[] };
