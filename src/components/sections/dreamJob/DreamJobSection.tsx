@@ -1,69 +1,102 @@
+'use client';
+import { RadarChart } from '@/components/charts/RadarChart';
 import clsx from 'clsx';
-import React from 'react';
-import { FaArrowDown, FaCheck } from 'react-icons/fa';
+import React, { useState } from 'react';
+import { Feature } from './types';
+import { calculateFeatureValuePerTheme } from './jobUtils';
+import { featuresContent, mainThemes } from './jobContent';
 
 const DreamJobSection = () => {
-  const trabajoIdealContent = [
-    'Didáctico',
-    'Entretenido',
-    'Con buen ambiente',
-    'Equilibrio vida / trabajo',
-    'Buen sueldo y posibilidad de subirlo',
-  ];
+  const [selectedFeatures, setSelectedFeatures] = useState<Feature[]>([]);
+  const valuePerTheme = calculateFeatureValuePerTheme(featuresContent);
+  const [valuesArray, setValuesArray] = useState(
+    Array(mainThemes.length).fill(0)
+  );
+  const positionsArray: Record<string, number> = {};
+  mainThemes.forEach((objeto, index) => {
+    positionsArray[objeto.keyword] = index;
+  });
 
-  const trabajoIdealExamples = [
-    'Reviews de código',
-    'Comunicación',
-    'Buenas prácticas',
-    'Diferentes frameworks/proyectos',
-    'Testing',
-    'Remoto',
-    'Sin horas extra',
-    'Agile',
-    'Buenos compañeros',
-    'Aprender backend',
-    'Revisiones salariales',
-  ];
+  const handleFeatureSelection = (feature: Feature) => {
+    const { theme, name } = feature;
+    const value = valuePerTheme[theme];
+    const position = positionsArray[theme];
+    console.log(value, ' + ', position);
+
+    setValuesArray((prev) => {
+      const auxArray = [...prev];
+      auxArray[position] += selectedFeatures.some((f) => f.name === name)
+        ? -value
+        : value;
+      return auxArray;
+    });
+
+    setSelectedFeatures((prev) => {
+      const updatedFeatures = prev.filter((f) => f.name !== name);
+      return selectedFeatures.some((f) => f.name === name)
+        ? updatedFeatures
+        : [...updatedFeatures, feature];
+    });
+  };
+
+  // Meter array de themes por feature para que cada click se reparta más.
+  // Distinguir plus, necesario y soñar es gratis
+
   return (
-    <section className="my-8 flex flex-col gap-4">
+    <section className="my-8 flex flex-col gap-4 rounded-lg border-2 border-dashed border-white p-4">
       <h2 className="text-center text-xl font-bold">
         ¿Cómo es mi trabajo ideal?
       </h2>
-      <div className="flex flex-col items-center gap-4 md:flex-row">
-        <ul className="text-lg md:w-[30%] ">
-          {trabajoIdealContent.map((text) => (
-            <li key={text} className="flex items-center gap-2.5">
-              <FaCheck />
-              {text}
-            </li>
-          ))}
-        </ul>
-        <FaArrowDown className=" h-12 w-12 md:w-[20%] md:-rotate-90" />
-
-        <div className="flex flex-wrap justify-around gap-2 md:w-[50%]">
-          {trabajoIdealExamples.map((text) => (
-            <Label key={text} text={text} />
+      <div>
+        <p>Necesario</p>
+        <div className="flex flex-wrap gap-1 text-sm text-black">
+          {featuresContent.map((feature, index) => (
+            <StringItem
+              key={index}
+              value={feature}
+              isSelected={selectedFeatures.some(
+                (selectedFeature) => selectedFeature.name === feature.name
+              )}
+              onSelect={handleFeatureSelection}
+            />
           ))}
         </div>
+        <p>Plus</p>
+        <div className="flex flex-wrap gap-1 text-sm text-black"></div>
+        <p>Soñar es gratis</p>
+        <div className="flex flex-wrap gap-1 text-sm text-black"></div>
       </div>
+      <RadarChart indicators={mainThemes} values={valuesArray} />
     </section>
   );
 };
 
-export default DreamJobSection;
+interface FeatureItemProps {
+  value: Feature;
+  isSelected: boolean;
+  onSelect: (value: Feature) => void;
+}
 
-const Label = ({ text }: { text: string }) => {
-  const randomColor = Math.floor(Math.random() * 3);
+const StringItem: React.FC<FeatureItemProps> = ({
+  value,
+  isSelected,
+  onSelect,
+}) => {
+  const toggleSelection = () => {
+    onSelect(value);
+  };
+
   return (
     <div
       className={clsx(
-        'rounded-md p-1 shadow-md',
-        randomColor === 0 && 'shadow-green-600',
-        randomColor === 1 && 'shadow-pink-600',
-        randomColor === 2 && 'shadow-blue-600'
+        'w-fit cursor-pointer rounded-md px-2 py-0.5 text-sm font-semibold text-black',
+        isSelected ? 'bg-[#FFE434] ' : 'bg-white'
       )}
+      onClick={toggleSelection}
     >
-      {text}
+      {value.name}
     </div>
   );
 };
+
+export default DreamJobSection;

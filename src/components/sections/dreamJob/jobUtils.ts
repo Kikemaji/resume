@@ -43,6 +43,5 @@ export const calculateFeatureValuePerTheme = (features: Feature[]) => {
       valuePerTheme[theme] = maxFeaturesNumber / totalFeatureCount;
     }
   }
-  console.log(valuePerTheme);
   return valuePerTheme;
 };

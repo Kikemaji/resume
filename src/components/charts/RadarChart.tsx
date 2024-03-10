@@ -1,19 +1,23 @@
 'use client';
 import React from 'react';
 import ReactECharts from 'echarts-for-react';
+import { Theme } from '../sections/dreamJob/types';
 
-export const RadarChart = () => {
+export const RadarChart = ({
+  indicators,
+  values,
+}: {
+  indicators: Theme[];
+  values: number[];
+}) => {
   const option = {
     color: ['#FFE434', '#67F9D8', '#56A3F1', '#FF917C'],
     radar: [
       {
-        indicator: [
-          { text: 'Didáctico' },
-          { text: 'Entretenido' },
-          { text: 'Buen ambiente' },
-          { text: 'Equilibrio vida - trabajo' },
-          { text: 'Sueldo €' },
-        ],
+        indicator: indicators.map((theme) => ({
+          name: theme.name,
+          max: indicators.length,
+        })),
         startAngle: 90,
         splitNumber: 4,
         shape: 'circle',
@@ -50,7 +54,7 @@ export const RadarChart = () => {
         },
         data: [
           {
-            value: [6, 7, 8, 9, 10],
+            value: values,
             name: 'Data B',
             areaStyle: {
               color: 'rgba(255, 228, 52, 0.6)',
