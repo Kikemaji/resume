@@ -3,11 +3,12 @@ import { RadarChart } from '@/components/charts/RadarChart';
 import clsx from 'clsx';
 import React, { useState } from 'react';
 import { Feature, SelectedFeatures } from './types';
-import { calculateFeatureValuePerTheme } from './jobUtils';
+import { calculateFeatureValuePerTheme, getFeaturesByType } from './jobUtils';
 import { featuresContent, mainThemes } from './jobContent';
 
 const { maxFeaturesNumber, valuePerTheme } =
   calculateFeatureValuePerTheme(featuresContent);
+
 const positionsArray: Record<string, number> = {};
 mainThemes.forEach((objeto, index) => {
   positionsArray[objeto.keyword] = index;
@@ -23,6 +24,8 @@ const allFeaturesNotActive: SelectedFeatures = featuresContent.reduce(
   },
   {} as SelectedFeatures
 );
+
+const featuresByType = getFeaturesByType(featuresContent);
 
 const DreamJobSection = () => {
   const [selectedFeatures, setSelectedFeatures] =
@@ -65,21 +68,21 @@ const DreamJobSection = () => {
         ¿Cómo es mi trabajo ideal?
       </h2>
       <div>
-        <p>Necesario</p>
-        <div className="flex flex-wrap gap-1 text-sm text-black">
-          {featuresContent.map((feature, index) => (
-            <StringItem
-              key={index}
-              value={feature}
-              isSelected={selectedFeatures[feature.name].active}
-              onSelect={handleFeatureSelection}
-            />
-          ))}
-        </div>
-        <p>Plus</p>
-        <div className="flex flex-wrap gap-1 text-sm text-black"></div>
-        <p>Soñar es gratis</p>
-        <div className="flex flex-wrap gap-1 text-sm text-black"></div>
+        {Object.entries(featuresByType).map(([type, feature]) => (
+          <div key={type}>
+            <p>{type}</p>
+            <div className="flex flex-wrap gap-1 text-sm text-black">
+              {feature.map((feature, index) => (
+                <StringItem
+                  key={index}
+                  value={feature}
+                  isSelected={selectedFeatures[feature.name].active}
+                  onSelect={handleFeatureSelection}
+                />
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
       <RadarChart
         indicators={mainThemes}

@@ -1,4 +1,4 @@
-import { Feature } from './types';
+import { Feature, FeatureType } from './types';
 
 const countOccurrences = (features: Feature[]): Record<string, number> => {
   const occurrences: Record<string, number> = {};
@@ -46,4 +46,23 @@ export const calculateFeatureValuePerTheme = (features: Feature[]) => {
     }
   }
   return { maxFeaturesNumber, valuePerTheme };
+};
+
+export const getFeaturesByType = (featuresContent: Feature[]) => {
+  const featuresByType: Record<FeatureType, Feature[]> = {
+    need: [],
+    plus: [],
+    dream: [],
+  };
+
+  featuresContent.forEach((feature) => {
+    if (feature.type === 'need') {
+      featuresByType.need.push(feature);
+    } else if (feature.type === 'plus') {
+      featuresByType.plus.push(feature);
+    } else if (feature.type === 'dream') {
+      featuresByType.dream.push(feature);
+    }
+  });
+  return featuresByType;
 };
