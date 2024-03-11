@@ -2,42 +2,60 @@
 import { RadarChart } from '@/components/charts/RadarChart';
 import clsx from 'clsx';
 import React, { useState } from 'react';
-import { Feature } from './types';
+import { Feature, SelectedFeatures } from './types';
 import { calculateFeatureValuePerTheme } from './jobUtils';
 import { featuresContent, mainThemes } from './jobContent';
 
+const { maxFeaturesNumber, valuePerTheme } =
+  calculateFeatureValuePerTheme(featuresContent);
+const positionsArray: Record<string, number> = {};
+mainThemes.forEach((objeto, index) => {
+  positionsArray[objeto.keyword] = index;
+});
+
+const allFeaturesNotActive: SelectedFeatures = featuresContent.reduce(
+  (acc, feature) => {
+    acc[feature.name] = {
+      feature,
+      active: false,
+    };
+    return acc;
+  },
+  {} as SelectedFeatures
+);
+
 const DreamJobSection = () => {
-  const [selectedFeatures, setSelectedFeatures] = useState<Feature[]>([]);
-  const { maxFeaturesNumber, valuePerTheme } =
-    calculateFeatureValuePerTheme(featuresContent);
-  const [valuesArray, setValuesArray] = useState(
+  const [selectedFeatures, setSelectedFeatures] =
+    useState<SelectedFeatures>(allFeaturesNotActive);
+  const [radarValuesArray, setRadarValuesArray] = useState(
     Array(mainThemes.length).fill(0)
   );
-  const positionsArray: Record<string, number> = {};
-  mainThemes.forEach((objeto, index) => {
-    positionsArray[objeto.keyword] = index;
-  });
 
   const handleFeatureSelection = (feature: Feature) => {
     const { themes, name } = feature;
-    themes.forEach((theme) => {
-      const value = valuePerTheme[theme];
-      const position = positionsArray[theme];
+    const featureSelected = selectedFeatures[name];
+    const isActive = featureSelected.active;
 
-      setValuesArray((prev) => {
-        const auxArray = [...prev];
-        auxArray[position] += selectedFeatures.some((f) => f.name === name)
-          ? -value
-          : value;
-        return auxArray;
-      });
+    setRadarValuesArray((prev) => {
+      return themes.reduce(
+        (acc, theme) => {
+          const value = valuePerTheme[theme];
+          const position = positionsArray[theme];
+          acc[position] += isActive ? -value : value;
+          return acc;
+        },
+        [...prev]
+      );
+    });
 
-      setSelectedFeatures((prev) => {
-        const updatedFeatures = prev.filter((f) => f.name !== name);
-        return selectedFeatures.some((f) => f.name === name)
-          ? updatedFeatures
-          : [...updatedFeatures, feature];
-      });
+    setSelectedFeatures((prev) => {
+      return {
+        ...prev,
+        [name]: {
+          ...prev[name],
+          active: !isActive,
+        },
+      };
     });
   };
 
@@ -53,9 +71,7 @@ const DreamJobSection = () => {
             <StringItem
               key={index}
               value={feature}
-              isSelected={selectedFeatures.some(
-                (selectedFeature) => selectedFeature.name === feature.name
-              )}
+              isSelected={selectedFeatures[feature.name].active}
               onSelect={handleFeatureSelection}
             />
           ))}
@@ -67,7 +83,7 @@ const DreamJobSection = () => {
       </div>
       <RadarChart
         indicators={mainThemes}
-        values={valuesArray.map((value) => value)}
+        values={radarValuesArray.map((value) => value)}
         maxValue={maxFeaturesNumber}
       />
     </section>
