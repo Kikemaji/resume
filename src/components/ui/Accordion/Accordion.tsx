@@ -36,7 +36,7 @@ const Accordion = ({}) => {
     <AccordionElem.Root
       className="w-full rounded-md xl:max-w-[1024px] "
       type="single"
-      defaultValue="item-1"
+      defaultValue=""
       collapsible
     >
       {content.map((element, index) => (
