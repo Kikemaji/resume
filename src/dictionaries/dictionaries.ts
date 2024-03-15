@@ -1,13 +1,6 @@
 import 'server-only';
-
-interface JsonLeaf {
-  [key: string]: string;
-}
-
-type JsonValue = string | JsonLeaf | Dictionary;
-
 export interface Dictionary {
-  [key: string]: JsonValue;
+  [key: string]: string | Dictionary;
 }
 
 interface DictionaryPromise {
