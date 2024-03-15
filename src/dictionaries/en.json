@@ -1,0 +1,13 @@
+{
+  "heroSection": {
+    "title": {
+      "1": "The frontend engineer",
+      "2": "you need"
+    },
+    "subtitle": "With code so you don't have to look at so many resumes",
+    "buttons": {
+      "code": "View code",
+      "contact": "Contact"
+    }
+  }
+}
