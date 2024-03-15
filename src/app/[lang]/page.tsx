@@ -27,7 +27,7 @@ export default async function Home({
       <div className=" mx-auto w-full px-4 py-4 md:px-16 lg:max-w-[80vw] lg:px-4 2xl:max-w-7xl">
         <HeroSection dictionary={dictionary} />
         <QualitySection />
-        <MapSection />
+        <MapSection dictionary={dictionary} />
         <WhyMeSection />
         <ExperienceSection />
         {/* CTA */}

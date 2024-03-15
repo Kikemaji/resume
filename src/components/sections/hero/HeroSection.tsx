@@ -1,5 +1,6 @@
 import SpinningText from '@/components/ui/SpinningContent/SpinningContent';
-import { Dictionary, getTranslation } from '@/dictionaries/dictionaries';
+import { Dictionary } from '@/dictionaries/dictionaries';
+import { getTranslation } from '@/utils/getTranslations';
 import Image from 'next/image';
 import React from 'react';
 import { FaCode } from 'react-icons/fa6';

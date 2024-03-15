@@ -5,8 +5,10 @@ import SpainMap from '@/assets/maps/ESP_COMUNIDADES.json';
 
 import * as echarts from 'echarts';
 import { codigoPorComunidad, workingTypesValue } from '@/constants/constants';
+import { Dictionary } from '@/dictionaries/dictionaries';
+import { getTranslation } from '@/utils/getTranslations';
 
-export const MapChart = () => {
+export const MapChart = ({ dictionary }: { dictionary: Dictionary }) => {
   const spainData = SpainMap.features.map((community) => {
     const code = community.properties.name;
     const workingTypeNumber = codigoPorComunidad[code].value;
@@ -73,6 +75,9 @@ export const MapChart = () => {
 
   return (
     <div className="h-full w-full">
+      <span>
+        Cliente: {getTranslation(dictionary, ['mapSection', 'title'])}
+      </span>
       <ReactECharts option={option} />
     </div>
   );
