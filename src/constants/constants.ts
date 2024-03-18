@@ -42,7 +42,7 @@ export const codigoPorComunidad: stringKeyObject = {
 };
 
 export const workingTypesValue: numberKeyObject = {
-  [WorkingTypesNumber.REMOTE]: { label: 'Remoto', color: '#93ddc2' }, //FIXME: Theme.colors
-  [WorkingTypesNumber.HYBRID]: { label: 'Híbrido', color: '#26697b' }, //FIXME: Theme.colors
-  [WorkingTypesNumber.IN_PERSON]: { label: 'Presencial', color: '#f1f1f1' }, //FIXME: Theme.colors
+  [WorkingTypesNumber.REMOTE]: { label: 'Remoto', color: '#93ddc2' },
+  [WorkingTypesNumber.HYBRID]: { label: 'Híbrido', color: '#26697b' },
+  [WorkingTypesNumber.IN_PERSON]: { label: 'Presencial', color: '#f1f1f1' },
 };

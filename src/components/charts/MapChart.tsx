@@ -54,7 +54,7 @@ export const MapChart = ({ dictionary }: { dictionary: Dictionary }) => {
             show: false,
           },
           itemStyle: {
-            areaColor: '#4193c4', //FIXME: Accent color
+            areaColor: '#4193c4',
             borderWidth: 2,
           },
         },
@@ -63,7 +63,7 @@ export const MapChart = ({ dictionary }: { dictionary: Dictionary }) => {
             show: false,
           },
           itemStyle: {
-            areaColor: '#4193c4', //FIXME: Accent color
+            areaColor: '#4193c4',
             borderWidth: 2,
           },
         },
