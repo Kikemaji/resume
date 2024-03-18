@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import { CiGlobe } from 'react-icons/ci';
+import Dropdown from './Dropdown/Dropdown';
 
 export const Navbar = () => {
   const fechaNacimiento = new Date(1999, 0, 10); // Año, mes (enero es 0-indexed), día
@@ -21,7 +21,7 @@ export const Navbar = () => {
         <div className="flex-1 text-sm">
           Enrique Márquez Jiménez - {edadCalculada} años
         </div>
-        <CiGlobe className="h-5 w-5" />
+        <Dropdown />
       </div>
     </nav>
   );
