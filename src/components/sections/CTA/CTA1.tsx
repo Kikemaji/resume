@@ -4,7 +4,7 @@ import clsx from 'clsx';
 
 const CTA1 = () => {
   return (
-    <section className="relative my-8 gap-2 py-16 text-center text-white">
+    <section className="relative my-32 gap-2 text-center text-white">
       <h2
         className={clsx(styles.gradientText, 'text-center text-2xl font-bold')}
       >

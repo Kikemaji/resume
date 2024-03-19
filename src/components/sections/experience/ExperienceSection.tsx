@@ -31,7 +31,7 @@ const ExperienceSection = () => {
   };
 
   return (
-    <section className="my-8 flex flex-col gap-2">
+    <section className="mb-16 mt-8 flex flex-col gap-2 lg:my-24">
       <h2 className="text-center text-xl font-bold">
         {anosDeExperiencia} {anosDeExperiencia > 1 ? 'años' : 'año'} y{' '}
         {mesasDeExperiencia} {mesasDeExperiencia === 1 ? 'mes' : 'meses'} de

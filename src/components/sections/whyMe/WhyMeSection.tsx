@@ -7,7 +7,7 @@ import clsx from 'clsx';
 
 const WhyMeSection = () => {
   return (
-    <section className="my-8">
+    <section className="my-16 lg:my-24">
       <h2 className="mb-4 text-center text-xl font-bold">
         ¿Por qué elegirme a mí?
       </h2>

@@ -5,7 +5,7 @@ import clsx from 'clsx';
 
 const EducationSection = () => {
   return (
-    <section className="my-8">
+    <section className="my-16 lg:my-24">
       <h2 className="mb-4 text-center text-xl font-bold md:text-end lg:text-center">
         ¿Con ganas de más?
       </h2>
