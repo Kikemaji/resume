@@ -1,7 +1,6 @@
 import { Navbar } from '@/components/ui/Navbar';
 import {
   CTA1Section,
-  ChatSection,
   CreatedSection,
   DreamJobSection,
   EducationSection,
@@ -27,11 +26,11 @@ export default async function Home({
       <div className=" mx-auto w-full px-4 py-4 md:px-16 lg:max-w-[80vw] lg:px-4 2xl:max-w-7xl">
         <HeroSection dictionary={dictionary} />
         <QualitySection />
-        <MapSection dictionary={dictionary} />
         <WhyMeSection />
+        <MapSection dictionary={dictionary} />
         <ExperienceSection />
         {/* CTA */}
-        <ChatSection />
+        {/* <ChatSection /> */}
         <EducationSection />
         <DreamJobSection />
         <CTA1Section />
