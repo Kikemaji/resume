@@ -109,8 +109,8 @@ const StringItem: React.FC<FeatureItemProps> = ({
   return (
     <div
       className={clsx(
-        'w-fit cursor-pointer rounded-md px-2 py-0.5 text-sm font-semibold text-black',
-        isSelected ? 'bg-[#FFE434] ' : 'bg-white'
+        'w-fit cursor-pointer rounded-md px-2 py-0.5 text-sm font-semibold transition-[300ms] hover:scale-95',
+        isSelected ? 'bg-white' : 'bg-gray-800 text-white hover:bg-gray-500'
       )}
       onClick={toggleSelection}
     >

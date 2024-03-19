@@ -31,7 +31,10 @@ const QualitySection = () => {
         <div className="text-xs md:text-base">
           <p>¿Por ti?</p>
           <p className="flex items-center gap-2">
-            <a href="" className="underline">
+            <a
+              href=""
+              className="underline transition-transform hover:scale-95"
+            >
               Dale amor al repo
             </a>
             <FaHeart

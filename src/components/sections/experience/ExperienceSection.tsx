@@ -87,7 +87,7 @@ const ExperienceSection = () => {
       <Dialog
         triggerIcon={<FaPlus className="h-5 w-5" />}
         triggerText="Enseñando a estudiar - Autónomo"
-        triggerClassName="!bg-gray-300"
+        triggerClassName=""
         title="Autónomo / Profesor de productividad"
         description="Enseñando a estudiar de forma eficiente"
         handleClose={resetSelect}

@@ -41,7 +41,7 @@ const Accordion = ({}) => {
     >
       {content.map((element, index) => (
         <AccordionElem.Item key={index} value={`item-${index}`}>
-          <AccordionTrigger className="flex w-full cursor-pointer items-center justify-between gap-4 border-b border-border  px-5 py-2 text-start ">
+          <AccordionTrigger className="flex w-full cursor-pointer items-center justify-between gap-4 border-b border-border px-5 py-2 text-start transition-colors hover:bg-gray-800">
             {element.question}
           </AccordionTrigger>
           <AccordionContent className={' bg-white text-black'}>

@@ -36,7 +36,7 @@ const Dialog = ({
       <DialogElem.Trigger asChild>
         <button
           className={clsx(
-            'flex items-center gap-4 rounded-md bg-white p-3 text-black',
+            'flex items-center gap-4 rounded-md border bg-white p-3 text-black transition-colors hover:border-white hover:bg-black hover:text-white',
             triggerClassName
           )}
         >

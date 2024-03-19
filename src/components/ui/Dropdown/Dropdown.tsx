@@ -9,7 +9,10 @@ const Dropdown = () => {
   return (
     <DropdownElem.Root>
       <DropdownElem.Trigger asChild>
-        <button className="" aria-label="Customise options">
+        <button
+          className="rounded-md border-white bg-black transition-colors hover:invert"
+          aria-label="Customise options"
+        >
           <CiGlobe className="h-5 w-5" />
         </button>
       </DropdownElem.Trigger>
