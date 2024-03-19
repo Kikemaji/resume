@@ -7,7 +7,7 @@ import styles from './Quality.module.css';
 const QualitySection = () => {
   return (
     <div className="my-12 text-gray-400">
-      <h4 className="  md:text-center lg:text-start lg:text-lg xl:text-xl">
+      <h4 className="h4 md:text-center lg:text-start">
         Calidad asegurada por:
       </h4>
       <div className="mt-1 flex items-end gap-4 md:mt-4 md:justify-center md:gap-16 lg:justify-normal">

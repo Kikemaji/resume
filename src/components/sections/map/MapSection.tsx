@@ -8,7 +8,7 @@ export const MapSection = ({ dictionary }: { dictionary: Dictionary }) => {
   return (
     <section className="flex flex-col gap-4 md:flex-row md:items-center">
       <div className="lg:w-1/2">
-        <h2 className="mb-2 text-lg font-bold lg:text-xl xl:text-2xl">
+        <h2 className="h2 mb-2 font-bold">
           {getTranslation(dictionary, ['mapSection', 'title'])}
         </h2>
         <ul>

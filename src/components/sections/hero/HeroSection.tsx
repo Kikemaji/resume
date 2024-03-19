@@ -9,13 +9,13 @@ const HeroSection = ({ dictionary }: { dictionary: Dictionary }) => {
   return (
     <section className="flex flex-col-reverse  gap-10 lg:mt-12 lg:flex-row lg:justify-around lg:gap-5 ">
       <div className="flex flex-col items-center justify-center gap-3 xl:max-w-xl">
-        <h1 className="break-words text-center text-3xl font-bold lg:text-4xl xl:text-5xl">
+        <h1 className="h1 break-words text-center font-bold ">
           {getTranslation(dictionary, ['heroSection', 'title', '1'])}{' '}
           <span className="whitespace-pre ">
             {getTranslation(dictionary, ['heroSection', 'title', '2'])}
           </span>
         </h1>
-        <h3 className="text-center text-lg lg:text-xl xl:text-2xl">
+        <h3 className="h3 text-center">
           {getTranslation(dictionary, ['heroSection', 'subtitle'])}
         </h3>
         <div className="mt-4 flex w-full flex-col items-center gap-3 lg:flex-row xl:mt-8">

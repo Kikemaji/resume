@@ -6,12 +6,12 @@ import clsx from 'clsx';
 const EducationSection = () => {
   return (
     <section className="my-16 lg:my-24">
-      <h2 className="mb-4 text-center text-xl font-bold md:text-end lg:text-center">
+      <h2 className="h2 mb-4 text-center font-bold md:text-end lg:text-center">
         ¿Con ganas de más?
       </h2>
       <div className="flex flex-col items-center gap-2 lg:flex-row lg:flex-wrap lg:justify-center">
         <div className={clsx(styles.card, 'bg-secondary md:ml-auto lg:ml-0')}>
-          <h3 className=" mb-2 text-lg font-bold md:mb-0">
+          <h3 className=" h3 mb-2 font-bold md:mb-0">
             Doble Grado Universitario
           </h3>
           <div className="flex flex-1 items-center gap-2 md:flex-auto">
@@ -29,7 +29,7 @@ const EducationSection = () => {
           </div>
         </div>
         <div className={clsx(styles.card, 'bg-secondary')}>
-          <h3 className="mb-2 text-lg font-bold md:mb-0">Cuatro idiomas</h3>
+          <h3 className="h3 mb-2 font-bold md:mb-0">Cuatro idiomas</h3>
           <ul>
             <li>
               <span className="font-bold"> C1 Inglés</span>: mayor nivel

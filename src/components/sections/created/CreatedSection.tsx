@@ -4,9 +4,7 @@ import React from 'react';
 const CreatedSection = () => {
   return (
     <section className="my-8 text-gray-400">
-      <h4 className="md:text-center lg:text-start lg:text-lg xl:text-xl">
-        Web creada con:
-      </h4>
+      <h4 className="h4 md:text-center lg:text-start">Web creada con:</h4>
       <div className="mt-1 flex items-end gap-4 text-xs md:mt-4 md:justify-center md:gap-16 md:text-base lg:justify-normal">
         <div>
           <Image

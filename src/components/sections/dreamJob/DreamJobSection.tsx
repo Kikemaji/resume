@@ -64,9 +64,7 @@ const DreamJobSection = () => {
 
   return (
     <section className="my-16 flex flex-col gap-4 rounded-lg border-2 border-dashed border-white p-4 lg:my-32">
-      <h2 className="text-center text-xl font-bold">
-        ¿Cómo es mi trabajo ideal?
-      </h2>
+      <h2 className="h2 text-center font-bold">¿Cómo es mi trabajo ideal?</h2>
       <div>
         {Object.entries(featuresByType).map(([type, feature]) => (
           <div key={type}>

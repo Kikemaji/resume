@@ -5,7 +5,7 @@ import { FaCamera, FaMicrophone } from 'react-icons/fa6';
 const ChatSection = () => {
   return (
     <section className="my-8 flex flex-col items-center gap-4">
-      <h2 className=" text-xl font-bold">Habla conmigo directamente</h2>
+      <h2 className=" h2 font-bold">Habla conmigo directamente</h2>
       <div className=" max-w-[640px] rounded-lg border-2 border-border">
         <div className="w-full rounded-t-lg border-b-2 border-border px-3 py-1 text-center font-bold text-white">
           Contacto RRHH

@@ -5,9 +5,7 @@ import clsx from 'clsx';
 const CTA1 = () => {
   return (
     <section className="relative my-32 gap-2 text-center text-white">
-      <h2
-        className={clsx(styles.gradientText, 'text-center text-2xl font-bold')}
-      >
+      <h2 className={clsx(styles.gradientText, 'h2 text-center font-bold')}>
         Como bien dicen las ofertas de trabajo:
       </h2>
       <p>No tienes por qué cumplir todos los requisitos.</p>
