@@ -40,7 +40,7 @@ const HeroSection = ({ dictionary }: { dictionary: Dictionary }) => {
         <SpinningText>
           <Image
             alt="Foto grande Enrique"
-            src="/profile_photo_lg_circle.png"
+            src="/photos/profile_photo_lg_circle.png"
             className="customShadow rounded-full md:hidden"
             width={210}
             height={210}
@@ -48,7 +48,7 @@ const HeroSection = ({ dictionary }: { dictionary: Dictionary }) => {
           />
           <Image
             alt="Foto grande Enrique"
-            src="/profile_photo_lg_circle.png"
+            src="/photos/profile_photo_lg_circle.png"
             className="customShadow hidden rounded-full md:block"
             width={310}
             height={310}

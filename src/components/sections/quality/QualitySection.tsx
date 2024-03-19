@@ -15,7 +15,7 @@ const QualitySection = () => {
           <Image
             className=""
             alt="ESLint icon"
-            src="/eslint.svg"
+            src="/icons/eslint.svg"
             width={24}
             height={21}
           />

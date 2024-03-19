@@ -9,7 +9,7 @@ function SpinningText({ children }: { children: React.ReactNode }) {
       key={0}
       className="h-10 w-10 invert"
       alt="NextJS icon"
-      src="/next.svg"
+      src="/icons/next.svg"
       width={24}
       height={24}
     />,
@@ -17,7 +17,7 @@ function SpinningText({ children }: { children: React.ReactNode }) {
       key={1}
       className="h-10 w-10"
       alt="ReactJS icon"
-      src="/react.svg"
+      src="/icons/react.svg"
       width={24}
       height={24}
     />,
@@ -25,7 +25,7 @@ function SpinningText({ children }: { children: React.ReactNode }) {
       key={2}
       className="w-8"
       alt="Typescript icon"
-      src="/typescript.svg"
+      src="/icons/typescript.svg"
       width={24}
       height={24}
     />,
@@ -33,7 +33,7 @@ function SpinningText({ children }: { children: React.ReactNode }) {
     //   key={3}
     //   className="w-10"
     //   alt="Tailwind CSS icon"
-    //   src="/tailwind.svg"
+    //   src="/icons/tailwind.svg"
     //   width={40}
     //   height={24}
     // />,
@@ -41,7 +41,7 @@ function SpinningText({ children }: { children: React.ReactNode }) {
       key={4}
       className="w-8"
       alt="Javascript icon"
-      src="/javascript.svg"
+      src="/icons/javascript.svg"
       width={24}
       height={24}
     />,
@@ -49,7 +49,7 @@ function SpinningText({ children }: { children: React.ReactNode }) {
       key={1}
       className="h-10 w-10"
       alt="Angular icon"
-      src="/angular.svg"
+      src="/icons/angular.svg"
       width={24}
       height={24}
     />,
@@ -57,7 +57,7 @@ function SpinningText({ children }: { children: React.ReactNode }) {
       key={1}
       className="h-10 w-10"
       alt="CSS icon"
-      src="/css.svg"
+      src="/icons/css.svg"
       width={24}
       height={24}
     />,
@@ -65,7 +65,7 @@ function SpinningText({ children }: { children: React.ReactNode }) {
       key={1}
       className="h-10 w-10"
       alt="HTML5 icon"
-      src="/html.svg"
+      src="/icons/html.svg"
       width={24}
       height={24}
     />,

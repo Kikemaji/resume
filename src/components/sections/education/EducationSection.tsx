@@ -18,7 +18,7 @@ const EducationSection = () => {
             <Image
               className="m-auto w-12"
               alt="URJC logo"
-              src="/URJC.svg"
+              src="/icons/URJC.svg"
               width={24}
               height={24}
             />

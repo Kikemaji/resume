@@ -12,7 +12,7 @@ const CreatedSection = () => {
           <Image
             className="mx-auto w-8 invert md:w-10"
             alt="NextJS icon"
-            src="/next.svg"
+            src="/icons/next.svg"
             width={24}
             height={24}
           />
@@ -22,7 +22,7 @@ const CreatedSection = () => {
           <Image
             className="mx-auto w-8 md:w-10"
             alt="ReactJS icon"
-            src="/react.svg"
+            src="/icons/react.svg"
             width={24}
             height={24}
           />
@@ -32,7 +32,7 @@ const CreatedSection = () => {
           <Image
             className="mx-auto w-8 md:w-10"
             alt="Typescript icon"
-            src="/typescript.svg"
+            src="/icons/typescript.svg"
             width={24}
             height={24}
           />
@@ -42,7 +42,7 @@ const CreatedSection = () => {
           <Image
             className="mx-auto w-8 md:w-10"
             alt="Tailwind CSS icon"
-            src="/tailwind.svg"
+            src="/icons/tailwind.svg"
             width={40}
             height={24}
           />
