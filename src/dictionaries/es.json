@@ -50,7 +50,12 @@
     "title": "Aprendo y me adapto rápido",
     "1": "Me encanta programar.",
     "2": "Independiente y me motivo con facilidad.",
-    "3": "Con iniciativa y habilidad para resolver problemas."
+    "3": "Con iniciativa y habilidad para resolver problemas.",
+    "mode": {
+      "0": "Presencial",
+      "1": "Híbrido",
+      "2": "Remote"
+    }
   },
   "experienceSection": {
     "ofExperience": "de experiencia",

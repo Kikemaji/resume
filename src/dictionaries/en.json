@@ -49,7 +49,12 @@
     "title": "I learn and adapt quickly",
     "1": "I love coding.",
     "2": "Independent and easily motivated.",
-    "3": "Initiative and problem-solving skills."
+    "3": "Initiative and problem-solving skills.",
+    "mode": {
+      "0": "On-site",
+      "1": "Hybrid",
+      "2": "Remote"
+    }
   },
   "experienceSection": {
     "ofExperience": "of experience",

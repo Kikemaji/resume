@@ -14,12 +14,17 @@ export const MapChart = ({ dictionary }: { dictionary: Dictionary }) => {
     const workingTypeNumber = codigoPorComunidad[code].value;
     return {
       name: code,
-      value: workingTypeNumber,
+      value: getTranslation(dictionary, [
+        'mapSection',
+        'mode',
+        workingTypeNumber.toString(),
+      ]),
       itemStyle: {
         color: workingTypesValue[workingTypeNumber].color,
       },
     };
   });
+
   const option = {
     tooltip: {
       trigger: 'item',
@@ -31,7 +36,7 @@ export const MapChart = ({ dictionary }: { dictionary: Dictionary }) => {
           codigoPorComunidad[params.name].name +
           ': ' +
           '<b>' +
-          workingTypesValue[codigoPorComunidad[params.name].value].label +
+          params.data?.value +
           '</b>' +
           '</div>';
         return result;
@@ -75,9 +80,6 @@ export const MapChart = ({ dictionary }: { dictionary: Dictionary }) => {
 
   return (
     <div className="h-full w-full">
-      <span>
-        Cliente: {getTranslation(dictionary, ['mapSection', 'title'])}
-      </span>
       <ReactECharts option={option} />
     </div>
   );
