@@ -13,7 +13,7 @@ export const RadarChart = ({
   maxValue: number;
 }) => {
   const option = {
-    color: ['#FFE434', '#67F9D8', '#56A3F1', '#FF917C'],
+    color: ['#FFE434'],
     radar: [
       {
         indicator: indicators.map((theme) => ({
