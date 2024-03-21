@@ -232,7 +232,7 @@ const SkillList = ({ title, skills, dictionary }: SkillListProps) => (
             <span
               className={clsx(skill.highlighted && 'font-bold text-accent')}
             >
-              {translation}
+              {translation === '' ? skill.name : translation}
             </span>
           </li>
         );
