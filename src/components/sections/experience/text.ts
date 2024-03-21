@@ -1,47 +1,34 @@
 import { Link, SkillCategory } from './types';
 
 export const selectContent = [
-  { index: '0', label: 'Tecnología usada' },
-  { index: '1', label: 'Proyecto destacable - Elecciones argentinas' },
+  { index: '0', label: 'usedTech' },
+  { index: '1', label: 'argElec' },
   {
     index: '2',
-    label: 'Proyecto destacable - Elecciones autonómicas españolas',
+    label: 'esElec',
   },
 ];
 
 export const selectContent2 = [
-  { index: '0', label: 'Tecnología usada' },
-  { index: '1', label: 'Proyecto destacable - Plataforma de RRHH' },
+  { index: '0', label: 'usedTech' },
+  { index: '1', label: 'rrhh' },
 ];
 
 export const selectContent3 = [
-  { index: '0', label: 'Habilidades técnicas' },
-  { index: '1', label: 'Soft skills' },
-  { index: '2', label: 'Destacable' },
+  { index: '0', label: 'techSkills' },
+  { index: '1', label: 'softSkills' },
+  { index: '2', label: 'notable' },
 ];
 
-export const argPoints = [
-  'Rediseño completo de la aplicación de captura y monitorización de votos en React.',
-  '*Resolución de más de 100 incidencias* para actualizar app antigua a la nueva versión.',
-  'Implementación de nuevas funcionalidades en un *código de alta complejidad.*',
-  'Creación de una aplicación de gestión de usuarios usando Next 13 (Api routes, server components), *reduciendo un proceso de 4 horas a 30 minutos*',
-];
+export const argPoints = ['argP1', 'argP2', 'argP3', 'argP4'];
 
-export const esPoints = [
-  '*Desarrollo en múltiples aplicaciones a la vez* para dar apoyo dónde fuera necesario, manteniendo al mismo tiempo un rol principal en la aplicación de difusión de votos.',
-  'Creación de una *web multilingüe* con React para descargar datos de prensa electoral.',
-  '*Implementación de diseño responsive* con animaciones usando Tailwind, framer motion, eChárts, Rádix…',
-];
+export const esPoints = ['esP1', 'esP2', 'esP3'];
 
-export const ustPoints = [
-  '*Creación desde 0* de la aplicación con *Angular y Firebase.*',
-  'Implementación de *diseño responsive* con SCSS.',
-  'Foco en funcionalidades y conexión con la BBDD de firestore.',
-];
+export const ustPoints = ['ustP1', 'ustP2', 'ustP3'];
 
 export const categories: SkillCategory[] = [
   {
-    title: 'Lenguajes/frameworks:',
+    title: 'language',
     skills: [
       { name: 'JavaScript/TypeScript', highlighted: true },
       { name: 'React.js', highlighted: true },
@@ -52,7 +39,7 @@ export const categories: SkillCategory[] = [
     ],
   },
   {
-    title: 'Herramientas:',
+    title: 'tools',
     skills: [
       { name: 'Git', highlighted: false },
       { name: 'Postman', highlighted: false },
@@ -63,7 +50,7 @@ export const categories: SkillCategory[] = [
     ],
   },
   {
-    title: 'Librerías:',
+    title: 'libraries',
     skills: [
       { name: 'eCharts', highlighted: true },
       { name: 'axios', highlighted: false },
@@ -83,7 +70,7 @@ export const categories: SkillCategory[] = [
 
 export const categories2: SkillCategory[] = [
   {
-    title: 'Tecnologías:',
+    title: 'tech',
     skills: [
       { name: 'TypeScript', highlighted: true },
       { name: 'Angular', highlighted: true },
@@ -95,7 +82,7 @@ export const categories2: SkillCategory[] = [
     ],
   },
   {
-    title: 'Herramientas:',
+    title: 'tools',
     skills: [
       { name: 'Git', highlighted: false },
       { name: 'Postman', highlighted: false },
@@ -107,53 +94,53 @@ export const categories2: SkillCategory[] = [
 
 export const categories3_1: SkillCategory[] = [
   {
-    title: 'Habilidades técnicas:',
+    title: 'techSkills',
     skills: [
-      { name: 'Wordpress', highlighted: true },
-      { name: 'Elementor Pro', highlighted: false },
-      { name: 'Adobe Premiere (Edición de vídeo)', highlighted: true },
+      { name: 'wordpress', highlighted: true },
+      { name: 'elementor', highlighted: false },
+      { name: 'adobe', highlighted: true },
       {
-        name: 'Email marketing (Active Campaign)',
+        name: 'emailMarketing',
         highlighted: true,
       },
-      { name: 'Meta Bussiness manager (Anuncios)', highlighted: false },
-      { name: 'Copywriting', highlighted: true },
-      { name: 'Gestión de RRSS', highlighted: false },
-      { name: 'Llamadas de ventas', highlighted: false },
+      { name: 'ads', highlighted: false },
+      { name: 'copy', highlighted: true },
+      { name: 'rrss', highlighted: false },
+      { name: 'salesCalls', highlighted: false },
     ],
   },
 ];
 
 export const categories3_2: SkillCategory[] = [
   {
-    title: 'Soft skills adquiridas:',
+    title: 'learnSoftSkills',
     skills: [
-      { name: 'Gestión del estrés', highlighted: true },
+      { name: 'stress', highlighted: true },
       {
-        name: 'Oratoria',
+        name: 'oratory',
         highlighted: true,
       },
-      { name: 'Adaptabilidad', highlighted: false },
+      { name: 'adapt', highlighted: false },
     ],
   },
   {
-    title: 'Soft skills enseñadas:',
+    title: 'teachSoftSkills',
     skills: [
-      { name: 'Rapidez para aprender', highlighted: true },
-      { name: 'Gestión de los nervios', highlighted: false },
-      { name: 'Concentración', highlighted: true },
+      { name: 'learnFast', highlighted: true },
+      { name: 'nerves', highlighted: false },
+      { name: 'concentration', highlighted: true },
       {
-        name: 'Alta capacidad de organización',
+        name: 'organization',
         highlighted: true,
       },
-      { name: 'Disciplina', highlighted: false },
+      { name: 'discipline', highlighted: false },
     ],
   },
 ];
 
 export const esLinks: Link[] = [
   {
-    name: 'Difusión elecciones autonómicas',
+    name: 'difuMunis',
     url: 'https://resultados.locales2023.es/',
   },
 ];

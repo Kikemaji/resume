@@ -4,15 +4,19 @@ import * as SelectElem from '@radix-ui/react-select';
 import clsx from 'clsx';
 import { FaChevronDown } from 'react-icons/fa';
 import { BiCheck } from 'react-icons/bi';
+import { getTranslation } from '@/utils/getTranslations';
+import { Dictionary } from '@/dictionaries/dictionaries';
 
 const Select = ({
   handleSelectValue,
   content,
   placeholder,
+  dictionary,
 }: {
   handleSelectValue: (value: string) => void;
   content: { index: string; label: string }[];
   placeholder: string;
+  dictionary: Dictionary;
 }) => (
   <SelectElem.Root onValueChange={handleSelectValue}>
     <SelectElem.Trigger className="inline-flex h-9 w-full max-w-64 cursor-pointer items-center justify-between gap-1.5 rounded-md px-4 py-1 text-sm text-black outline outline-1 outline-border hover:bg-[#f7f7f7] data-[placeholder]:text-border">
@@ -30,7 +34,11 @@ const Select = ({
           <SelectElem.Group>
             {content.map((elem) => (
               <SelectItem value={elem.index} key={elem.index}>
-                {elem.label}
+                {getTranslation(dictionary, [
+                  'experienceSection',
+                  'select',
+                  elem.label,
+                ])}
               </SelectItem>
             ))}
           </SelectElem.Group>

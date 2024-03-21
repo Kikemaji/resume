@@ -14,15 +14,15 @@ export const MapSection = ({ dictionary }: { dictionary: Dictionary }) => {
         <ul>
           <li className="mt-1 flex items-center gap-2 md:mt-2.5 md:gap-4 lg:text-lg">
             <IoCheckmarkCircle className="h-5 w-5 flex-shrink-0" />
-            Me encanta programar.
+            {getTranslation(dictionary, ['mapSection', '1'])}
           </li>
           <li className="mt-1 flex items-center gap-2 md:mt-2.5 md:gap-4 lg:text-lg">
             <IoCheckmarkCircle className="h-5 w-5 flex-shrink-0" />
-            Independiente y me motivo con facilidad.
+            {getTranslation(dictionary, ['mapSection', '2'])}
           </li>
           <li className="mt-1 flex items-center gap-2 md:mt-2.5 md:gap-4 lg:text-lg">
             <IoCheckmarkCircle className="h-5 w-5 flex-shrink-0" />
-            Con iniciativa y habilidad para resolver problemas.
+            {getTranslation(dictionary, ['mapSection', '3'])}
           </li>
         </ul>
       </div>

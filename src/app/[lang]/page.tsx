@@ -22,16 +22,16 @@ export default async function Home({
 
   return (
     <main className="flex min-h-screen flex-col bg-background text-text ">
-      <Navbar />
+      <Navbar dictionary={dictionary} />
       <div className=" mx-auto w-full px-4 py-4 md:px-16 lg:max-w-[80vw] lg:px-4 2xl:max-w-7xl">
         <HeroSection dictionary={dictionary} />
-        <QualitySection />
-        <WhyMeSection />
+        <QualitySection dictionary={dictionary} />
+        <WhyMeSection dictionary={dictionary} />
         <MapSection dictionary={dictionary} />
-        <ExperienceSection />
+        <ExperienceSection dictionary={dictionary} />
         {/* CTA */}
         {/* <ChatSection /> */}
-        <EducationSection />
+        <EducationSection dictionary={dictionary} />
         <DreamJobSection />
         <CTA1Section />
         <FAQSection />

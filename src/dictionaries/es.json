@@ -1,4 +1,10 @@
 {
+  "years": "años",
+  "photo": "Foto Enrique",
+  "y": "y",
+  "icons": {
+    "eslint": "Icono ESLint"
+  },
   "heroSection": {
     "title": {
       "1": "El ingeniero frontend",
@@ -8,10 +14,127 @@
     "buttons": {
       "code": "Ver código",
       "contact": "Contacto"
+    }
+  },
+  "qualitySection": {
+    "title": "Calidad asegurada por: ",
+    "principles": "principios",
+    "solid": "SOLID",
+    "byYou": "¿Por ti?",
+    "repoLove": "Dale amor al repo"
+  },
+
+  "whyMeSection": {
+    "title": "¿Por qué elegirme a mí?",
+    "card1": {
+      "title": "Team player",
+      "1": "Empático, sociable y optimista.",
+      "2": "Siempre con una sonrisa."
     },
-    "photo": "Foto Enrique"
+    "card2": {
+      "title": "Mentalidad de crecimiento",
+      "1": "Me encanta lo difícil",
+      "2": "Soy super curioso"
+    },
+    "card3": {
+      "title": "Autocrítico",
+      "1": "Reconozco mis errores",
+      "2": "Busco respuestas sin miedo a preguntar"
+    }
   },
   "mapSection": {
-    "title": "Aprendo y me adapto rápido"
+    "title": "Aprendo y me adapto rápido",
+    "1": "Me encanta programar.",
+    "2": "Independiente y me motivo con facilidad.",
+    "3": "Con iniciativa y habilidad para resolver problemas."
+  },
+  "experienceSection": {
+    "ofExperience": "de experiencia",
+    "choseOption": "Elige una opción",
+    "select": {
+      "placeholder": "¿Qué quieres saber?",
+      "usedTech": "Tecnología usada",
+      "argElec": "Proyecto destacable - Elecciones argentinas",
+      "esElec": "Proyecto destacable - Elecciones autonómicas españolas",
+      "rrhh": "Proyecto destacable - Plataforma de RRHH",
+      "techSkills": "Habilidades técnicas",
+      "softSkills": "Soft skills",
+      "notable": "Destacable"
+    },
+    "project": {
+      "notable": "Partes destacables:",
+      "argP1": "Rediseño completo de la aplicación de captura y monitorización de votos en React.",
+      "argP2": "*Resolución de más de 100 incidencias* para actualizar software antigua a la nueva versión.",
+      "argP3": "Implementación de nuevas funcionalidades en un *código de alta complejidad.*",
+      "argP4": "Creación de una aplicación de gestión de usuarios usando Next 13 (Api routes, server components), *reduciendo un proceso de 4 horas a 30 minutos*",
+      "esP1": "*Desarrollo en múltiples aplicaciones a la vez* para dar apoyo dónde fuera necesario, manteniendo al mismo tiempo un rol principal en la aplicación de difusión de votos.",
+      "esP2": "Creación de una *web multilingüe* con React para descargar datos de prensa electoral.",
+      "esP3": "*Implementación de diseño responsive* con animaciones usando Tailwind, framer motion, eChárts, Rádix…",
+      "ustP1": "*Creación desde 0* de la aplicación con *Angular y Firebase.*",
+      "ustP2": "Implementación de *diseño responsive* con SCSS.",
+      "ustP3": "Foco en funcionalidades y conexión con la BBDD de firestore."
+    },
+    "categories": {
+      "language": "Lenguajes/frameworks:",
+      "tools": "Herramientas:",
+      "libraries": "Librerías:",
+      "tech": "Tecnologías:",
+      "techSkills": "Habilidades técnicas:",
+      "learnSoftSkills": "Soft skills adquiridas:",
+      "teachSoftSkills": "Soft skills enseñadas:",
+      "wordpress": "Wordpress",
+      "elementor": "Elementor Pro",
+      "adobe": "Adobe Premiere (Edición de vídeo)",
+      "emailMarketing": "Email marketing (Active Campaign)",
+      "ads": "Meta Bussiness manager (Anuncios)",
+      "copy": "Copywriting",
+      "rrss": "Gestión de RRSS",
+      "salesCalls": "Llamadas de ventas",
+      "stress": "Gestión del estrés",
+      "oratory": "Oratoria",
+      "adapt": "Adaptabilidad",
+      "learnFast": "Rapidez para aprender",
+      "nerves": "Gestión de los nervios",
+      "concentration": "Concentración",
+      "organization": "Alta capacidad de organización",
+      "discipline": "Disciplina"
+    },
+    "link": {
+      "difuMunis": "Difusión elecciones autonómicas"
+    },
+    "experience1": {
+      "triggerText": "Enseñando a estudiar - Autónomo",
+      "title": "Autónomo / Profesor de productividad",
+      "description": "Enseñando a estudiar de forma eficiente"
+    },
+    "experience2": {
+      "triggerText": "Fullstack becario - 4 meses",
+      "title": "Beca Fullstack developer - UST Global",
+      "description": "Desarrollando una plataforma de RRHH, frontend y backend."
+    },
+    "experience3": {
+      "triggerText": "Software de las elecciones - 1 año y 4 meses",
+      "title": "Ingeniero frontend - Minsait",
+      "description": "Desarrollando el *software de las elecciones* Españolas y Latinoamericanas"
+    }
+  },
+  "educationSection": {
+    "title": "¿Con ganas de más?",
+    "card1": {
+      "title": "Doble Grado Universitario",
+      "1": "Ingeniería Informática",
+      "2": "Ingeniería del Software"
+    },
+    "card2": {
+      "title": "Cuatro idiomas",
+      "11": "C1 Inglés",
+      "12": ": mayor nivel demostrable.",
+      "21": "C1 Francés",
+      "22": ": un poco oxidado.",
+      "31": "Español",
+      "32": "nativo.",
+      "41": "2 años de clases de ",
+      "42": "japonés."
+    }
   }
 }

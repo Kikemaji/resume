@@ -4,34 +4,44 @@ import { GiCrystalGrowth } from 'react-icons/gi';
 import { RiTeamFill } from 'react-icons/ri';
 import styles from './WhyMe.module.css';
 import clsx from 'clsx';
+import { Dictionary } from '@/dictionaries/dictionaries';
+import { getTranslation } from '@/utils/getTranslations';
 
-const WhyMeSection = () => {
+const WhyMeSection = ({ dictionary }: { dictionary: Dictionary }) => {
   return (
     <section className="my-16 lg:my-24">
-      <h2 className="h2 mb-4 text-center font-bold">¿Por qué elegirme a mí?</h2>
+      <h2 className="h2 mb-4 text-center font-bold">
+        {getTranslation(dictionary, ['whyMeSection', 'title'])}
+      </h2>
       <div className="flex flex-col items-center gap-2 lg:flex-row lg:flex-wrap lg:justify-center">
         <div className={clsx(styles.card, 'md:mr-auto lg:mr-0')}>
           <RiTeamFill className={clsx(styles.icon, 'flex-shrink-0')} />
           <div>
-            <h3 className="h3 font-semibold">Team Player</h3>
-            <p>Empático, sociable y optimista.</p>
-            <p>Siempre con una sonrisa.</p>
+            <h3 className="h3 font-semibold">
+              {getTranslation(dictionary, ['whyMeSection', 'card1', 'title'])}
+            </h3>
+            <p>{getTranslation(dictionary, ['whyMeSection', 'card1', '1'])}</p>
+            <p>{getTranslation(dictionary, ['whyMeSection', 'card1', '2'])}</p>
           </div>
         </div>
         <div className={clsx(styles.card)}>
           <GiCrystalGrowth className={clsx(styles.icon, ' flex-shrink-0 ')} />
           <div>
-            <h3 className="h3 font-semibold ">Growth Mindset</h3>
-            <p>Me encanta lo difícil </p>
-            <p>Soy super curioso </p>
+            <h3 className="h3 font-semibold ">
+              {getTranslation(dictionary, ['whyMeSection', 'card2', 'title'])}
+            </h3>
+            <p>{getTranslation(dictionary, ['whyMeSection', 'card2', '1'])}</p>
+            <p>{getTranslation(dictionary, ['whyMeSection', 'card2', '2'])}</p>
           </div>
         </div>
         <div className={clsx(styles.card, 'md:ml-auto lg:ml-0')}>
           <FaCircleNodes className={clsx(styles.icon, 'flex-shrink-0')} />
           <div>
-            <h3 className="h3 font-semibold">Autocrítico</h3>
-            <p>Reconozco mis errores</p>
-            <p>Busco respuestas sin miedo a preguntar</p>
+            <h3 className="h3 font-semibold">
+              {getTranslation(dictionary, ['whyMeSection', 'card3', 'title'])}
+            </h3>
+            <p>{getTranslation(dictionary, ['whyMeSection', 'card3', '1'])}</p>
+            <p>{getTranslation(dictionary, ['whyMeSection', 'card3', '2'])}</p>
           </div>
         </div>
       </div>

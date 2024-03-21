@@ -8,6 +8,8 @@ import clsx from 'clsx';
 import { addFontBoldJSX } from '@/utils/addFontBold';
 import { Link, Skill, SkillCategory } from './types';
 import * as data from './text';
+import { Dictionary } from '@/dictionaries/dictionaries';
+import { getTranslation } from '@/utils/getTranslations';
 
 const comienzoAprox = new Date(2022, 7, 12).getTime();
 const ahora = new Date().getTime();
@@ -20,7 +22,7 @@ const mesasDeExperiencia = Math.floor(
     (30.44 * 24 * 60 * 60 * 1000)
 );
 
-const ExperienceSection = () => {
+const ExperienceSection = ({ dictionary }: { dictionary: Dictionary }) => {
   const [value, setValue] = useState('-1');
   const handleSelectValue = (val: string) => {
     setValue(val);
@@ -33,78 +35,148 @@ const ExperienceSection = () => {
   return (
     <section className="mb-16 mt-8 flex flex-col gap-2 lg:my-24">
       <h2 className="h2 text-center font-bold">
-        {anosDeExperiencia} {anosDeExperiencia > 1 ? 'años' : 'año'} y{' '}
-        {mesasDeExperiencia} {mesasDeExperiencia === 1 ? 'mes' : 'meses'} de
-        experiencia
+        {anosDeExperiencia} {anosDeExperiencia > 1 ? 'años' : 'año'}{' '}
+        {getTranslation(dictionary, ['y'])} {mesasDeExperiencia}{' '}
+        {mesasDeExperiencia === 1 ? 'mes' : 'meses'}{' '}
+        {getTranslation(dictionary, ['experienceSection', 'ofExperience'])}
       </h2>
       <Dialog
         triggerIcon={<FaPlus className="h-5 w-5" />}
-        triggerText="Software de las elecciones - 1 año y 3 meses"
-        title="Ingeniero frontend - Minsait"
-        description="Desarrollando el *software de las elecciones* Españolas y Latinoamericanas"
+        triggerText={getTranslation(dictionary, [
+          'experienceSection',
+          'experience3',
+          'triggerText',
+        ])}
+        triggerClassName=""
+        title={getTranslation(dictionary, [
+          'experienceSection',
+          'experience3',
+          'title',
+        ])}
+        description={getTranslation(dictionary, [
+          'experienceSection',
+          'experience3',
+          'description',
+        ])}
         handleClose={resetSelect}
       >
         <Select
-          placeholder="¿Qué quieres saber?"
+          placeholder={getTranslation(dictionary, [
+            'experienceSection',
+            'select',
+            'placeholder',
+          ])}
           handleSelectValue={handleSelectValue}
           content={data.selectContent}
+          dictionary={dictionary}
         />
         <div className="max-h-[50dvh] min-h-[30dvh] overflow-y-scroll">
           {value === '-1' && (
             <div className="grid h-[400px] place-items-center text-xl">
-              Elige una opción
+              {getTranslation(dictionary, ['experienceSection', 'choseOption'])}
             </div>
           )}
-          {value === '0' && <Skills categories={data.categories} />}
-          {value === '1' && <Project descriptions={data.argPoints} />}
+          {value === '0' && (
+            <Skills categories={data.categories} dictionary={dictionary} />
+          )}
+          {value === '1' && (
+            <Project descriptions={data.argPoints} dictionary={dictionary} />
+          )}
           {value === '2' && (
-            <Project descriptions={data.esPoints} links={data.esLinks} />
+            <Project
+              descriptions={data.esPoints}
+              links={data.esLinks}
+              dictionary={dictionary}
+            />
           )}
         </div>
       </Dialog>
       <Dialog
         triggerIcon={<FaPlus className="h-5 w-5" />}
-        triggerText="Fullstack becario - 4 meses"
-        title="Beca Fullstack developer - UST Global"
-        description="Desarrollando una plataforma de RRHH, frontend y backend."
+        triggerText={getTranslation(dictionary, [
+          'experienceSection',
+          'experience2',
+          'triggerText',
+        ])}
+        triggerClassName=""
+        title={getTranslation(dictionary, [
+          'experienceSection',
+          'experience2',
+          'title',
+        ])}
+        description={getTranslation(dictionary, [
+          'experienceSection',
+          'experience2',
+          'description',
+        ])}
         handleClose={resetSelect}
       >
         <Select
-          placeholder="¿Qué quieres saber?"
+          placeholder={getTranslation(dictionary, [
+            'experienceSection',
+            'select',
+            'placeholder',
+          ])}
           handleSelectValue={handleSelectValue}
           content={data.selectContent2}
+          dictionary={dictionary}
         />
         <div className="max-h-[50dvh] min-h-[30dvh] overflow-y-scroll">
           {value === '-1' && (
             <div className="grid h-[400px] place-items-center text-xl">
-              Elige una opción
+              {getTranslation(dictionary, ['experienceSection', 'choseOption'])}
             </div>
           )}
-          {value === '0' && <Skills categories={data.categories2} />}
-          {value === '1' && <Project descriptions={data.ustPoints} />}
+          {value === '0' && (
+            <Skills categories={data.categories2} dictionary={dictionary} />
+          )}
+          {value === '1' && (
+            <Project descriptions={data.ustPoints} dictionary={dictionary} />
+          )}
         </div>
       </Dialog>
       <Dialog
         triggerIcon={<FaPlus className="h-5 w-5" />}
-        triggerText="Enseñando a estudiar - Autónomo"
+        triggerText={getTranslation(dictionary, [
+          'experienceSection',
+          'experience1',
+          'triggerText',
+        ])}
         triggerClassName=""
-        title="Autónomo / Profesor de productividad"
-        description="Enseñando a estudiar de forma eficiente"
+        title={getTranslation(dictionary, [
+          'experienceSection',
+          'experience1',
+          'title',
+        ])}
+        description={getTranslation(dictionary, [
+          'experienceSection',
+          'experience1',
+          'description',
+        ])}
         handleClose={resetSelect}
       >
         <Select
-          placeholder="¿Qué quieres saber?"
+          placeholder={getTranslation(dictionary, [
+            'experienceSection',
+            'select',
+            'placeholder',
+          ])}
           handleSelectValue={handleSelectValue}
           content={data.selectContent3}
+          dictionary={dictionary}
         />
         <div className="max-h-[50dvh] min-h-[30dvh] overflow-y-scroll">
           {value === '-1' && (
             <div className="grid h-[400px] place-items-center text-xl">
-              Elige una opción
+              {getTranslation(dictionary, ['experienceSection', 'choseOption'])}
             </div>
           )}
-          {value === '0' && <Skills categories={data.categories3_1} />}
-          {value === '1' && <Skills categories={data.categories3_2} />}
+          {value === '0' && (
+            <Skills categories={data.categories3_1} dictionary={dictionary} />
+          )}
+          {value === '1' && (
+            <Skills categories={data.categories3_2} dictionary={dictionary} />
+          )}
           {value === '2' && (
             <div>
               Libro organización, 500k seguidores, Habilidades poco comunes
@@ -117,7 +189,13 @@ const ExperienceSection = () => {
   );
 };
 
-const Skills = ({ categories }: { categories: SkillCategory[] }) => {
+const Skills = ({
+  categories,
+  dictionary,
+}: {
+  categories: SkillCategory[];
+  dictionary: Dictionary;
+}) => {
   return (
     <div className="mt-2 flex max-h-[400px] flex-col gap-2 p-2 md:flex-wrap">
       {categories.map((category, index) => (
@@ -125,6 +203,7 @@ const Skills = ({ categories }: { categories: SkillCategory[] }) => {
           key={index}
           title={category.title}
           skills={category.skills}
+          dictionary={dictionary}
         />
       ))}
     </div>
@@ -134,18 +213,30 @@ const Skills = ({ categories }: { categories: SkillCategory[] }) => {
 interface SkillListProps {
   title: string;
   skills: Skill[];
+  dictionary: Dictionary;
 }
-const SkillList = ({ title, skills }: SkillListProps) => (
+const SkillList = ({ title, skills, dictionary }: SkillListProps) => (
   <div>
-    <p className="font-bold">{title}</p>
+    <p className="font-bold">
+      {getTranslation(dictionary, ['experienceSection', 'categories', title])}
+    </p>
     <ul className="list-disc px-5">
-      {skills.map((skill, index) => (
-        <li key={index}>
-          <span className={clsx(skill.highlighted && 'font-bold text-accent')}>
-            {skill.name}
-          </span>
-        </li>
-      ))}
+      {skills.map((skill, index) => {
+        const translation = getTranslation(dictionary, [
+          'experienceSection',
+          'categories',
+          skill.name,
+        ]);
+        return (
+          <li key={index}>
+            <span
+              className={clsx(skill.highlighted && 'font-bold text-accent')}
+            >
+              {translation}
+            </span>
+          </li>
+        );
+      })}
     </ul>
   </div>
 );
@@ -153,15 +244,27 @@ const SkillList = ({ title, skills }: SkillListProps) => (
 interface ProjectProps {
   descriptions: string[];
   links?: Link[];
+  dictionary: Dictionary;
 }
 
-const Project: React.FC<ProjectProps> = ({ descriptions, links }) => (
+const Project: React.FC<ProjectProps> = ({
+  descriptions,
+  links,
+  dictionary,
+}) => (
   <div className="mt-2">
-    <p className="font-bold">Partes destacables:</p>
+    <p className="font-bold">
+      {getTranslation(dictionary, ['experienceSection', 'project', 'notable'])}
+    </p>
     <ul className="list-disc px-5">
-      {descriptions.map((description, index) => (
-        <li key={index}>{addFontBoldJSX(description)}</li>
-      ))}
+      {descriptions.map((description, index) => {
+        const translation = getTranslation(dictionary, [
+          'experienceSection',
+          'project',
+          description,
+        ]);
+        return <li key={index}>{addFontBoldJSX(translation)}</li>;
+      })}
       {links?.map((link, index) => (
         <li key={index}>
           <a
@@ -169,7 +272,11 @@ const Project: React.FC<ProjectProps> = ({ descriptions, links }) => (
             target="_blank"
             className="inline-flex items-center gap-2 text-blue-400 underline"
           >
-            {link.name}
+            {getTranslation(dictionary, [
+              'experienceSection',
+              'link',
+              link.name,
+            ])}
             <FaExternalLinkAlt />
           </a>
         </li>

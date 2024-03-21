@@ -2,17 +2,19 @@ import Image from 'next/image';
 import React from 'react';
 import styles from './Education.module.css';
 import clsx from 'clsx';
+import { Dictionary } from '@/dictionaries/dictionaries';
+import { getTranslation } from '@/utils/getTranslations';
 
-const EducationSection = () => {
+const EducationSection = ({ dictionary }: { dictionary: Dictionary }) => {
   return (
     <section className="my-16 lg:my-24">
       <h2 className="h2 mb-4 text-center font-bold md:text-end lg:text-center">
-        ¿Con ganas de más?
+        {getTranslation(dictionary, ['educationSection', 'title'])}
       </h2>
       <div className="flex flex-col items-center gap-2 lg:flex-row lg:flex-wrap lg:justify-center">
         <div className={clsx(styles.card, 'bg-secondary md:ml-auto lg:ml-0')}>
           <h3 className=" h3 mb-2 font-bold md:mb-0">
-            Doble Grado Universitario
+            {getTranslation(dictionary, ['educationSection', 'card1', 'title'])}
           </h3>
           <div className="flex flex-1 items-center gap-2 md:flex-auto">
             <Image
@@ -23,26 +25,60 @@ const EducationSection = () => {
               height={24}
             />
             <div>
-              <p>Ingeniería Informática</p>
-              <p>Ingeniería del Software</p>
+              <p>
+                {getTranslation(dictionary, ['educationSection', 'card1', '1'])}
+              </p>
+              <p>
+                {getTranslation(dictionary, ['educationSection', 'card1', '2'])}
+              </p>
             </div>
           </div>
         </div>
         <div className={clsx(styles.card, 'bg-secondary')}>
-          <h3 className="h3 mb-2 font-bold md:mb-0">Cuatro idiomas</h3>
+          <h3 className="h3 mb-2 font-bold md:mb-0">
+            {getTranslation(dictionary, ['educationSection', 'card2', 'title'])}
+          </h3>
           <ul>
             <li>
-              <span className="font-bold"> C1 Inglés</span>: mayor nivel
-              demostrable.
+              <span className="font-bold">
+                {' '}
+                {getTranslation(dictionary, [
+                  'educationSection',
+                  'card2',
+                  '11',
+                ])}
+              </span>
+              {getTranslation(dictionary, ['educationSection', 'card2', '12'])}
             </li>
             <li>
-              <span className="font-bold">C1 Francés</span>: un poco oxidado.
+              <span className="font-bold">
+                {getTranslation(dictionary, [
+                  'educationSection',
+                  'card2',
+                  '21',
+                ])}
+              </span>
+              {getTranslation(dictionary, ['educationSection', 'card2', '22'])}
             </li>
             <li>
-              <span className="font-bold">Español</span> nativo.
+              <span className="font-bold">
+                {getTranslation(dictionary, [
+                  'educationSection',
+                  'card2',
+                  '31',
+                ])}
+              </span>{' '}
+              {getTranslation(dictionary, ['educationSection', 'card2', '32'])}
             </li>
             <li>
-              2 años de clases de <span className="font-bold">japonés</span>.
+              {getTranslation(dictionary, ['educationSection', 'card2', '41'])}
+              <span className="font-bold">
+                {getTranslation(dictionary, [
+                  'educationSection',
+                  'card2',
+                  '42',
+                ])}
+              </span>
             </li>
           </ul>
         </div>

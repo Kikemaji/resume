@@ -1,14 +1,139 @@
 {
+  "years": "years",
+  "photo": "Enrique's Photo",
+  "y": "and",
+  "icons": {
+    "eslint": "ESLint Icon"
+  },
   "heroSection": {
     "title": {
       "1": "The frontend engineer",
       "2": "you need"
     },
-    "subtitle": "With code so you don't have to look at so many resumes",
+    "subtitle": "With code so you don't have to look at so many CVs",
     "buttons": {
       "code": "View code",
       "contact": "Contact"
+    }
+  },
+  "qualitySection": {
+    "title": "Quality assured by: ",
+    "principles": "Principles",
+    "solid": "SOLID",
+    "byYou": "By you?",
+    "repoLove": "Show some love to the repo"
+  },
+  "whyMeSection": {
+    "title": "Why choose me?",
+    "card1": {
+      "title": "Team player",
+      "1": "Empathetic, sociable, and optimistic.",
+      "2": "Always with a smile."
     },
-    "photo": "Enrique's photo"
+    "card2": {
+      "title": "Growth mindset",
+      "1": "I love challenges",
+      "2": "I'm super curious"
+    },
+    "card3": {
+      "title": "Self-critical",
+      "1": "I acknowledge my mistakes",
+      "2": "I seek answers without fear of asking"
+    }
+  },
+  "mapSection": {
+    "title": "I learn and adapt quickly",
+    "1": "I love coding.",
+    "2": "Independent and easily motivated.",
+    "3": "Initiative and problem-solving skills."
+  },
+  "experienceSection": {
+    "ofExperience": "of experience",
+    "choseOption": "Choose an option",
+    "select": {
+      "placeholder": "What do you want to know?",
+      "usedTech": "Used technology",
+      "argElec": "Notable project - Argentine elections",
+      "esElec": "Notable project - Spanish regional elections",
+      "rrhh": "Notable project - HR platform",
+      "techSkills": "Technical skills",
+      "softSkills": "Soft skills",
+      "notable": "Notable"
+    },
+    "project": {
+      "notable": "Key parts:",
+      "argP1": "Complete redesign of the vote capture and monitoring application in React.",
+      "argP2": "*Resolved over 100 issues* to update old software to the new version.",
+      "argP3": "Implementation of new features in *highly complex code.*",
+      "argP4": "Creation of a user management application using Next 13 (Api routes, server components), *reducing a 4-hour process to 30 minutes*",
+      "esP1": "*Development in multiple applications simultaneously* to provide support where needed, while maintaining a primary role in the vote dissemination application.",
+      "esP2": "Creation of a *multilingual website* with React to download electoral press data.",
+      "esP3": "*Implementation of responsive design* with animations using Tailwind, framer motion, eCharts, Radix...",
+      "ustP1": "Created the application from scratch with *Angular and Firebase.*",
+      "ustP2": "Implemented *responsive design* with SCSS.",
+      "ustP3": "Focused on features and connection with firestore DB."
+    },
+    "categories": {
+      "language": "Languages/frameworks:",
+      "tools": "Tools:",
+      "libraries": "Libraries:",
+      "tech": "Technologies:",
+      "techSkills": "Technical skills:",
+      "learnSoftSkills": "Acquired soft skills:",
+      "teachSoftSkills": "Taught soft skills:",
+      "wordpress": "Wordpress",
+      "elementor": "Elementor Pro",
+      "adobe": "Adobe Premiere (Video Editing)",
+      "emailMarketing": "Email marketing (Active Campaign)",
+      "ads": "Meta Business Manager (Ads)",
+      "copy": "Copywriting",
+      "rrss": "Social Media Management",
+      "salesCalls": "Sales Calls",
+      "stress": "Stress Management",
+      "oratory": "Public Speaking",
+      "adapt": "Adaptability",
+      "learnFast": "Quick learner",
+      "nerves": "Nerves Management",
+      "concentration": "Concentration",
+      "organization": "High organizational capacity",
+      "discipline": "Discipline"
+    },
+    "link": {
+      "difuMunis": "Regional elections results page"
+    },
+    "experience1": {
+      "triggerText": "Teaching to study - Freelance",
+      "title": "Freelancer / Productivity teacher",
+      "description": "Teaching efficient study methods"
+    },
+    "experience2": {
+      "triggerText": "Fullstack internship - 4 months",
+      "title": "Fullstack Developer Intern - UST Global",
+      "description": "Developing an HR platform, frontend and backend."
+    },
+    "experience3": {
+      "triggerText": "Elections software - 1 year and 4 months",
+      "title": "Frontend Engineer - Minsait",
+      "description": "Developing Spanish and Latin American election software"
+    }
+  },
+  "educationSection": {
+    "title": "Want more?",
+    "card1": {
+      "title": "Double Bachelor's Degree",
+      "1": "Computer Engineering",
+      "2": "Software Engineering"
+    },
+    "card2": {
+      "title": "Four languages",
+      "11": "C1 English",
+      "12": ": can demonstrate higher level.",
+      "21": "C1 French",
+      "22": ": a bit rusty.",
+      "31": "Spanish",
+      "32": "native.",
+      "41": "2 years of ",
+      "42": "Japanese classes."
+    }
   }
 }
