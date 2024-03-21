@@ -39,7 +39,7 @@ const HeroSection = ({ dictionary }: { dictionary: Dictionary }) => {
       <div className="relative flex justify-center">
         <SpinningText>
           <Image
-            alt="Foto grande Enrique"
+            alt={getTranslation(dictionary, ['heroSection', 'photo']) ?? ''}
             src="/photos/profile_photo_lg_circle.png"
             className="customShadow rounded-full md:hidden"
             width={210}
@@ -47,7 +47,7 @@ const HeroSection = ({ dictionary }: { dictionary: Dictionary }) => {
             priority
           />
           <Image
-            alt="Foto grande Enrique"
+            alt={getTranslation(dictionary, ['heroSection', 'photo']) ?? ''}
             src="/photos/profile_photo_lg_circle.png"
             className="customShadow hidden rounded-full md:block"
             width={310}
