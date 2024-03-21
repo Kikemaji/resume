@@ -32,10 +32,10 @@ export default async function Home({
         {/* CTA */}
         {/* <ChatSection /> */}
         <EducationSection dictionary={dictionary} />
-        <DreamJobSection />
-        <CTA1Section />
-        <FAQSection />
-        <CreatedSection />
+        <DreamJobSection dictionary={dictionary} />
+        <CTA1Section dictionary={dictionary} />
+        <FAQSection dictionary={dictionary} />
+        <CreatedSection dictionary={dictionary} />
       </div>
     </main>
   );

@@ -4,31 +4,31 @@ import { FaChevronDown } from 'react-icons/fa6';
 import * as AccordionElem from '@radix-ui/react-accordion';
 import clsx from 'clsx';
 import styles from './Accordion.module.css';
+import { Dictionary } from '@/dictionaries/dictionaries';
+import { getTranslation } from '@/utils/getTranslations';
 
-const Accordion = ({}) => {
+const Accordion = ({ dictionary }: { dictionary: Dictionary }) => {
   const content = [
     // {
     //   question: '¿Cuál es tu disponibilidad?',
     //   answer: 'Preaviso de 15 días',
     // },
     {
-      question: '¿Estás autorizado para trabajar en la Unión Europea?',
-      answer: 'Sí, soy español.',
+      question: getTranslation(dictionary, ['FAQSection', 'Q1']),
+      answer: getTranslation(dictionary, ['FAQSection', 'A1']),
     },
     {
-      question: '¿Cuál es tu expectativa salarial?',
-      answer:
-        'Depende de cómo sea el trabajo y las responsabilidades que tenga. Habrá que hablarlo en la entrevista.',
+      question: getTranslation(dictionary, ['FAQSection', 'Q2']),
+      answer: getTranslation(dictionary, ['FAQSection', 'A2']),
     },
 
     {
-      question: '¿Qué otros lenguajes conoces?',
-      answer: 'Que sean relevantes, Java y Python',
+      question: getTranslation(dictionary, ['FAQSection', 'Q3']),
+      answer: getTranslation(dictionary, ['FAQSection', 'A3']),
     },
     {
-      question: '¿Cuándo se actualizó esta página por última vez?',
-      answer:
-        'Marzo 2023. Aunque datos como la experiencia y la edad se actualizan automáticamente.',
+      question: getTranslation(dictionary, ['FAQSection', 'Q4']),
+      answer: getTranslation(dictionary, ['FAQSection', 'A4']),
     },
   ];
 

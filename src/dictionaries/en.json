@@ -3,7 +3,11 @@
   "photo": "Enrique's Photo",
   "y": "and",
   "icons": {
-    "eslint": "ESLint Icon"
+    "eslint": "ESLint icon",
+    "next": "NextJS icon",
+    "react": "ReactJS icon",
+    "typescript": "Typescript icon",
+    "tailwind": "Tailwind icon"
   },
   "heroSection": {
     "title": {
@@ -135,5 +139,63 @@
       "41": "2 years of ",
       "42": "Japanese classes."
     }
+  },
+  "dreamJobSection": {
+    "title": "What's my dream job like?",
+    "subtitle": "Choose the options to see how balanced your offer is",
+    "type": {
+      "need": "Necessary",
+      "plus": "Plus",
+      "dream": "Dreaming is free"
+    },
+    "themes": {
+      "educational": "Educational",
+      "entertaining": "Entertaining",
+      "environment": "Good work environment",
+      "balance": "Work / Life balance",
+      "salary": "Salary €"
+    },
+    "tags": {
+      "workModel": "Remote/Hybrid",
+      "overtime": "No overtime",
+      "flexible": "Flexible schedule",
+      "salaryReview": "Salary reviews",
+      "coWorkers": "Good coworkers",
+      "insurance": "Health insurance",
+      "codeReviews": "Code reviews",
+      "communication": "Communication",
+      "goodPractice": "Good practices",
+      "flexPayment": "Flexible remuneration",
+      "languages": "Different frameworks/projects",
+      "testing": "Testing",
+      "agile": "Agile",
+      "backend": "Learning backend",
+      "topSalary": "Very competitive salary",
+      "dailyIntensive": "Daily intensive workday",
+      "youngTeam": "Young team",
+      "bonus": "Bonus",
+      "training": "Training",
+      "freedom": "Freedom to choose technologies used"
+    }
+  },
+  "CTA1Section": {
+    "title": "As job offers often say:",
+    "1": "You don't have to meet all the requirements.",
+    "2": "If you think you have a good offer...",
+    "button": "Talk to me :)"
+  },
+  "FAQSection": {
+    "title": "Frequently Asked Questions",
+    "Q1": "Are you authorized to work in the European Union?",
+    "A1": "Yes, I am Spanish.",
+    "Q2": "What is your salary expectation?",
+    "A2": "It depends on the job and the responsibilities it entails. We'll have to discuss it in the interview.",
+    "Q3": "What other languages do you know?",
+    "A3": "The important ones are Java andPython",
+    "Q4": "When was this page last updated?",
+    "A4": "March 2023. Although data such as experience and age are automatically updated."
+  },
+  "createdSection": {
+    "title": "Website created with:"
   }
 }

@@ -2,22 +2,30 @@
 import React from 'react';
 import ReactECharts from 'echarts-for-react';
 import { Theme } from '../sections/dreamJob/types';
+import { Dictionary } from '@/dictionaries/dictionaries';
+import { getTranslation } from '@/utils/getTranslations';
 
 export const RadarChart = ({
   indicators,
   values,
   maxValue,
+  dictionary,
 }: {
   indicators: Theme[];
   values: number[];
   maxValue: number;
+  dictionary: Dictionary;
 }) => {
   const option = {
     color: ['#FFE434'],
     radar: [
       {
         indicator: indicators.map((theme) => ({
-          name: theme.name,
+          name: getTranslation(dictionary, [
+            'dreamJobSection',
+            'themes',
+            theme.name,
+          ]),
           max: maxValue,
         })),
         startAngle: 90,
@@ -57,7 +65,7 @@ export const RadarChart = ({
         data: [
           {
             value: values,
-            name: 'Data B',
+            name: 'Data A',
             areaStyle: {
               color: 'rgba(255, 228, 52, 0.6)',
             },

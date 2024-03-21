@@ -1,15 +1,19 @@
+import { Dictionary } from '@/dictionaries/dictionaries';
+import { getTranslation } from '@/utils/getTranslations';
 import Image from 'next/image';
 import React from 'react';
 
-const CreatedSection = () => {
+const CreatedSection = ({ dictionary }: { dictionary: Dictionary }) => {
   return (
     <section className="my-8 text-gray-400">
-      <h4 className="h4 md:text-center lg:text-start">Web creada con:</h4>
+      <h4 className="h4 md:text-center lg:text-start">
+        {getTranslation(dictionary, ['createdSection', 'title'])}
+      </h4>
       <div className="mt-1 flex items-end gap-4 text-xs md:mt-4 md:justify-center md:gap-16 md:text-base lg:justify-normal">
         <div>
           <Image
             className="mx-auto w-8 invert md:w-10"
-            alt="NextJS icon"
+            alt={getTranslation(dictionary, ['icons', 'next'])}
             src="/icons/next.svg"
             width={24}
             height={24}
@@ -19,7 +23,7 @@ const CreatedSection = () => {
         <div>
           <Image
             className="mx-auto w-8 md:w-10"
-            alt="ReactJS icon"
+            alt={getTranslation(dictionary, ['icons', 'react'])}
             src="/icons/react.svg"
             width={24}
             height={24}
@@ -29,7 +33,7 @@ const CreatedSection = () => {
         <div>
           <Image
             className="mx-auto w-8 md:w-10"
-            alt="Typescript icon"
+            alt={getTranslation(dictionary, ['icons', 'typescript'])}
             src="/icons/typescript.svg"
             width={24}
             height={24}
@@ -39,7 +43,7 @@ const CreatedSection = () => {
         <div>
           <Image
             className="mx-auto w-8 md:w-10"
-            alt="Tailwind CSS icon"
+            alt={getTranslation(dictionary, ['icons', 'tailwind'])}
             src="/icons/tailwind.svg"
             width={40}
             height={24}

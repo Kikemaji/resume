@@ -3,7 +3,11 @@
   "photo": "Foto Enrique",
   "y": "y",
   "icons": {
-    "eslint": "Icono ESLint"
+    "eslint": "Icono ESLint",
+    "next": "Icono NextJS",
+    "react": "Icono ReactJS",
+    "typescript": "Icono Typescript",
+    "tailwind": "Icono Tailwind"
   },
   "heroSection": {
     "title": {
@@ -136,5 +140,63 @@
       "41": "2 años de clases de ",
       "42": "japonés."
     }
+  },
+  "dreamJobSection": {
+    "title": "¿Cómo es mi trabajo ideal?",
+    "subtitle": "Elige las opciones para ver cómo de equilibrada es tu oferta",
+    "type": {
+      "need": "Necesario",
+      "plus": "Plus",
+      "dream": "Soñar es gratis"
+    },
+    "themes": {
+      "educational": "Didáctico",
+      "entertaining": "Entretenido",
+      "environment": "Con buen ambiente",
+      "balance": "Equilibrio vida / trabajo",
+      "salary": "Sueldo €"
+    },
+    "tags": {
+      "workModel": "Remoto/Híbrido",
+      "overtime": "Sin horas extra",
+      "flexible": "Horario flexible",
+      "salaryReview": "Revisiones salariales",
+      "coWorkers": "Buenos compañeros",
+      "insurance": "Seguro médico",
+      "codeReviews": "Reviews de código",
+      "communication": "Comunicación",
+      "goodPractice": "Buenas prácticas",
+      "flexPayment": "Retribución flexible",
+      "languages": "Diferentes frameworks/proyectos",
+      "testing": "Testing",
+      "agile": "Agile",
+      "backend": "Aprender backend",
+      "topSalary": "Salario muy competitivo",
+      "dailyIntensive": "Jornada intensiva diaria",
+      "youngTeam": "Equipo joven",
+      "bonus": "Bonus",
+      "training": "Formación",
+      "freedom": "Libertad para decidir tecnologías usadas"
+    }
+  },
+  "CTA1Section": {
+    "title": "Como bien dicen las ofertas de trabajo:",
+    "1": "No tienes por qué cumplir todos los requisitos.",
+    "2": "Si crees que tienes una buena oferta...",
+    "button": "Háblame :)"
+  },
+  "FAQSection": {
+    "title": "Preguntas frecuentes",
+    "Q1": "¿Estás autorizado para trabajar en la Unión Europea?",
+    "A1": "Sí, soy español.",
+    "Q2": "¿Cuál es tu expectativa salarial?",
+    "A2": "Depende de cómo sea el trabajo y las responsabilidades que tenga. Habrá que hablarlo en la entrevista.",
+    "Q3": "¿Qué otros lenguajes conoces?",
+    "A3": "Que sean relevantes, Java y Python",
+    "Q4": "¿Cuándo se actualizó esta página por última vez?",
+    "A4": "Marzo 2023. Aunque datos como la experiencia y la edad se actualizan automáticamente."
+  },
+  "createdSection": {
+    "title": "Web creada con:"
   }
 }

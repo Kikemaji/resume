@@ -5,6 +5,8 @@ import React, { useState } from 'react';
 import { Feature, SelectedFeatures } from './types';
 import { calculateFeatureValuePerTheme, getFeaturesByType } from './jobUtils';
 import { featuresContent, mainThemes } from './jobContent';
+import { Dictionary } from '@/dictionaries/dictionaries';
+import { getTranslation } from '@/utils/getTranslations';
 
 const { maxFeaturesNumber, valuePerTheme } =
   calculateFeatureValuePerTheme(featuresContent);
@@ -27,7 +29,7 @@ const allFeaturesNotActive: SelectedFeatures = featuresContent.reduce(
 
 const featuresByType = getFeaturesByType(featuresContent);
 
-const DreamJobSection = () => {
+const DreamJobSection = ({ dictionary }: { dictionary: Dictionary }) => {
   const [selectedFeatures, setSelectedFeatures] =
     useState<SelectedFeatures>(allFeaturesNotActive);
   const [radarValuesArray, setRadarValuesArray] = useState(
@@ -64,11 +66,20 @@ const DreamJobSection = () => {
 
   return (
     <section className="my-16 flex flex-col gap-4 rounded-lg border-2 border-dashed border-white p-4 lg:my-32">
-      <h2 className="h2 text-center font-bold">¿Cómo es mi trabajo ideal?</h2>
+      <div>
+        <h2 className="h2 text-center font-bold">
+          {getTranslation(dictionary, ['dreamJobSection', 'title'])}
+        </h2>
+        <h4 className="h4 text-center">
+          {getTranslation(dictionary, ['dreamJobSection', 'subtitle'])}
+        </h4>
+      </div>
       <div>
         {Object.entries(featuresByType).map(([type, feature]) => (
           <div key={type}>
-            <p>{type}</p>
+            <p>
+              {getTranslation(dictionary, ['dreamJobSection', 'type', type])}
+            </p>
             <div className="flex flex-wrap gap-1 text-sm text-black">
               {feature.map((feature, index) => (
                 <StringItem
@@ -76,6 +87,7 @@ const DreamJobSection = () => {
                   value={feature}
                   isSelected={selectedFeatures[feature.name].active}
                   onSelect={handleFeatureSelection}
+                  dictionary={dictionary}
                 />
               ))}
             </div>
@@ -86,6 +98,7 @@ const DreamJobSection = () => {
         indicators={mainThemes}
         values={radarValuesArray.map((value) => value)}
         maxValue={maxFeaturesNumber}
+        dictionary={dictionary}
       />
     </section>
   );
@@ -95,12 +108,14 @@ interface FeatureItemProps {
   value: Feature;
   isSelected: boolean;
   onSelect: (value: Feature) => void;
+  dictionary: Dictionary;
 }
 
 const StringItem: React.FC<FeatureItemProps> = ({
   value,
   isSelected,
   onSelect,
+  dictionary,
 }) => {
   const toggleSelection = () => {
     onSelect(value);
@@ -114,7 +129,7 @@ const StringItem: React.FC<FeatureItemProps> = ({
       )}
       onClick={toggleSelection}
     >
-      {value.name}
+      {getTranslation(dictionary, ['dreamJobSection', 'tags', value.name])}
     </div>
   );
 };
