@@ -78,7 +78,7 @@ const ExperienceSection = ({ dictionary }: { dictionary: Dictionary }) => {
         />
         <div className="max-h-[50dvh] min-h-[30dvh] overflow-y-scroll">
           {value === '-1' && (
-            <div className="grid h-[400px] place-items-center text-xl">
+            <div className="grid h-[300px] place-items-center text-xl">
               {getTranslation(dictionary, ['experienceSection', 'choseOption'])}
             </div>
           )}
@@ -129,7 +129,7 @@ const ExperienceSection = ({ dictionary }: { dictionary: Dictionary }) => {
         />
         <div className="max-h-[50dvh] min-h-[30dvh] overflow-y-scroll">
           {value === '-1' && (
-            <div className="grid h-[400px] place-items-center text-xl">
+            <div className="grid h-[300px] place-items-center text-xl">
               {getTranslation(dictionary, ['experienceSection', 'choseOption'])}
             </div>
           )}
@@ -173,7 +173,7 @@ const ExperienceSection = ({ dictionary }: { dictionary: Dictionary }) => {
         />
         <div className="max-h-[50dvh] min-h-[30dvh] overflow-y-scroll">
           {value === '-1' && (
-            <div className="grid h-[400px] place-items-center text-xl">
+            <div className="grid h-[300px] place-items-center text-xl">
               {getTranslation(dictionary, ['experienceSection', 'choseOption'])}
             </div>
           )}
@@ -182,12 +182,6 @@ const ExperienceSection = ({ dictionary }: { dictionary: Dictionary }) => {
           )}
           {value === '1' && (
             <Skills categories={data.categories3_2} dictionary={dictionary} />
-          )}
-          {value === '2' && (
-            <div>
-              Libro organización, 500k seguidores, Habilidades poco comunes
-              (pereza, concentración y organización)
-            </div>
           )}
         </div>
       </Dialog>

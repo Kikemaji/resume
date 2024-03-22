@@ -17,7 +17,6 @@ export const selectContent2 = [
 export const selectContent3 = [
   { index: '0', label: 'techSkills' },
   { index: '1', label: 'softSkills' },
-  { index: '2', label: 'notable' },
 ];
 
 export const argPoints = ['argP1', 'argP2', 'argP3', 'argP4'];
