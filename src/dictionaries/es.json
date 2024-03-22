@@ -221,7 +221,9 @@
     "Q3": "¿Qué otros lenguajes conoces?",
     "A3": "Que sean relevantes, Java y Python",
     "Q4": "¿Cuándo se actualizó esta página por última vez?",
-    "A4": "Marzo 2023. Aunque datos como la experiencia y la edad se actualizan automáticamente."
+    "A4": "Marzo 2023. Aunque datos como la experiencia y la edad se actualizan automáticamente.",
+    "Q5": "Participas en proyectos como freelance?",
+    "A5": "Es posible si tu proyecto es compatible con un trabajo a tiempo completo."
   },
   "createdSection": {
     "title": "Web creada con:"

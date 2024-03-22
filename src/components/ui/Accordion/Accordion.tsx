@@ -30,6 +30,10 @@ const Accordion = ({ dictionary }: { dictionary: Dictionary }) => {
       question: getTranslation(dictionary, ['FAQSection', 'Q4']),
       answer: getTranslation(dictionary, ['FAQSection', 'A4']),
     },
+    {
+      question: getTranslation(dictionary, ['FAQSection', 'Q5']),
+      answer: getTranslation(dictionary, ['FAQSection', 'A5']),
+    },
   ];
 
   return (
