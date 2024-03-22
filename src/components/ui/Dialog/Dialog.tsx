@@ -14,6 +14,7 @@ interface DialogProps {
   description?: string;
   children: React.ReactNode;
   handleClose?: () => void;
+  contentClassName?: string;
 }
 
 const Dialog = ({
@@ -24,6 +25,7 @@ const Dialog = ({
   description,
   children,
   handleClose,
+  contentClassName,
 }: DialogProps) => {
   const handleCloseInside = (open: boolean) => {
     if (!open && handleClose) {
@@ -50,7 +52,8 @@ const Dialog = ({
           className={clsx(
             styles.dialogShadow,
             styles.animateContentShow,
-            'fixed left-1/2 top-1/2 z-20 max-h-[85dvh] w-[90vw] max-w-xl -translate-x-1/2 -translate-y-1/2 transform rounded-lg bg-white p-6 text-black'
+            contentClassName,
+            'fixed left-1/2 top-1/2 max-h-[85dvh] w-[90vw] max-w-xl -translate-x-1/2 -translate-y-1/2 transform rounded-lg bg-white p-6 text-black'
           )}
         >
           <DialogElem.Title className="h3 mx-auto border-b border-black p-1 text-center md:w-8/12">

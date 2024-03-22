@@ -10,6 +10,7 @@ const ExplanationDialog = ({ dictionary }: { dictionary: Dictionary }) => {
       triggerText={'Te las explico aquí'}
       title="Explicación términos"
       triggerClassName="hover:underline"
+      contentClassName="z-20"
     >
       <ol className="mt-2 max-h-[50dvh] min-h-[30dvh] overflow-y-scroll">
         {featuresContent.map((feature) => (
