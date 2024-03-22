@@ -1,5 +1,4 @@
 import clsx from 'clsx';
-import Image from 'next/image';
 import React from 'react';
 import { FaHeart } from 'react-icons/fa6';
 import styles from './Quality.module.css';
@@ -12,16 +11,16 @@ const QualitySection = ({ dictionary }: { dictionary: Dictionary }) => {
       <h4 className="h4 md:text-center lg:text-start">
         {getTranslation(dictionary, ['qualitySection', 'title'])}
       </h4>
-      <div className="mt-1 flex items-end gap-4 md:mt-4 md:justify-center md:gap-16 lg:justify-normal">
-        <div className="flex flex-col gap-1">
-          <Image
+      <div className="mt-1 flex items-end gap-4  md:justify-center md:gap-16 lg:justify-normal">
+        <div className="flex items-center gap-1">
+          <span className="text-xs md:text-base">ESLint</span>
+          {/* <Image
             className=""
             alt={getTranslation(dictionary, ['icons', 'eslint'])}
             src="/icons/eslint.svg"
             width={24}
             height={21}
-          />
-          <span className="text-xs md:text-base">ESLint</span>
+          /> */}
         </div>
         <div
           className="
