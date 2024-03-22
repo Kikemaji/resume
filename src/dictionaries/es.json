@@ -1,7 +1,10 @@
 {
   "years": "años",
   "photo": "Foto Enrique",
-  "y": "y",
+  "plusYears": "años y",
+  "year": "año y",
+  "plusMonth": "meses",
+  "month": "mes",
   "icons": {
     "eslint": "Icono ESLint",
     "next": "Icono NextJS",

@@ -11,7 +11,7 @@ import * as data from './text';
 import { Dictionary } from '@/dictionaries/dictionaries';
 import { getTranslation } from '@/utils/getTranslations';
 
-const comienzoAprox = new Date(2022, 7, 12).getTime();
+const comienzoAprox = new Date(2022, 6, 12).getTime(); // Adding 2 previous jobs
 const ahora = new Date().getTime();
 const diferenciaEnMilisegundos = ahora - comienzoAprox;
 const anosDeExperiencia = Math.floor(
@@ -21,6 +21,7 @@ const mesasDeExperiencia = Math.floor(
   (diferenciaEnMilisegundos % (365.25 * 24 * 60 * 60 * 1000)) /
     (30.44 * 24 * 60 * 60 * 1000)
 );
+const stopCounting = true;
 
 const ExperienceSection = ({ dictionary }: { dictionary: Dictionary }) => {
   const [value, setValue] = useState('-1');
@@ -35,9 +36,14 @@ const ExperienceSection = ({ dictionary }: { dictionary: Dictionary }) => {
   return (
     <section className="mb-16 mt-8 flex flex-col gap-2 lg:my-24">
       <h2 className="h2 text-center font-bold">
-        {anosDeExperiencia} {anosDeExperiencia > 1 ? 'años' : 'año'}{' '}
-        {getTranslation(dictionary, ['y'])} {mesasDeExperiencia}{' '}
-        {mesasDeExperiencia === 1 ? 'mes' : 'meses'}{' '}
+        {stopCounting ? 1 : anosDeExperiencia}{' '}
+        {anosDeExperiencia > 1
+          ? getTranslation(dictionary, ['plusYears'])
+          : getTranslation(dictionary, ['year'])}{' '}
+        {stopCounting ? 8 : mesasDeExperiencia}{' '}
+        {mesasDeExperiencia > 1
+          ? getTranslation(dictionary, ['plusMonth'])
+          : getTranslation(dictionary, ['month'])}{' '}
         {getTranslation(dictionary, ['experienceSection', 'ofExperience'])}
       </h2>
       <Dialog
