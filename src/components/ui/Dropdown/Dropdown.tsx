@@ -25,11 +25,21 @@ const Dropdown = () => {
           )}
           sideOffset={5}
         >
-          <DropdownElem.Item className="rounded-md p-1 hover:bg-black hover:text-white">
-            <a href="/es">Español</a>
+          <DropdownElem.Item>
+            <a
+              href="/es"
+              className="block rounded-md p-1 text-center hover:bg-black hover:text-white"
+            >
+              Español
+            </a>
           </DropdownElem.Item>
-          <DropdownElem.Item className="rounded-md p-1 hover:bg-black hover:text-white">
-            <a href="/en">English</a>
+          <DropdownElem.Item>
+            <a
+              href="/en"
+              className="block rounded-md p-1 text-center hover:bg-black hover:text-white"
+            >
+              English
+            </a>
           </DropdownElem.Item>
         </DropdownElem.Content>
       </DropdownElem.Portal>
