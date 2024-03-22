@@ -172,7 +172,7 @@
       "communication": "Comunicación",
       "goodPractice": "Buenas prácticas",
       "flexPayment": "Retribución flexible",
-      "languages": "Diferentes frameworks/proyectos",
+      "moreFrameworks": "Diferentes frameworks/proyectos",
       "testing": "Testing",
       "agile": "Agile",
       "backend": "Aprender backend",
@@ -182,6 +182,28 @@
       "bonus": "Bonus",
       "training": "Formación",
       "freedom": "Libertad para decidir tecnologías usadas"
+    },
+    "explanations": {
+      "workModel": "Híbrido máximo 2 días en Madrid o 100% remoto.",
+      "overtime": "Solo estoy dispuesto a hacer horas extra si están bien controladas y se hacen de forma esporádica.",
+      "flexible": "Posibilidad de empezar a trabajar en un rango de horas, en lugar de a una hora específica. Trabajo mejor si me despierto a partir de las 08:00AM.",
+      "salaryReview": "Tienen que tener una fecha (mínimo de forma anual) y posibilidades reales de subir de sueldo si me lo merezco.",
+      "coWorkers": "Compañeros sociables y con buen ambiente en general.",
+      "insurance": "Seguro médico gratuito.",
+      "codeReviews": "Críticas constructivas de mi código para poder mejorar como programador, además de asegurar la calidad del código del proyecto.",
+      "communication": "Comunicación suficiente como para enterarme de todo lo que necesito saber",
+      "goodPractice": "Código limpio y buenas prácticas.",
+      "flexPayment": "Gympass, cheque restaurante, transporte...",
+      "moreFrameworks": "Usar diferentes frameworks o participar en diferentes proyectos a lo largo del tiempo",
+      "testing": "Poder hacer (yo) testing en los proyectos. Tengo mucho interés en aprender más.",
+      "agile": "Usar metodologías agiles en los proyectos.",
+      "backend": "Posibilidad de trabajar como fullstack.",
+      "topSalary": "Salario muy alto, que soñar es gratis.",
+      "dailyIntensive": "Jornada de 7 horas cada día, 35 horas semanales.",
+      "youngTeam": "Que parte del equipo sean personas de 20-30 años.",
+      "bonus": "Bonus anual por objetivos propios o de la empresa.",
+      "training": "Formaciones para certificados y plataformas de formación.",
+      "freedom": "Poder elegir en cada proyecto las tecnologías que se van a usar sin tener grandes restricciones."
     }
   },
   "CTA1Section": {

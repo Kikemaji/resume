@@ -18,7 +18,7 @@ export const featuresContent: Feature[] = [
   { name: 'communication', themes: ['ambiente', 'entretenido'], type: 'need' },
   { name: 'goodPractice', themes: ['didactico', 'entretenido'], type: 'need' },
   { name: 'flexPayment', themes: ['sueldo'], type: 'plus' },
-  { name: 'languages', themes: ['entretenido', 'didactico'], type: 'plus' },
+  { name: 'moreFrameworks', themes: ['entretenido', 'didactico'], type: 'plus' },
   { name: 'testing', themes: ['didactico'], type: 'plus' },
   { name: 'agile', themes: ['didactico', 'equilibrio'], type: 'plus' },
   { name: 'backend', themes: ['didactico', 'entretenido'], type: 'plus' },

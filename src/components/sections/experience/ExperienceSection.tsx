@@ -42,12 +42,12 @@ const ExperienceSection = ({ dictionary }: { dictionary: Dictionary }) => {
       </h2>
       <Dialog
         triggerIcon={<FaPlus className="h-5 w-5" />}
+        triggerClassName="flex items-center gap-4 rounded-md border bg-white p-3 text-black transition-colors hover:border-white hover:bg-black hover:text-white"
         triggerText={getTranslation(dictionary, [
           'experienceSection',
           'experience3',
           'triggerText',
         ])}
-        triggerClassName=""
         title={getTranslation(dictionary, [
           'experienceSection',
           'experience3',
@@ -93,12 +93,12 @@ const ExperienceSection = ({ dictionary }: { dictionary: Dictionary }) => {
       </Dialog>
       <Dialog
         triggerIcon={<FaPlus className="h-5 w-5" />}
+        triggerClassName="flex items-center gap-4 rounded-md border bg-white p-3 text-black transition-colors hover:border-white hover:bg-black hover:text-white"
         triggerText={getTranslation(dictionary, [
           'experienceSection',
           'experience2',
           'triggerText',
         ])}
-        triggerClassName=""
         title={getTranslation(dictionary, [
           'experienceSection',
           'experience2',
@@ -137,12 +137,12 @@ const ExperienceSection = ({ dictionary }: { dictionary: Dictionary }) => {
       </Dialog>
       <Dialog
         triggerIcon={<FaPlus className="h-5 w-5" />}
+        triggerClassName="flex items-center gap-4 rounded-md border bg-white p-3 text-black transition-colors hover:border-white hover:bg-black hover:text-white"
         triggerText={getTranslation(dictionary, [
           'experienceSection',
           'experience1',
           'triggerText',
         ])}
-        triggerClassName=""
         title={getTranslation(dictionary, [
           'experienceSection',
           'experience1',

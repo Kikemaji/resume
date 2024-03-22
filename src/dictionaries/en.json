@@ -171,7 +171,7 @@
       "communication": "Communication",
       "goodPractice": "Good practices",
       "flexPayment": "Flexible remuneration",
-      "languages": "Different frameworks/projects",
+      "moreFrameworks": "Different frameworks/projects",
       "testing": "Testing",
       "agile": "Agile",
       "backend": "Learning backend",
@@ -181,6 +181,28 @@
       "bonus": "Bonus",
       "training": "Training",
       "freedom": "Freedom to choose technologies used"
+    },
+    "explanations": {
+      "workModel": "Hybrid maximum 2 days in Madrid or 100% remote.",
+      "overtime": "I'm only willing to do overtime if it's well controlled and done sporadically.",
+      "flexible": "Possibility to start working within a range of hours, instead of at a specific time. I work best if I wake up from 08:00 AM.",
+      "salaryReview": "There must be a date (at least annually) and real possibilities of a salary increase if I deserve it.",
+      "coWorkers": "Sociable colleagues and a good overall environment.",
+      "insurance": "Free medical insurance.",
+      "codeReviews": "Constructive criticism of my code to improve as a programmer, as well as to ensure the quality of the project's code.",
+      "communication": "Sufficient communication to keep me informed of everything I need to know.",
+      "goodPractice": "Clean code and good practices.",
+      "flexPayment": "Gympass, restaurant vouchers, transportation...",
+      "moreFrameworks": "Using different frameworks or participating in different projects over time.",
+      "testing": "Being able to do testing on projects. I'm very interested in learning more.",
+      "agile": "Using agile methodologies in projects.",
+      "backend": "Possibility to work as a fullstack developer.",
+      "topSalary": "Very high salary, dreaming is free.",
+      "dailyIntensive": "7-hour workday each day, 35 hours per week.",
+      "youngTeam": "Part of the team consisting of people aged 20-30.",
+      "bonus": "Annual bonus for personal or company objectives.",
+      "training": "Training for certifications and training platforms.",
+      "freedom": "Being able to choose the technologies to be used in each project without major restrictions."
     }
   },
   "CTA1Section": {

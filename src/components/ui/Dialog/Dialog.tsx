@@ -34,12 +34,7 @@ const Dialog = ({
   return (
     <DialogElem.Root onOpenChange={handleCloseInside}>
       <DialogElem.Trigger asChild>
-        <button
-          className={clsx(
-            'flex items-center gap-4 rounded-md border bg-white p-3 text-black transition-colors hover:border-white hover:bg-black hover:text-white',
-            triggerClassName
-          )}
-        >
+        <button className={clsx('', triggerClassName)}>
           {triggerIcon}
           <span className="font-semibold">{triggerText}</span>
         </button>
@@ -55,7 +50,7 @@ const Dialog = ({
           className={clsx(
             styles.dialogShadow,
             styles.animateContentShow,
-            ' fixed left-1/2 top-1/2 max-h-[85dvh] w-[90vw] max-w-xl -translate-x-1/2 -translate-y-1/2 transform rounded-lg bg-white p-6 text-black'
+            'fixed left-1/2 top-1/2 z-20 max-h-[85dvh] w-[90vw] max-w-xl -translate-x-1/2 -translate-y-1/2 transform rounded-lg bg-white p-6 text-black'
           )}
         >
           <DialogElem.Title className="h3 mx-auto border-b border-black p-1 text-center md:w-8/12">

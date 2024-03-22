@@ -7,6 +7,7 @@ import { calculateFeatureValuePerTheme, getFeaturesByType } from './jobUtils';
 import { featuresContent, mainThemes } from './jobContent';
 import { Dictionary } from '@/dictionaries/dictionaries';
 import { getTranslation } from '@/utils/getTranslations';
+import ExplanationDialog from './ExplanationDialog';
 
 const { maxFeaturesNumber, valuePerTheme } =
   calculateFeatureValuePerTheme(featuresContent);
@@ -100,6 +101,10 @@ const DreamJobSection = ({ dictionary }: { dictionary: Dictionary }) => {
         maxValue={maxFeaturesNumber}
         dictionary={dictionary}
       />
+      <p className="text-xs opacity-60">
+        ¿No entiendes algunas de las opciones?{' '}
+        <ExplanationDialog dictionary={dictionary} />
+      </p>
     </section>
   );
 };
