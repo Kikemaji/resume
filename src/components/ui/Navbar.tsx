@@ -16,7 +16,7 @@ export const Navbar = ({ dictionary }: { dictionary: Dictionary }) => {
       <div className="mx-auto flex items-center gap-4 px-4 py-2  2xl:max-w-7xl">
         <Image
           alt={getTranslation(dictionary, ['photo'])}
-          src="/profile_photo_sm_circle.png"
+          src="/photos/profile_photo_sm_circle.png"
           width={24}
           height={24}
         />
