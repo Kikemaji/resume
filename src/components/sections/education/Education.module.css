@@ -1,3 +1,31 @@
 .card {
   @apply flex w-full flex-col items-center rounded-lg px-6 py-4 sm:max-w-[335px] md:min-h-[160px];
 }
+
+.flipCard {
+  @apply relative h-[160px] w-[335px];
+}
+
+.flipCardContent {
+  @apply absolute h-full w-full overflow-hidden rounded-lg transition-transform duration-500;
+  backface-visibility: hidden;
+}
+
+.flipCardFront {
+  @apply flex items-center justify-center bg-white text-5xl font-bold text-black;
+  transform: perspective(600px) rotateY(0deg);
+  box-shadow: 0 5px 10px #000;
+}
+
+.flipCardBack {
+  @apply flex items-center justify-center bg-secondary p-4 text-center text-white;
+  transform: perspective(600px) rotateY(180deg);
+}
+
+.flipCard:hover .flipCardFront {
+  transform: perspective(600px) rotateY(180deg);
+}
+
+.flipCard:hover .flipCardBack {
+  transform: perspective(600px) rotateY(360deg);
+}
