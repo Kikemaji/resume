@@ -66,3 +66,23 @@ export const getFeaturesByType = (featuresContent: Feature[]) => {
   });
   return featuresByType;
 };
+
+export const initDefaultValues = (
+  featuresContent: Feature[],
+  valuePerTheme: Record<string, number>,
+  positionsArray: Record<string, number>
+) => {
+  let values = [0, 0, 0, 0, 0];
+  featuresContent.forEach((feature) => {
+    values = feature.themes.reduce(
+      (acc, theme) => {
+        const value = valuePerTheme[theme];
+        const position = positionsArray[theme];
+        acc[position] += feature.activeByDefault ? value : 0;
+        return acc;
+      },
+      [...values]
+    );
+  });
+  return values;
+};

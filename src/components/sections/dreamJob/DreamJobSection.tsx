@@ -3,7 +3,11 @@ import { RadarChart } from '@/components/charts/RadarChart';
 import clsx from 'clsx';
 import React, { useState } from 'react';
 import { Feature, SelectedFeatures } from './types';
-import { calculateFeatureValuePerTheme, getFeaturesByType } from './jobUtils';
+import {
+  calculateFeatureValuePerTheme,
+  getFeaturesByType,
+  initDefaultValues,
+} from './jobUtils';
 import { featuresContent, mainThemes } from './jobContent';
 import { Dictionary } from '@/dictionaries/dictionaries';
 import { getTranslation } from '@/utils/getTranslations';
@@ -22,22 +26,25 @@ const allFeaturesNotActive: SelectedFeatures = featuresContent.reduce(
   (acc, feature) => {
     acc[feature.name] = {
       feature,
-      active: false,
+      active: feature.activeByDefault,
     };
     return acc;
   },
   {} as SelectedFeatures
 );
 
+const initValues = initDefaultValues(
+  featuresContent,
+  valuePerTheme,
+  positionsArray
+);
 const featuresByType = getFeaturesByType(featuresContent);
 const numberOfTypes = Object.keys(featuresByType).length;
 
 const DreamJobSection = ({ dictionary }: { dictionary: Dictionary }) => {
   const [selectedFeatures, setSelectedFeatures] =
     useState<SelectedFeatures>(allFeaturesNotActive);
-  const [radarValuesArray, setRadarValuesArray] = useState(
-    Array(mainThemes.length).fill(0)
-  );
+  const [radarValuesArray, setRadarValuesArray] = useState(initValues);
   const [typeIndexMobile, setTypeIndexMobile] = useState(0);
 
   const handleFeatureSelection = (feature: Feature) => {
