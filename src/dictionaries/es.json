@@ -57,7 +57,7 @@
     "mode": {
       "0": "Presencial",
       "1": "Híbrido",
-      "2": "Remote"
+      "2": "Remoto"
     }
   },
   "experienceSection": {
@@ -194,7 +194,7 @@
       "coWorkers": "Compañeros sociables y con buen ambiente en general.",
       "insurance": "Seguro médico gratuito.",
       "codeReviews": "Críticas constructivas de mi código para poder mejorar como programador, además de asegurar la calidad del código del proyecto.",
-      "communication": "Comunicación suficiente como para enterarme de todo lo que necesito saber",
+      "communication": "Comunicación suficiente como para enterarme de todo lo que necesito saber.",
       "goodPractice": "Código limpio y buenas prácticas.",
       "flexPayment": "Gympass, cheque restaurante, transporte...",
       "moreFrameworks": "Usar diferentes frameworks o participar en diferentes proyectos a lo largo del tiempo",
@@ -224,7 +224,7 @@
     "Q3": "¿Qué otros lenguajes conoces?",
     "A3": "Que sean relevantes, Java y Python",
     "Q4": "¿Cuándo se actualizó esta página por última vez?",
-    "A4": "Marzo 2023. Aunque datos como la experiencia y la edad se actualizan automáticamente.",
+    "A4": "Creada: Marzo de 2023. Última actualización:Marzo 2023. Aunque datos como la experiencia y la edad se actualizan automáticamente.",
     "Q5": "Participas en proyectos como freelance?",
     "A5": "Es posible si tu proyecto es compatible con un trabajo a tiempo completo."
   },
