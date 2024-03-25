@@ -38,49 +38,67 @@ const EducationSection = ({ dictionary }: { dictionary: Dictionary }) => {
           <h3 className="h3 mb-2 font-bold md:mb-0">
             {getTranslation(dictionary, ['educationSection', 'card2', 'title'])}
           </h3>
-          <ul>
-            <li>
-              <span className="font-bold">
-                {' '}
+          <div className="flex flex-1 items-center">
+            <ul>
+              <li>
+                <span className="font-bold">
+                  {' '}
+                  {getTranslation(dictionary, [
+                    'educationSection',
+                    'card2',
+                    '11',
+                  ])}
+                </span>
                 {getTranslation(dictionary, [
                   'educationSection',
                   'card2',
-                  '11',
+                  '12',
                 ])}
-              </span>
-              {getTranslation(dictionary, ['educationSection', 'card2', '12'])}
-            </li>
-            <li>
-              <span className="font-bold">
+              </li>
+              <li>
+                <span className="font-bold">
+                  {getTranslation(dictionary, [
+                    'educationSection',
+                    'card2',
+                    '21',
+                  ])}
+                </span>
                 {getTranslation(dictionary, [
                   'educationSection',
                   'card2',
-                  '21',
+                  '22',
                 ])}
-              </span>
-              {getTranslation(dictionary, ['educationSection', 'card2', '22'])}
-            </li>
-            <li>
-              <span className="font-bold">
+              </li>
+              <li>
+                <span className="font-bold">
+                  {getTranslation(dictionary, [
+                    'educationSection',
+                    'card2',
+                    '31',
+                  ])}
+                </span>{' '}
                 {getTranslation(dictionary, [
                   'educationSection',
                   'card2',
-                  '31',
+                  '32',
                 ])}
-              </span>{' '}
-              {getTranslation(dictionary, ['educationSection', 'card2', '32'])}
-            </li>
-            <li>
-              {getTranslation(dictionary, ['educationSection', 'card2', '41'])}
-              <span className="font-bold">
+              </li>
+              <li>
                 {getTranslation(dictionary, [
                   'educationSection',
                   'card2',
-                  '42',
+                  '41',
                 ])}
-              </span>
-            </li>
-          </ul>
+                <span className="font-bold">
+                  {getTranslation(dictionary, [
+                    'educationSection',
+                    'card2',
+                    '42',
+                  ])}
+                </span>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <div className={clsx(styles.flipCard, 'hidden xl:block')}>
