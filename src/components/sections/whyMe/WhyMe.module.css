@@ -1,5 +1,5 @@
 .card {
-  @apply flex w-fit items-center gap-5 rounded-lg border border-border px-6 py-2 md:min-w-[335px] md:flex-col md:gap-0;
+  @apply flex w-full items-center gap-5 rounded-lg border border-border px-6 py-2 md:w-fit md:min-w-[335px] md:flex-col md:gap-0;
 }
 
 .icon {

@@ -10,7 +10,7 @@ import { getTranslation } from '@/utils/getTranslations';
 const WhyMeSection = ({ dictionary }: { dictionary: Dictionary }) => {
   return (
     <section className="my-16 lg:my-24">
-      <h2 className="h2 mb-4 text-center font-bold">
+      <h2 className="h2 mb-4 text-center font-bold md:text-start lg:text-center">
         {getTranslation(dictionary, ['whyMeSection', 'title'])}
       </h2>
       <div className="flex flex-col items-center gap-2 lg:flex-row lg:flex-wrap lg:justify-center">
