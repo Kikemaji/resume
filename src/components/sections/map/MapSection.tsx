@@ -2,6 +2,7 @@ import MapChart from '@/components/charts/MapChart';
 import { Dictionary } from '@/dictionaries/dictionaries';
 import { getTranslation } from '@/utils/getTranslations';
 import React from 'react';
+import { FaLongArrowAltRight } from 'react-icons/fa';
 import { IoCheckmarkCircle } from 'react-icons/io5';
 
 export const MapSection = ({ dictionary }: { dictionary: Dictionary }) => {
@@ -26,7 +27,10 @@ export const MapSection = ({ dictionary }: { dictionary: Dictionary }) => {
           </li>
         </ul>
       </div>
-      <div className="min-w-[300px] lg:w-[400px]">
+      <div className="relative min-w-[300px] lg:w-[400px]">
+        <div className="absolute left-5 top-1/3">
+          <FaLongArrowAltRight className="animate-pulse text-2xl" />
+        </div>
         <MapChart dictionary={dictionary} />
       </div>
     </section>
