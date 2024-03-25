@@ -4,6 +4,7 @@ import ReactECharts from 'echarts-for-react';
 import { Theme } from '../sections/dreamJob/types';
 import { Dictionary } from '@/dictionaries/dictionaries';
 import { getTranslation } from '@/utils/getTranslations';
+import useIsMobile from '@/hooks/useIsMobile';
 
 export const RadarChart = ({
   indicators,
@@ -16,16 +17,24 @@ export const RadarChart = ({
   maxValue: number;
   dictionary: Dictionary;
 }) => {
+  const isMobile = useIsMobile();
   const option = {
     color: ['#FFE434'],
     radar: [
       {
         indicator: indicators.map((theme) => ({
-          name: getTranslation(dictionary, [
-            'dreamJobSection',
-            'themes',
-            theme.name,
-          ]),
+          name: isMobile
+            ? getTranslation(dictionary, [
+                'dreamJobSection',
+                'themes',
+                'mobile',
+                theme.name,
+              ])
+            : getTranslation(dictionary, [
+                'dreamJobSection',
+                'themes',
+                theme.name,
+              ]),
           max: maxValue,
         })),
         startAngle: 90,

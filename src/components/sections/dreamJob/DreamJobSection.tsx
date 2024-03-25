@@ -8,6 +8,7 @@ import { featuresContent, mainThemes } from './jobContent';
 import { Dictionary } from '@/dictionaries/dictionaries';
 import { getTranslation } from '@/utils/getTranslations';
 import ExplanationDialog from './ExplanationDialog';
+import { IoChevronBackSharp, IoChevronForwardSharp } from 'react-icons/io5';
 
 const { maxFeaturesNumber, valuePerTheme } =
   calculateFeatureValuePerTheme(featuresContent);
@@ -29,6 +30,7 @@ const allFeaturesNotActive: SelectedFeatures = featuresContent.reduce(
 );
 
 const featuresByType = getFeaturesByType(featuresContent);
+const numberOfTypes = Object.keys(featuresByType).length;
 
 const DreamJobSection = ({ dictionary }: { dictionary: Dictionary }) => {
   const [selectedFeatures, setSelectedFeatures] =
@@ -36,6 +38,7 @@ const DreamJobSection = ({ dictionary }: { dictionary: Dictionary }) => {
   const [radarValuesArray, setRadarValuesArray] = useState(
     Array(mainThemes.length).fill(0)
   );
+  const [typeIndexMobile, setTypeIndexMobile] = useState(0);
 
   const handleFeatureSelection = (feature: Feature) => {
     const { themes, name } = feature;
@@ -65,6 +68,13 @@ const DreamJobSection = ({ dictionary }: { dictionary: Dictionary }) => {
     });
   };
 
+  const changeIndexTypeMobile = (n: number) => {
+    setTypeIndexMobile((prev) => {
+      const newValue = Math.max(0, Math.min(prev + n, numberOfTypes));
+      return newValue;
+    });
+  };
+
   return (
     <section className="my-16 flex flex-col gap-4 rounded-lg border-2 border-dashed border-white p-4 lg:my-32">
       <div>
@@ -75,9 +85,55 @@ const DreamJobSection = ({ dictionary }: { dictionary: Dictionary }) => {
           {getTranslation(dictionary, ['dreamJobSection', 'subtitle'])}
         </h4>
       </div>
-      <div>
+      {/* MOBILE */}
+      <div className="relative md:hidden">
+        {typeIndexMobile > 0 && (
+          <div
+            className="absolute left-0 top-1/2 -translate-x-full -translate-y-1/2 rounded-full bg-secondary p-1 text-white"
+            onClick={() => changeIndexTypeMobile(-1)}
+          >
+            <IoChevronBackSharp />
+          </div>
+        )}
+        {typeIndexMobile < numberOfTypes - 1 && (
+          <div
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-full rounded-full bg-secondary p-1 text-white"
+            onClick={() => changeIndexTypeMobile(1)}
+          >
+            <IoChevronForwardSharp />
+          </div>
+        )}
+
+        {Object.entries(featuresByType).map(
+          ([type, feature], index) =>
+            typeIndexMobile === index && (
+              <div key={type} className="">
+                <p className="text-center font-semibold underline">
+                  {getTranslation(dictionary, [
+                    'dreamJobSection',
+                    'type',
+                    type,
+                  ])}
+                </p>
+                <div className="flex flex-wrap justify-center gap-1 text-sm text-black">
+                  {feature.map((feature, index) => (
+                    <StringItem
+                      key={index}
+                      value={feature}
+                      isSelected={selectedFeatures[feature.name].active}
+                      onSelect={handleFeatureSelection}
+                      dictionary={dictionary}
+                    />
+                  ))}
+                </div>
+              </div>
+            )
+        )}
+      </div>
+      {/* NO MOBILE */}
+      <div className="hidden md:block">
         {Object.entries(featuresByType).map(([type, feature]) => (
-          <div key={type}>
+          <div key={type} className="md:mb-2 md:last:mb-0">
             <p>
               {getTranslation(dictionary, ['dreamJobSection', 'type', type])}
             </p>
@@ -101,6 +157,27 @@ const DreamJobSection = ({ dictionary }: { dictionary: Dictionary }) => {
         maxValue={maxFeaturesNumber}
         dictionary={dictionary}
       />
+      <ul className=" flex flex-wrap text-xs opacity-60 md:hidden">
+        {mainThemes.map((theme) => (
+          <li key={theme.name} className="mr-1">
+            <span className="font-bold">
+              【
+              {getTranslation(dictionary, [
+                'dreamJobSection',
+                'themes',
+                'mobile',
+                theme.name,
+              ])}
+              】:{' '}
+            </span>
+            {getTranslation(dictionary, [
+              'dreamJobSection',
+              'themes',
+              theme.name,
+            ])}
+          </li>
+        ))}
+      </ul>
       <p className="text-xs opacity-60">
         ¿No entiendes algunas de las opciones?{' '}
         <ExplanationDialog dictionary={dictionary} />

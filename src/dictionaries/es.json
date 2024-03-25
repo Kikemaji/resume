@@ -162,7 +162,14 @@
       "entertaining": "Entretenido",
       "environment": "Con buen ambiente",
       "balance": "Equilibrio vida / trabajo",
-      "salary": "Sueldo €"
+      "salary": "Sueldo €",
+      "mobile": {
+        "educational": "Did",
+        "entertaining": "En",
+        "environment": "Amb",
+        "balance": "Eq",
+        "salary": "€"
+      }
     },
     "tags": {
       "workModel": "Remoto/Híbrido",

@@ -161,7 +161,14 @@
       "entertaining": "Entertaining",
       "environment": "Good work environment",
       "balance": "Work / Life balance",
-      "salary": "Salary €"
+      "salary": "Salary €",
+      "mobile": {
+        "educational": "Ed",
+        "entertaining": "En",
+        "environment": "Env",
+        "balance": "Bal",
+        "salary": "€"
+      }
     },
     "tags": {
       "workModel": "Remote/Hybrid",
