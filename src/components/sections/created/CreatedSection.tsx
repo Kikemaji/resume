@@ -50,9 +50,6 @@ const CreatedSection = ({ dictionary }: { dictionary: Dictionary }) => {
           />
           <span className="text-nowrap">Tailwind CSS</span>
         </div>
-        <div>
-          Server Side <span className="block">Rendering</span>
-        </div>
       </div>
     </section>
   );
