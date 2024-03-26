@@ -62,6 +62,8 @@
   "experienceSection": {
     "ofExperience": "of experience",
     "choseOption": "Choose an option",
+    "noContent": "Current job - To be filled in.",
+    "currentJob": "Current job",
     "select": {
       "placeholder": "What do you want to know?",
       "usedTech": "Used technology",
@@ -127,6 +129,11 @@
       "triggerText": "Elections software - 1 year and 4 months",
       "title": "Frontend Engineer - Minsait",
       "description": "Developing Spanish and Latin American election software"
+    },
+    "experience4": {
+      "triggerText": " --- ",
+      "title": "Frontend Engineer - Axpo",
+      "description": " --- "
     }
   },
   "educationSection": {

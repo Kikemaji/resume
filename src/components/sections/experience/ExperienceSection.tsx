@@ -11,17 +11,26 @@ import * as data from './text';
 import { Dictionary } from '@/dictionaries/dictionaries';
 import { getTranslation } from '@/utils/getTranslations';
 
-const comienzoAprox = new Date(2022, 6, 12).getTime(); // Adding 2 previous jobs
-const ahora = new Date().getTime();
-const diferenciaEnMilisegundos = ahora - comienzoAprox;
-const anosDeExperiencia = Math.floor(
-  diferenciaEnMilisegundos / (365.25 * 24 * 60 * 60 * 1000)
+const now = new Date().getTime();
+const aproxStart = new Date(2022, 7, 8).getTime(); // Adding previous jobs
+const totalTimeMiliseconds = now - aproxStart;
+const totalYearsOfExperience = Math.floor(
+  totalTimeMiliseconds / (365.25 * 24 * 60 * 60 * 1000)
 );
-const mesasDeExperiencia = Math.floor(
-  (diferenciaEnMilisegundos % (365.25 * 24 * 60 * 60 * 1000)) /
+const totalMonthsOfExperience = Math.floor(
+  (totalTimeMiliseconds % (365.25 * 24 * 60 * 60 * 1000)) /
     (30.44 * 24 * 60 * 60 * 1000)
 );
-const stopCounting = true;
+
+const startCurrentJob = new Date(2024, 3, 8).getTime(); // January is 0
+const timeInCurrentJob = now - startCurrentJob;
+const yearsOfExperienceCurrentJob = Math.floor(
+  timeInCurrentJob / (365.25 * 24 * 60 * 60 * 1000)
+);
+const monthsOfExperienceCurrentJob = Math.floor(
+  (timeInCurrentJob % (365.25 * 24 * 60 * 60 * 1000)) /
+    (30.44 * 24 * 60 * 60 * 1000)
+);
 
 const ExperienceSection = ({ dictionary }: { dictionary: Dictionary }) => {
   const [value, setValue] = useState('-1');
@@ -32,20 +41,52 @@ const ExperienceSection = ({ dictionary }: { dictionary: Dictionary }) => {
   const resetSelect = () => {
     setValue('-1');
   };
+  const totalExperienceJSX = (
+    <>
+      {totalYearsOfExperience}{' '}
+      {totalYearsOfExperience > 1
+        ? getTranslation(dictionary, ['plusYears'])
+        : getTranslation(dictionary, ['year'])}{' '}
+      {totalMonthsOfExperience}{' '}
+      {totalMonthsOfExperience > 1
+        ? getTranslation(dictionary, ['plusMonth'])
+        : getTranslation(dictionary, ['month'])}{' '}
+      {getTranslation(dictionary, ['experienceSection', 'ofExperience'])}
+    </>
+  );
+
+  const currentJobExperienceString = `Ingeniero Frontend - ${yearsOfExperienceCurrentJob} ${
+    yearsOfExperienceCurrentJob > 1
+      ? getTranslation(dictionary, ['plusYears'])
+      : getTranslation(dictionary, ['year'])
+  } ${monthsOfExperienceCurrentJob} ${
+    monthsOfExperienceCurrentJob > 1
+      ? getTranslation(dictionary, ['plusMonth'])
+      : getTranslation(dictionary, ['month'])
+  } ${getTranslation(dictionary, ['experienceSection', 'ofExperience'])} - ${getTranslation(dictionary, ['experienceSection', 'currentJob'])}`;
 
   return (
     <section className="mb-16 mt-8 flex flex-col gap-2 lg:my-24">
-      <h2 className="h2 text-center font-bold">
-        {stopCounting ? 1 : anosDeExperiencia}{' '}
-        {anosDeExperiencia > 1
-          ? getTranslation(dictionary, ['plusYears'])
-          : getTranslation(dictionary, ['year'])}{' '}
-        {stopCounting ? 8 : mesasDeExperiencia}{' '}
-        {mesasDeExperiencia > 1
-          ? getTranslation(dictionary, ['plusMonth'])
-          : getTranslation(dictionary, ['month'])}{' '}
-        {getTranslation(dictionary, ['experienceSection', 'ofExperience'])}
-      </h2>
+      <h2 className="h2 text-center font-bold">{totalExperienceJSX}</h2>
+      <Dialog
+        triggerIcon={<FaPlus className="h-5 w-5" />}
+        triggerClassName="flex items-center gap-4 rounded-md border bg-white p-3 text-black transition-colors hover:border-white hover:bg-black hover:text-white"
+        triggerText={currentJobExperienceString}
+        title={getTranslation(dictionary, [
+          'experienceSection',
+          'experience4',
+          'title',
+        ])}
+        handleClose={resetSelect}
+      >
+        <div className="max-h-[50dvh] min-h-[30dvh] overflow-y-scroll">
+          {value === '-1' && (
+            <div className="grid h-[300px] place-items-center text-xl">
+              {getTranslation(dictionary, ['experienceSection', 'noContent'])}
+            </div>
+          )}
+        </div>
+      </Dialog>
       <Dialog
         triggerIcon={<FaPlus className="h-5 w-5" />}
         triggerClassName="flex items-center gap-4 rounded-md border bg-white p-3 text-black transition-colors hover:border-white hover:bg-black hover:text-white"

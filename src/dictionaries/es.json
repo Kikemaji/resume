@@ -63,6 +63,8 @@
   "experienceSection": {
     "ofExperience": "de experiencia",
     "choseOption": "Elige una opción",
+    "noContent": "Trabajo actual - Pendiente de rellenar",
+    "currentJob": "Trabajo actual",
     "select": {
       "placeholder": "¿Qué quieres saber?",
       "usedTech": "Tecnología usada",
@@ -128,6 +130,11 @@
       "triggerText": "Software de las elecciones - 1 año y 4 meses",
       "title": "Ingeniero frontend - Minsait",
       "description": "Desarrollando el *software de las elecciones* Españolas y Latinoamericanas"
+    },
+    "experience4": {
+      "triggerText": " --- ",
+      "title": "Ingeniero frontend - Axpo",
+      "description": " --- "
     }
   },
   "educationSection": {
