@@ -45,7 +45,7 @@ const DreamJobSection = ({ dictionary }: { dictionary: Dictionary }) => {
   const [selectedFeatures, setSelectedFeatures] =
     useState<SelectedFeatures>(allFeaturesNotActive);
   const [radarValuesArray, setRadarValuesArray] = useState(initValues);
-  const [typeIndexMobile, setTypeIndexMobile] = useState(0);
+  const [typeIndexMobile, setTypeIndexMobile] = useState(1);
 
   const handleFeatureSelection = (feature: Feature) => {
     const { themes, name } = feature;
@@ -91,6 +91,9 @@ const DreamJobSection = ({ dictionary }: { dictionary: Dictionary }) => {
         <h4 className="h4 text-center">
           {getTranslation(dictionary, ['dreamJobSection', 'subtitle'])}
         </h4>
+        <p className="text-center text-xs opacity-60">
+          {getTranslation(dictionary, ['dreamJobSection', 'subtitle2'])}
+        </p>
       </div>
       {/* MOBILE */}
       <div className="relative md:hidden">

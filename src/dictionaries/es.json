@@ -152,6 +152,7 @@
   "dreamJobSection": {
     "title": "¿Cómo es mi trabajo ideal?",
     "subtitle": "Elige las opciones para ver cómo de equilibrada es tu oferta",
+    "subtitle2": "Seleccionadas por defecto las características de mi trabajo actual.",
     "type": {
       "need": "Necesario",
       "plus": "Plus",

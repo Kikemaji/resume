@@ -151,6 +151,7 @@
   "dreamJobSection": {
     "title": "What's my dream job like?",
     "subtitle": "Choose the options to see how balanced your offer is",
+    "subtitle2": "Features selected by default are from my current job.",
     "type": {
       "need": "Necessary",
       "plus": "Plus",
