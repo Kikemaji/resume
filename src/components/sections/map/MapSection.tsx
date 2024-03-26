@@ -7,8 +7,8 @@ import { IoCheckmarkCircle } from 'react-icons/io5';
 
 export const MapSection = ({ dictionary }: { dictionary: Dictionary }) => {
   return (
-    <section className="flex flex-col gap-4 md:flex-row md:items-center lg:justify-around">
-      <div className="lg:w-1/2">
+    <div className="flex flex-col gap-4 md:flex-row md:items-center lg:justify-around">
+      <section className="lg:w-1/2">
         <h2 className="h2 mb-2 font-bold">
           {getTranslation(dictionary, ['mapSection', 'title'])}
         </h2>
@@ -26,14 +26,14 @@ export const MapSection = ({ dictionary }: { dictionary: Dictionary }) => {
             {getTranslation(dictionary, ['mapSection', '3'])}
           </li>
         </ul>
-      </div>
+      </section>
       <div className="relative min-w-[300px] lg:w-[400px]">
         <div className="absolute left-5 top-1/3">
           <FaLongArrowAltRight className="animate-pulse text-2xl" />
         </div>
         <MapChart dictionary={dictionary} />
       </div>
-    </section>
+    </div>
   );
 };
 

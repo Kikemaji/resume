@@ -18,7 +18,7 @@ const HeroSection = ({ dictionary }: { dictionary: Dictionary }) => {
         <h3 className="h3 text-center">
           {getTranslation(dictionary, ['heroSection', 'subtitle'])}
         </h3>
-        <div className="mt-4 flex w-full flex-col items-center gap-3 lg:flex-row xl:mt-8">
+        <section className="mt-4 flex w-full flex-col items-center gap-3 lg:flex-row xl:mt-8">
           <button className="flex w-full cursor-pointer items-center justify-center gap-3 rounded-md border border-black bg-secondary px-3 py-1 transition-colors hover:border-white hover:bg-black hover:text-white md:w-4/6 lg:w-full">
             <FaCode />
             <span>
@@ -34,7 +34,7 @@ const HeroSection = ({ dictionary }: { dictionary: Dictionary }) => {
               ])}
             </span>
           </button>
-        </div>
+        </section>
       </div>
       <div className="relative flex justify-center">
         <SpinningText>

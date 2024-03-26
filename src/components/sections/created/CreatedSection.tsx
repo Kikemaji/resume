@@ -9,8 +9,8 @@ const CreatedSection = ({ dictionary }: { dictionary: Dictionary }) => {
       <h4 className="h4 md:text-center">
         {getTranslation(dictionary, ['createdSection', 'title'])}
       </h4>
-      <div className="mt-1 flex items-end gap-4 text-xs md:mt-4 md:justify-center md:gap-16 md:text-base">
-        <div>
+      <ul className="mt-1 flex items-end gap-4 text-xs md:mt-4 md:justify-center md:gap-16 md:text-base">
+        <li>
           <Image
             className="mx-auto w-8 invert md:w-10"
             alt={getTranslation(dictionary, ['icons', 'next'])}
@@ -19,8 +19,8 @@ const CreatedSection = ({ dictionary }: { dictionary: Dictionary }) => {
             height={24}
           />
           <span>Next.js</span>
-        </div>
-        <div>
+        </li>
+        <li>
           <Image
             className="mx-auto w-8 md:w-10"
             alt={getTranslation(dictionary, ['icons', 'react'])}
@@ -29,8 +29,8 @@ const CreatedSection = ({ dictionary }: { dictionary: Dictionary }) => {
             height={24}
           />
           <span>React.js</span>
-        </div>
-        <div>
+        </li>
+        <li>
           <Image
             className="mx-auto w-8 md:w-10"
             alt={getTranslation(dictionary, ['icons', 'typescript'])}
@@ -39,8 +39,8 @@ const CreatedSection = ({ dictionary }: { dictionary: Dictionary }) => {
             height={24}
           />
           <span>Typescript</span>
-        </div>
-        <div>
+        </li>
+        <li>
           <Image
             className="mx-auto w-8 md:w-10"
             alt={getTranslation(dictionary, ['icons', 'tailwind'])}
@@ -49,8 +49,8 @@ const CreatedSection = ({ dictionary }: { dictionary: Dictionary }) => {
             height={24}
           />
           <span className="text-nowrap">Tailwind CSS</span>
-        </div>
-      </div>
+        </li>
+      </ul>
     </section>
   );
 };

@@ -257,10 +257,10 @@ interface SkillListProps {
   dictionary: Dictionary;
 }
 const SkillList = ({ title, skills, dictionary }: SkillListProps) => (
-  <div>
-    <p className="font-bold">
+  <section>
+    <h4 className="font-bold">
       {getTranslation(dictionary, ['experienceSection', 'categories', title])}
-    </p>
+    </h4>
     <ul className="list-disc px-5">
       {skills.map((skill, index) => {
         const translation = getTranslation(dictionary, [
@@ -279,7 +279,7 @@ const SkillList = ({ title, skills, dictionary }: SkillListProps) => (
         );
       })}
     </ul>
-  </div>
+  </section>
 );
 
 interface ProjectProps {
@@ -293,10 +293,10 @@ const Project: React.FC<ProjectProps> = ({
   links,
   dictionary,
 }) => (
-  <div className="mt-2">
-    <p className="font-bold">
+  <section className="mt-2">
+    <h4 className="font-bold">
       {getTranslation(dictionary, ['experienceSection', 'project', 'notable'])}
-    </p>
+    </h4>
     <ul className="list-disc px-5">
       {descriptions.map((description, index) => {
         const translation = getTranslation(dictionary, [
@@ -323,7 +323,7 @@ const Project: React.FC<ProjectProps> = ({
         </li>
       ))}
     </ul>
-  </div>
+  </section>
 );
 
 export default ExperienceSection;

@@ -23,20 +23,19 @@ export default async function Home({
   return (
     <main className="flex min-h-screen flex-col bg-background text-text ">
       <Navbar dictionary={dictionary} />
-      <div className=" mx-auto w-full px-4 py-4 md:px-16 lg:max-w-[80vw] lg:px-4 2xl:max-w-7xl">
+      <article className=" mx-auto w-full px-4 py-4 md:px-16 lg:max-w-[80vw] lg:px-4 2xl:max-w-7xl">
         <HeroSection dictionary={dictionary} />
         <QualitySection dictionary={dictionary} />
         <WhyMeSection dictionary={dictionary} />
         <MapSection dictionary={dictionary} />
         <ExperienceSection dictionary={dictionary} />
-        {/* CTA */}
         {/* <ChatSection /> */}
         <EducationSection dictionary={dictionary} />
         <DreamJobSection dictionary={dictionary} />
         <CTA1Section dictionary={dictionary} />
         <FAQSection dictionary={dictionary} />
         <CreatedSection dictionary={dictionary} />
-      </div>
+      </article>
     </main>
   );
 }

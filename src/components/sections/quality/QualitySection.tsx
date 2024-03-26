@@ -7,7 +7,7 @@ import { getTranslation } from '@/utils/getTranslations';
 
 const QualitySection = ({ dictionary }: { dictionary: Dictionary }) => {
   return (
-    <div className="my-12 text-gray-400">
+    <section className="my-12 text-gray-400">
       <h4 className="h4 md:text-center lg:text-start">
         {getTranslation(dictionary, ['qualitySection', 'title'])}
       </h4>
@@ -45,7 +45,7 @@ const QualitySection = ({ dictionary }: { dictionary: Dictionary }) => {
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

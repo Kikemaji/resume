@@ -20,10 +20,10 @@ export const Navbar = ({ dictionary }: { dictionary: Dictionary }) => {
           width={24}
           height={24}
         />
-        <div className="flex-1 text-sm">
+        <p className="flex-1 text-sm">
           Enrique Márquez Jiménez - {edadCalculada}{' '}
           {getTranslation(dictionary, ['years'])}
-        </div>
+        </p>
         <Dropdown />
       </div>
     </nav>

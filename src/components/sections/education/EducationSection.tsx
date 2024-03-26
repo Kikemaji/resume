@@ -11,8 +11,8 @@ const EducationSection = ({ dictionary }: { dictionary: Dictionary }) => {
       <h2 className="h2 mb-4 text-center font-bold lg:text-center">
         {getTranslation(dictionary, ['educationSection', 'title'])}
       </h2>
-      <div className="flex flex-col items-center gap-2 md:flex-row md:flex-wrap md:justify-center">
-        <div className={clsx(styles.card, 'bg-secondary')}>
+      <ul className="flex flex-col items-center gap-2 md:flex-row md:flex-wrap md:justify-center">
+        <section className={clsx(styles.card, 'bg-secondary')}>
           <h3 className=" h3 mb-2 font-bold md:mb-0">
             {getTranslation(dictionary, ['educationSection', 'card1', 'title'])}
           </h3>
@@ -33,8 +33,8 @@ const EducationSection = ({ dictionary }: { dictionary: Dictionary }) => {
               </p>
             </div>
           </div>
-        </div>
-        <div className={clsx(styles.card, 'bg-secondary')}>
+        </section>
+        <section className={clsx(styles.card, 'bg-secondary')}>
           <h3 className="h3 mb-2 font-bold md:mb-0">
             {getTranslation(dictionary, ['educationSection', 'card2', 'title'])}
           </h3>
@@ -99,18 +99,17 @@ const EducationSection = ({ dictionary }: { dictionary: Dictionary }) => {
               </li>
             </ul>
           </div>
-        </div>
-
-        <div className={clsx(styles.flipCard, 'hidden xl:block')}>
+        </section>
+        <section className={clsx(styles.flipCard, 'hidden xl:block')}>
           <div className={clsx(styles.flipCardContent, styles.flipCardFront)}>
             ?
           </div>
-          <div className={clsx(styles.flipCardContent, styles.flipCardBack)}>
+          <p className={clsx(styles.flipCardContent, styles.flipCardBack)}>
             Más o pido feedback? / 2 opciones. Te gusta? Llámame, que no? haz
             scroll y dame feedback al final
-          </div>
-        </div>
-      </div>
+          </p>
+        </section>
+      </ul>
     </section>
   );
 };

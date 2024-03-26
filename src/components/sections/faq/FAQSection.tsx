@@ -7,7 +7,7 @@ const FAQSection = ({ dictionary }: { dictionary: Dictionary }) => {
   return (
     <section className="my-8 flex flex-col items-center gap-4">
       <h2 className="h2 font-bold">
-        {getTranslation(dictionary, ['heroSection', 'title'])}
+        {getTranslation(dictionary, ['FAQSection', 'title'])}
       </h2>
       <Accordion dictionary={dictionary} />
     </section>

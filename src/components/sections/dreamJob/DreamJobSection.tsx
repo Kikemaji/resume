@@ -117,15 +117,15 @@ const DreamJobSection = ({ dictionary }: { dictionary: Dictionary }) => {
         {Object.entries(featuresByType).map(
           ([type, feature], index) =>
             typeIndexMobile === index && (
-              <div key={type} className="">
-                <p className="text-center font-semibold underline">
+              <section key={type} className="">
+                <h5 className="text-center font-semibold underline">
                   {getTranslation(dictionary, [
                     'dreamJobSection',
                     'type',
                     type,
                   ])}
-                </p>
-                <div className="flex flex-wrap justify-center gap-1 text-sm text-black">
+                </h5>
+                <ul className="flex flex-wrap justify-center gap-1 text-sm text-black">
                   {feature.map((feature, index) => (
                     <StringItem
                       key={index}
@@ -135,19 +135,19 @@ const DreamJobSection = ({ dictionary }: { dictionary: Dictionary }) => {
                       dictionary={dictionary}
                     />
                   ))}
-                </div>
-              </div>
+                </ul>
+              </section>
             )
         )}
       </div>
       {/* NO MOBILE */}
       <div className="hidden md:block">
         {Object.entries(featuresByType).map(([type, feature]) => (
-          <div key={type} className="md:mb-2 md:last:mb-0">
-            <p>
+          <section key={type} className="md:mb-2 md:last:mb-0">
+            <h5>
               {getTranslation(dictionary, ['dreamJobSection', 'type', type])}
-            </p>
-            <div className="flex flex-wrap gap-1 text-sm text-black">
+            </h5>
+            <ul className="flex flex-wrap gap-1 text-sm text-black">
               {feature.map((feature, index) => (
                 <StringItem
                   key={index}
@@ -157,8 +157,8 @@ const DreamJobSection = ({ dictionary }: { dictionary: Dictionary }) => {
                   dictionary={dictionary}
                 />
               ))}
-            </div>
-          </div>
+            </ul>
+          </section>
         ))}
       </div>
       <RadarChart
@@ -214,7 +214,7 @@ const StringItem: React.FC<FeatureItemProps> = ({
   };
 
   return (
-    <div
+    <li
       className={clsx(
         'w-fit cursor-pointer rounded-md px-2 py-0.5 text-sm font-semibold transition-[300ms] hover:scale-95',
         isSelected ? 'bg-white' : 'bg-gray-800 text-white hover:bg-gray-500'
@@ -222,7 +222,7 @@ const StringItem: React.FC<FeatureItemProps> = ({
       onClick={toggleSelection}
     >
       {getTranslation(dictionary, ['dreamJobSection', 'tags', value.name])}
-    </div>
+    </li>
   );
 };
 

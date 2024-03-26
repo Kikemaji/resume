@@ -13,38 +13,38 @@ const WhyMeSection = ({ dictionary }: { dictionary: Dictionary }) => {
       <h2 className="h2 mb-4 text-center font-bold md:text-start lg:text-center">
         {getTranslation(dictionary, ['whyMeSection', 'title'])}
       </h2>
-      <div className="flex flex-col items-center gap-2 lg:flex-row lg:flex-wrap lg:justify-center">
-        <div className={clsx(styles.card, 'md:mr-auto lg:mr-0')}>
+      <ul className="flex flex-col items-center gap-2 lg:flex-row lg:flex-wrap lg:justify-center">
+        <li className={clsx(styles.card, 'md:mr-auto lg:mr-0')}>
           <RiTeamFill className={clsx(styles.icon, 'flex-shrink-0')} />
-          <div>
+          <section>
             <h3 className="h3 font-semibold">
               {getTranslation(dictionary, ['whyMeSection', 'card1', 'title'])}
             </h3>
             <p>{getTranslation(dictionary, ['whyMeSection', 'card1', '1'])}</p>
             <p>{getTranslation(dictionary, ['whyMeSection', 'card1', '2'])}</p>
-          </div>
-        </div>
-        <div className={clsx(styles.card)}>
+          </section>
+        </li>
+        <li className={clsx(styles.card)}>
           <GiCrystalGrowth className={clsx(styles.icon, ' flex-shrink-0 ')} />
-          <div>
+          <section>
             <h3 className="h3 font-semibold ">
               {getTranslation(dictionary, ['whyMeSection', 'card2', 'title'])}
             </h3>
             <p>{getTranslation(dictionary, ['whyMeSection', 'card2', '1'])}</p>
             <p>{getTranslation(dictionary, ['whyMeSection', 'card2', '2'])}</p>
-          </div>
-        </div>
-        <div className={clsx(styles.card, 'md:ml-auto lg:ml-0')}>
+          </section>
+        </li>
+        <li className={clsx(styles.card, 'md:ml-auto lg:ml-0')}>
           <FaCircleNodes className={clsx(styles.icon, 'flex-shrink-0')} />
-          <div>
+          <section>
             <h3 className="h3 font-semibold">
               {getTranslation(dictionary, ['whyMeSection', 'card3', 'title'])}
             </h3>
             <p>{getTranslation(dictionary, ['whyMeSection', 'card3', '1'])}</p>
             <p>{getTranslation(dictionary, ['whyMeSection', 'card3', '2'])}</p>
-          </div>
-        </div>
-      </div>
+          </section>
+        </li>
+      </ul>
     </section>
   );
 };
