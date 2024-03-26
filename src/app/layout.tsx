@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
-import './globals.css';
-
+import '@/app/globals.css';
 export const metadata: Metadata = {
   title: 'Enrique Márquez Jiménez',
   description: 'Curriculum interactivo de Enrique Márquez Jiménez',
