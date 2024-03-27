@@ -43,7 +43,7 @@
   animation: spinning 4s linear infinite;
 }
 
-.animatedBorderBox button {
+.animatedBorderBox a {
   position: relative;
   z-index: 10;
 }

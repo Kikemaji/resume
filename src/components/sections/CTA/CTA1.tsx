@@ -3,6 +3,7 @@ import styles from './CTA1.module.css';
 import clsx from 'clsx';
 import { Dictionary } from '@/dictionaries/dictionaries';
 import { getTranslation } from '@/utils/getTranslations';
+import Link from 'next/link';
 
 const CTA1 = ({ dictionary }: { dictionary: Dictionary }) => {
   return (
@@ -13,9 +14,13 @@ const CTA1 = ({ dictionary }: { dictionary: Dictionary }) => {
       <p>{getTranslation(dictionary, ['CTA1Section', '1'])}</p>
       <p>{getTranslation(dictionary, ['CTA1Section', '2'])}</p>
       <div className={styles.animatedBorderBox}>
-        <button className=" px-3 py-2 font-bold transition-colors hover:bg-white hover:text-black">
+        <Link
+          href={getTranslation(dictionary, ['linkedInURL'])}
+          target="_blank"
+          className=" px-3 py-2 font-bold transition-colors hover:bg-white hover:text-black"
+        >
           {getTranslation(dictionary, ['CTA1Section', 'button'])}
-        </button>
+        </Link>
       </div>
     </section>
   );

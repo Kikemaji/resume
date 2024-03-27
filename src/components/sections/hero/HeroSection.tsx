@@ -2,6 +2,7 @@ import SpinningText from '@/components/ui/SpinningContent/SpinningContent';
 import { Dictionary } from '@/dictionaries/dictionaries';
 import { getTranslation } from '@/utils/getTranslations';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 import { FaCode } from 'react-icons/fa6';
 
@@ -25,15 +26,13 @@ const HeroSection = ({ dictionary }: { dictionary: Dictionary }) => {
               {getTranslation(dictionary, ['heroSection', 'buttons', 'code'])}
             </span>
           </button>
-          <button className="flex w-full cursor-pointer items-center justify-center gap-1 rounded-md border border-black bg-primary px-3 py-1 text-black transition-colors hover:border-white hover:bg-black hover:text-white md:w-4/6 lg:w-full">
-            <span>
-              {getTranslation(dictionary, [
-                'heroSection',
-                'buttons',
-                'contact',
-              ])}
-            </span>
-          </button>
+          <Link
+            href={getTranslation(dictionary, ['linkedInURL'])}
+            target="_blank"
+            className="flex w-full cursor-pointer items-center justify-center gap-1 rounded-md border border-black bg-primary px-3 py-1 text-black transition-colors hover:border-white hover:bg-black hover:text-white md:w-4/6 lg:w-full"
+          >
+            {getTranslation(dictionary, ['heroSection', 'buttons', 'contact'])}
+          </Link>
         </section>
       </div>
       <div className="relative flex justify-center">
