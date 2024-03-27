@@ -2,16 +2,22 @@ import { Navbar } from '@/components/ui/Navbar';
 import {
   CTA1Section,
   CreatedSection,
-  DreamJobSection,
   EducationSection,
   ExperienceSection,
   FAQSection,
   HeroSection,
-  MapSection,
   QualitySection,
   WhyMeSection,
 } from '@/components/sections';
 import { getDictionary } from '@/dictionaries/dictionaries';
+import dynamic from 'next/dynamic';
+
+const LazyMapSection = dynamic(
+  () => import('@/components/sections/map/MapSection')
+);
+const LazyDreamJobSection = dynamic(
+  () => import('@/components/sections/dreamJob/DreamJobSection')
+);
 
 export default async function Home({
   params: { lang },
@@ -27,11 +33,11 @@ export default async function Home({
         <HeroSection dictionary={dictionary} />
         <QualitySection dictionary={dictionary} />
         <WhyMeSection dictionary={dictionary} />
-        <MapSection dictionary={dictionary} />
+        <LazyMapSection dictionary={dictionary} />
         <ExperienceSection dictionary={dictionary} />
         {/* <ChatSection /> */}
         <EducationSection dictionary={dictionary} />
-        <DreamJobSection dictionary={dictionary} />
+        <LazyDreamJobSection dictionary={dictionary} />
         <CTA1Section dictionary={dictionary} />
         <FAQSection dictionary={dictionary} />
         <CreatedSection dictionary={dictionary} />
