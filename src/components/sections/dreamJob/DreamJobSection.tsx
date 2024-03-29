@@ -189,7 +189,7 @@ const DreamJobSection = ({ dictionary }: { dictionary: Dictionary }) => {
         ))}
       </ul>
       <p className="text-xs opacity-60">
-        ¿No entiendes algunas de las opciones?{' '}
+        {getTranslation(dictionary, ['dreamJobSection', 'modal', 'preTrigger'])}{' '}
         <ExplanationDialog dictionary={dictionary} />
       </p>
     </section>

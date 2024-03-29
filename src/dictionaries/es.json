@@ -66,6 +66,7 @@
     "choseOption": "Elige una opción",
     "noContent": "Trabajo actual - Pendiente de rellenar",
     "currentJob": "Trabajo actual",
+    "frontendEngineer": "Ingeniero Frontend",
     "select": {
       "placeholder": "¿Qué quieres saber?",
       "usedTech": "Tecnología usada",
@@ -123,12 +124,12 @@
       "description": "Enseñando a estudiar de forma eficiente."
     },
     "experience2": {
-      "triggerText": "Fullstack becario - 4 meses",
+      "triggerText": "Beca fullstack developer - 4 meses",
       "title": "Beca Fullstack developer - UST Global",
       "description": "Desarrollando una plataforma de RRHH, frontend y backend."
     },
     "experience3": {
-      "triggerText": "Software de las elecciones - 1 año y 4 meses",
+      "triggerText": "Ingeniero Frontend - 1 año y 4 meses",
       "title": "Ingeniero frontend - Minsait",
       "description": "Desarrollando el *software de las elecciones* Españolas y Latinoamericanas."
     },
@@ -232,7 +233,8 @@
     },
     "modal": {
       "title": "Explicación",
-      "trigger": "Te las explico aquí."
+      "trigger": "Te las explico aquí.",
+      "preTrigger": "¿No entiendes algunas de las opciones?"
     }
   },
   "CTA1Section": {

@@ -65,6 +65,7 @@
     "choseOption": "Choose an option",
     "noContent": "Current job - To be filled in.",
     "currentJob": "Current job",
+    "frontendEngineer": "Frontend engineer",
     "select": {
       "placeholder": "What do you want to know?",
       "usedTech": "Used technology",
@@ -122,12 +123,12 @@
       "description": "Teaching efficient study methods."
     },
     "experience2": {
-      "triggerText": "Fullstack internship - 4 months",
+      "triggerText": "Fullstack developer internship - 4 months",
       "title": "Fullstack Developer Intern - UST Global",
       "description": "Developing an HR platform, frontend and backend."
     },
     "experience3": {
-      "triggerText": "Elections software - 1 year and 4 months",
+      "triggerText": "Frontend Engineer - 1 year and 4 months",
       "title": "Frontend Engineer - Minsait",
       "description": "Developing Spanish and Latin American election software."
     },
@@ -231,7 +232,8 @@
     },
     "modal": {
       "title": "Definitions",
-      "trigger": "Explained here."
+      "trigger": "Explained here.",
+      "preTrigger": "Are there some options you don't understand?"
     }
   },
   "CTA1Section": {
