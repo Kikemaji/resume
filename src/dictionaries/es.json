@@ -56,9 +56,9 @@
     "2": "Independiente y me motivo con facilidad.",
     "3": "Con iniciativa y habilidad para resolver problemas.",
     "mode": {
-      "0": "Presencial",
-      "1": "Híbrido",
-      "2": "Remoto"
+      "1": "Remoto",
+      "2": "Híbrido",
+      "3": "Presencial"
     }
   },
   "experienceSection": {

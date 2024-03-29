@@ -55,9 +55,9 @@
     "2": "Independent and easily motivated.",
     "3": "Initiative and problem-solving skills.",
     "mode": {
-      "0": "On-site",
-      "1": "Hybrid",
-      "2": "Remote"
+      "1": "Remote",
+      "2": "Hybrid",
+      "3": "On-site"
     }
   },
   "experienceSection": {
