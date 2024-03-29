@@ -96,7 +96,7 @@ const DreamJobSection = ({ dictionary }: { dictionary: Dictionary }) => {
         </p>
       </div>
       {/* MOBILE */}
-      <div className="bg relative w-full">
+      <div className="bg relative w-full md:hidden">
         <div className="w-full overflow-x-hidden">
           {typeIndexMobile > 0 && (
             <div
@@ -115,7 +115,7 @@ const DreamJobSection = ({ dictionary }: { dictionary: Dictionary }) => {
             </div>
           )}
           <div
-            className={' flex w-[300%] transition-transform md:hidden'}
+            className={'flex w-[300%] transition-transform md:hidden'}
             style={{ transform: `translateX(-${33 * typeIndexMobile}%)` }}
           >
             {Object.entries(featuresByType).map(([type, feature]) => (
@@ -127,7 +127,7 @@ const DreamJobSection = ({ dictionary }: { dictionary: Dictionary }) => {
                     type,
                   ])}
                 </h5>
-                <ul className="flex flex-wrap justify-center gap-1 text-sm text-black">
+                <ul className="flex flex-wrap justify-center gap-1 py-1 text-sm text-black">
                   {feature.map((feature, index) => (
                     <StringItem
                       key={index}
