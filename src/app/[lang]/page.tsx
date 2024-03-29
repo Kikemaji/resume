@@ -6,7 +6,6 @@ import {
   ExperienceSection,
   FAQSection,
   HeroSection,
-  QualitySection,
   WhyMeSection,
 } from '@/components/sections';
 import { getDictionary } from '@/dictionaries/dictionaries';
@@ -31,7 +30,7 @@ export default async function Home({
       <Navbar dictionary={dictionary} />
       <article className=" mx-auto w-full px-4 py-4 md:px-16 lg:max-w-[80vw] lg:px-4 2xl:max-w-7xl">
         <HeroSection dictionary={dictionary} />
-        <QualitySection dictionary={dictionary} />
+        {/* <QualitySection dictionary={dictionary} /> */}
         <WhyMeSection dictionary={dictionary} />
         <LazyMapSection dictionary={dictionary} />
         <ExperienceSection dictionary={dictionary} />

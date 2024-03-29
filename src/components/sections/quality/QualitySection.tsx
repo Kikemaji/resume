@@ -23,7 +23,7 @@ const QualitySection = ({ dictionary }: { dictionary: Dictionary }) => {
           {/* <p>{getTranslation(dictionary, ['qualitySection', 'principles'])}</p> */}
           <span>{getTranslation(dictionary, ['qualitySection', 'solid'])}</span>
         </div>
-        {/* <div>¿Sonnar?</div> */}
+        <div>Sonnar</div>
         <div className="text-xs md:text-base">
           <p>{getTranslation(dictionary, ['qualitySection', 'byYou'])}</p>
           <p className="flex items-center gap-2">
