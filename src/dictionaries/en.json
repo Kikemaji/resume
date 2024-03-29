@@ -228,6 +228,10 @@
       "bonus": "Annual bonus for personal or company objectives.",
       "training": "Training for certifications and training platforms.",
       "freedom": "Being able to choose the technologies to be used in each project without major restrictions."
+    },
+    "modal": {
+      "title": "Definitions",
+      "trigger": "Explained here."
     }
   },
   "CTA1Section": {

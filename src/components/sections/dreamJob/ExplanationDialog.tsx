@@ -7,9 +7,13 @@ import { getTranslation } from '@/utils/getTranslations';
 const ExplanationDialog = ({ dictionary }: { dictionary: Dictionary }) => {
   return (
     <Dialog
-      triggerText={'Te las explico aquí'}
-      title="Explicación términos"
-      triggerClassName="hover:underline"
+      triggerText={getTranslation(dictionary, [
+        'dreamJobSection',
+        'modal',
+        'trigger',
+      ])}
+      title={getTranslation(dictionary, ['dreamJobSection', 'modal', 'title'])}
+      triggerClassName="underline transition-transform hover:scale-95"
       contentClassName="z-20"
     >
       <ol className="mt-2 max-h-[50dvh] min-h-[30dvh] overflow-y-scroll">

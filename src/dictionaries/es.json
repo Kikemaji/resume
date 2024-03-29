@@ -229,6 +229,10 @@
       "bonus": "Bonus anual por objetivos propios o de la empresa.",
       "training": "Formaciones para certificados y plataformas de formación.",
       "freedom": "Poder elegir en cada proyecto las tecnologías que se van a usar sin tener grandes restricciones."
+    },
+    "modal": {
+      "title": "Explicación",
+      "trigger": "Te las explico aquí."
     }
   },
   "CTA1Section": {
