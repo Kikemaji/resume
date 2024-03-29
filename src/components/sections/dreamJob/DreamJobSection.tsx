@@ -96,28 +96,30 @@ const DreamJobSection = ({ dictionary }: { dictionary: Dictionary }) => {
         </p>
       </div>
       {/* MOBILE */}
-      <div className="relative md:hidden">
-        {typeIndexMobile > 0 && (
+      <div className="bg relative w-full">
+        <div className="w-full overflow-x-hidden">
+          {typeIndexMobile > 0 && (
+            <div
+              className="absolute left-0 top-1/2 -translate-x-full -translate-y-1/2 rounded-full bg-secondary p-1 text-white"
+              onClick={() => changeIndexTypeMobile(-1)}
+            >
+              <IoChevronBackSharp />
+            </div>
+          )}
+          {typeIndexMobile < numberOfTypes - 1 && (
+            <div
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-full rounded-full bg-secondary p-1 text-white"
+              onClick={() => changeIndexTypeMobile(1)}
+            >
+              <IoChevronForwardSharp />
+            </div>
+          )}
           <div
-            className="absolute left-0 top-1/2 -translate-x-full -translate-y-1/2 rounded-full bg-secondary p-1 text-white"
-            onClick={() => changeIndexTypeMobile(-1)}
+            className={' flex w-[300%] transition-transform md:hidden'}
+            style={{ transform: `translateX(-${33 * typeIndexMobile}%)` }}
           >
-            <IoChevronBackSharp />
-          </div>
-        )}
-        {typeIndexMobile < numberOfTypes - 1 && (
-          <div
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-full rounded-full bg-secondary p-1 text-white"
-            onClick={() => changeIndexTypeMobile(1)}
-          >
-            <IoChevronForwardSharp />
-          </div>
-        )}
-
-        {Object.entries(featuresByType).map(
-          ([type, feature], index) =>
-            typeIndexMobile === index && (
-              <section key={type} className="">
+            {Object.entries(featuresByType).map(([type, feature]) => (
+              <section key={type} className="w-1/3 px-2">
                 <h5 className="text-center font-semibold underline">
                   {getTranslation(dictionary, [
                     'dreamJobSection',
@@ -137,8 +139,9 @@ const DreamJobSection = ({ dictionary }: { dictionary: Dictionary }) => {
                   ))}
                 </ul>
               </section>
-            )
-        )}
+            ))}
+          </div>
+        </div>
       </div>
       {/* NO MOBILE */}
       <div className="hidden md:block">
@@ -216,7 +219,7 @@ const StringItem: React.FC<FeatureItemProps> = ({
   return (
     <li
       className={clsx(
-        'w-fit cursor-pointer rounded-md px-2 py-0.5 text-sm font-semibold transition-[300ms] hover:scale-95',
+        'w-fit cursor-pointer rounded-md px-2 py-0.5 text-center text-sm font-semibold transition-[300ms] hover:scale-95',
         isSelected ? 'bg-white' : 'bg-gray-800 text-white hover:bg-gray-500'
       )}
       onClick={toggleSelection}
