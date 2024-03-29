@@ -69,7 +69,7 @@ const ExperienceSection = ({ dictionary }: { dictionary: Dictionary }) => {
     <section className="mb-16 mt-8 flex flex-col gap-2 lg:my-24">
       <h2 className="h2 text-center font-bold">{totalExperienceJSX}</h2>
       <Dialog
-        triggerIcon={<FaPlus className="h-5 w-5" />}
+        triggerIcon={<FaPlus className="h-4 w-4 md:h-5 md:w-5" />}
         triggerClassName="flex items-center gap-4 rounded-md border bg-white p-3 text-black transition-colors hover:border-white hover:bg-black hover:text-white"
         triggerText={currentJobExperienceString}
         title={getTranslation(dictionary, [
@@ -88,7 +88,7 @@ const ExperienceSection = ({ dictionary }: { dictionary: Dictionary }) => {
         </div>
       </Dialog>
       <Dialog
-        triggerIcon={<FaPlus className="h-5 w-5" />}
+        triggerIcon={<FaPlus className="h-4 w-4 md:h-5 md:w-5" />}
         triggerClassName="flex items-center gap-4 rounded-md border bg-white p-3 text-black transition-colors hover:border-white hover:bg-black hover:text-white"
         triggerText={getTranslation(dictionary, [
           'experienceSection',
@@ -139,7 +139,7 @@ const ExperienceSection = ({ dictionary }: { dictionary: Dictionary }) => {
         </div>
       </Dialog>
       <Dialog
-        triggerIcon={<FaPlus className="h-5 w-5" />}
+        triggerIcon={<FaPlus className="h-4 w-4 md:h-5 md:w-5" />}
         triggerClassName="flex items-center gap-4 rounded-md border bg-white p-3 text-black transition-colors hover:border-white hover:bg-black hover:text-white"
         triggerText={getTranslation(dictionary, [
           'experienceSection',
@@ -183,7 +183,7 @@ const ExperienceSection = ({ dictionary }: { dictionary: Dictionary }) => {
         </div>
       </Dialog>
       <Dialog
-        triggerIcon={<FaPlus className="h-5 w-5" />}
+        triggerIcon={<FaPlus className="h-4 w-4 md:h-5 md:w-5" />}
         triggerClassName="flex items-center gap-4 rounded-md border bg-white p-3 text-black transition-colors hover:border-white hover:bg-black hover:text-white"
         triggerText={getTranslation(dictionary, [
           'experienceSection',

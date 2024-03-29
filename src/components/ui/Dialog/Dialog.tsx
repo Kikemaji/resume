@@ -37,7 +37,7 @@ const Dialog = ({
     <DialogElem.Root onOpenChange={handleCloseInside}>
       <DialogElem.Trigger asChild>
         <button className={clsx('', triggerClassName)}>
-          {triggerIcon}
+          <span className="flex-none">{triggerIcon}</span>
           <span className="font-semibold">{triggerText}</span>
         </button>
       </DialogElem.Trigger>
