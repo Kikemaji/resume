@@ -20,12 +20,14 @@ const HeroSection = ({ dictionary }: { dictionary: Dictionary }) => {
           {getTranslation(dictionary, ['heroSection', 'subtitle'])}
         </h3>
         <section className="mt-4 flex w-full flex-col items-center gap-3 lg:flex-row xl:mt-8">
-          <button className="flex w-full cursor-pointer items-center justify-center gap-3 rounded-md border border-black bg-secondary px-3 py-1 transition-colors hover:border-white hover:bg-black hover:text-white md:w-4/6 lg:w-full">
+          <Link
+            href="https://github.com/Kikemaji/resume"
+            target="_blank"
+            className="flex w-full cursor-pointer items-center justify-center gap-3 rounded-md border border-black bg-secondary px-3 py-1 transition-colors hover:border-white hover:bg-black hover:text-white md:w-4/6 lg:w-full"
+          >
             <FaCode />
-            <span>
-              {getTranslation(dictionary, ['heroSection', 'buttons', 'code'])}
-            </span>
-          </button>
+            {getTranslation(dictionary, ['heroSection', 'buttons', 'code'])}
+          </Link>
           <Link
             href={getTranslation(dictionary, ['linkedInURL'])}
             target="_blank"
