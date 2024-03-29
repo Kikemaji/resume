@@ -27,7 +27,7 @@ export const MapSection = ({ dictionary }: { dictionary: Dictionary }) => {
           </li>
         </ul>
       </section>
-      <div className="relative min-w-[300px] lg:w-[400px]">
+      <div className="relative min-w-[250px] md:min-w-[300px] lg:w-[400px]">
         <div className="absolute left-5 top-1/3">
           <FaLongArrowAltRight className="animate-pulse text-2xl" />
         </div>
