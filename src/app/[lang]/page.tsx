@@ -10,6 +10,7 @@ import {
 } from '@/components/sections';
 import { getDictionary } from '@/dictionaries/dictionaries';
 import dynamic from 'next/dynamic';
+import { i18n } from '../../../i18n.config';
 
 const LazyMapSection = dynamic(
   () => import('@/components/sections/map/MapSection')
@@ -43,4 +44,10 @@ export default async function Home({
       </article>
     </main>
   );
+}
+
+export async function generateStaticParams() {
+  return i18n.locales.map((locale) => ({
+    lang: locale,
+  }));
 }
