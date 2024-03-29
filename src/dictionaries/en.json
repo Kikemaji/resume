@@ -18,7 +18,7 @@
       "1": "The frontend engineer",
       "2": "you need"
     },
-    "subtitle": "With code so you don't have to look at so many CVs",
+    "subtitle": "With code so you don't have to look at so many CVs.",
     "buttons": {
       "code": "View code",
       "contact": "Contact"
@@ -29,7 +29,7 @@
     "principles": "Principles",
     "solid": "SOLID",
     "byYou": "By you?",
-    "repoLove": "Show some love to the repo"
+    "repoLove": "Show some love to the repo."
   },
   "whyMeSection": {
     "title": "Why choose me?",
@@ -40,17 +40,17 @@
     },
     "card2": {
       "title": "Growth mindset",
-      "1": "I love challenges",
-      "2": "I'm super curious"
+      "1": "I love challenges.",
+      "2": "I'm super curious."
     },
     "card3": {
       "title": "Self-critical",
-      "1": "I acknowledge my mistakes",
-      "2": "I seek answers without fear of asking"
+      "1": "I acknowledge my mistakes.",
+      "2": "I seek answers without fear of asking."
     }
   },
   "mapSection": {
-    "title": "I learn and adapt quickly",
+    "title": "I learn and adapt quickly.",
     "1": "I love coding.",
     "2": "Independent and easily motivated.",
     "3": "Initiative and problem-solving skills.",
@@ -80,7 +80,7 @@
       "argP1": "Complete redesign of the vote capture and monitoring application in React.",
       "argP2": "*Resolved over 100 issues* to update old software to the new version.",
       "argP3": "Implementation of new features in *highly complex code.*",
-      "argP4": "Creation of a user management application using Next 13 (Api routes, server components), *reducing a 4-hour process to 30 minutes*",
+      "argP4": "Creation of a user management application using Next 13 (Api routes, server components), *reducing a 4-hour process to 30 minutes*.",
       "esP1": "*Development in multiple applications simultaneously* to provide support where needed, while maintaining a primary role in the vote dissemination application.",
       "esP2": "Creation of a *multilingual website* with React to download electoral press data.",
       "esP3": "*Implementation of responsive design* with animations using Tailwind, framer motion, eCharts, Radix...",
@@ -119,7 +119,7 @@
     "experience1": {
       "triggerText": "Teaching to study - Freelance",
       "title": "Freelancer / Productivity teacher",
-      "description": "Teaching efficient study methods"
+      "description": "Teaching efficient study methods."
     },
     "experience2": {
       "triggerText": "Fullstack internship - 4 months",
@@ -129,7 +129,7 @@
     "experience3": {
       "triggerText": "Elections software - 1 year and 4 months",
       "title": "Frontend Engineer - Minsait",
-      "description": "Developing Spanish and Latin American election software"
+      "description": "Developing Spanish and Latin American election software."
     },
     "experience4": {
       "triggerText": " --- ",
@@ -141,8 +141,8 @@
     "title": "Want more?",
     "card1": {
       "title": "Double Bachelor's Degree",
-      "1": "Computer Engineering",
-      "2": "Software Engineering"
+      "1": "Computer Engineering.",
+      "2": "Software Engineering."
     },
     "card2": {
       "title": "Four languages",
@@ -164,7 +164,7 @@
   },
   "dreamJobSection": {
     "title": "What's my dream job like?",
-    "subtitle": "Choose the options to see how balanced your offer is",
+    "subtitle": "Choose between options to see how balanced your offer is.",
     "subtitle2": "Features selected by default are from my current job.",
     "type": {
       "need": "Necessary",
@@ -247,7 +247,7 @@
     "Q2": "What is your salary expectation?",
     "A2": "It depends on the job and the responsibilities it entails. We'll have to discuss it in the interview.",
     "Q3": "What other languages do you know?",
-    "A3": "The important ones are Java and Python",
+    "A3": "The important ones are Java and Python.",
     "Q4": "When was this page last updated?",
     "A4": "Created: March 2023. Last updated: March 2023. Although data such as experience and age are automatically updated.",
     "Q5": "Do you freelance?",
