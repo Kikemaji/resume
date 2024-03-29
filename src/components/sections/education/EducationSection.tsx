@@ -100,15 +100,47 @@ const EducationSection = ({ dictionary }: { dictionary: Dictionary }) => {
             </ul>
           </div>
         </section>
-        <section className={clsx(styles.flipCard, 'hidden xl:block')}>
+        <div className={clsx(styles.flipCard, 'hidden xl:block')}>
           <div className={clsx(styles.flipCardContent, styles.flipCardFront)}>
             ?
           </div>
-          <p className={clsx(styles.flipCardContent, styles.flipCardBack)}>
-            Más o pido feedback? / 2 opciones. Te gusta? Llámame, que no? haz
-            scroll y dame feedback al final
-          </p>
-        </section>
+          <section
+            className={clsx(styles.flipCardContent, styles.flipCardBack)}
+          >
+            <h3 className="h3 mb-2 font-bold md:mb-0">
+              {getTranslation(dictionary, [
+                'educationSection',
+                'card3',
+                'title',
+              ])}
+            </h3>
+            <div className="flex flex-1 items-center">
+              <ul>
+                <li>
+                  {getTranslation(dictionary, [
+                    'educationSection',
+                    'card3',
+                    '1',
+                  ])}
+                </li>
+                <li>
+                  {getTranslation(dictionary, [
+                    'educationSection',
+                    'card3',
+                    '2',
+                  ])}
+                </li>
+                <li>
+                  {getTranslation(dictionary, [
+                    'educationSection',
+                    'card3',
+                    '3',
+                  ])}
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
       </ul>
     </section>
   );
