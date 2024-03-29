@@ -6,10 +6,10 @@ import React from 'react';
 const CreatedSection = ({ dictionary }: { dictionary: Dictionary }) => {
   return (
     <section className="my-8 text-gray-400">
-      <h4 className="h4 md:text-center">
+      <h4 className="h4 text-center">
         {getTranslation(dictionary, ['createdSection', 'title'])}
       </h4>
-      <ul className="mt-1 flex items-end gap-4 text-xs md:mt-4 md:justify-center md:gap-16 md:text-base">
+      <ul className="mt-1 flex items-end justify-center gap-4 text-xs md:mt-4 md:gap-16 md:text-base">
         <li>
           <Image
             className="mx-auto w-8 invert md:w-10"
