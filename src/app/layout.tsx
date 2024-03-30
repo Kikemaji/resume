@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import '@/app/globals.css';
 export const metadata: Metadata = {
   title: 'Enrique Márquez Jiménez',
-  description: 'Curriculum interactivo de Enrique Márquez Jiménez',
+  description: 'Portfolio de Enrique Márquez Jiménez',
 };
 
 export default function RootLayout({
