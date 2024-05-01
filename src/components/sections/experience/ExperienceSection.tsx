@@ -55,7 +55,7 @@ const ExperienceSection = ({ dictionary }: { dictionary: Dictionary }) => {
     </>
   );
 
-  const currentJobExperienceString = `${getTranslation(dictionary, ['experienceSection', 'frontendEngineer'])} - ${yearsOfExperienceCurrentJob > 0 ? yearsOfExperienceCurrentJob : ''} ${
+  const currentJobExperienceString = `${getTranslation(dictionary, ['experienceSection', 'experience4', 'triggerText'])} - ${yearsOfExperienceCurrentJob > 0 ? yearsOfExperienceCurrentJob : ''} ${
     yearsOfExperienceCurrentJob === 0
       ? ''
       : yearsOfExperienceCurrentJob > 1
